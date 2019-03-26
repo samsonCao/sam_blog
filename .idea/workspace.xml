@@ -33,8 +33,8 @@
         <entry file="file://$PROJECT_DIR$/ES6相关知识点/arrow-function.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="612">
-                <caret line="116" lean-forward="true" selection-start-line="116" selection-end-line="116" />
+              <first_editor relative-caret-position="852">
+                <caret line="341" column="5" selection-start-line="341" selection-start-column="5" selection-end-line="341" selection-end-column="5" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -139,12 +139,12 @@
       <option name="presentableId" value="Default" />
       <updated>1553602207628</updated>
       <workItem from="1553602209181" duration="623000" />
-      <workItem from="1553603476956" duration="547000" />
+      <workItem from="1553603476956" duration="676000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1170000" />
+    <option name="totallyTimeSpent" value="1299000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-241" y="-1057" width="1920" height="1057" extended-state="6" />
@@ -188,8 +188,8 @@
     <entry file="file://$PROJECT_DIR$/ES6相关知识点/arrow-function.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="612">
-            <caret line="116" lean-forward="true" selection-start-line="116" selection-end-line="116" />
+          <first_editor relative-caret-position="852">
+            <caret line="341" column="5" selection-start-line="341" selection-start-column="5" selection-end-line="341" selection-end-column="5" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />

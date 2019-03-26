@@ -331,9 +331,14 @@ button.addEventListener('click', () => {
 - 箭头函数不支持new.target
 - 箭头函数不支持重命名函数参数,普通函数的函数参数支持重命名
 - 箭头函数相对于普通函数语法更简洁优雅
-- 箭头函数的注意事项及不适用场景
 ###### 箭头函数的注意事项：
 - 箭头函数一条语句返回对象字面量，需要加括号
 - 箭头函数在参数和箭头之间不能换行
 - 箭头函数的解析顺序相对||靠前
 - 不适用场景：箭头函数的this意外指向和代码的可读性。
+
+------
+参考资料
+MDN: https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+知乎-什么时候不能使用箭头函数： https://zhuanlan.zhihu.com/p/26540168
+
