@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20f2280d-97d2-425f-9b9d-e8390077f175" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/samcao.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLinters/jshint.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/markdown-navigator.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ES6相关知识点/ES6-API.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ES6相关知识点/arrow-function.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ES6相关知识点/arrow-function.md" beforeDir="false" afterPath="$PROJECT_DIR$/ES6相关知识点/arrow-function.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -40,8 +33,8 @@
         <entry file="file://$PROJECT_DIR$/ES6相关知识点/arrow-function.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="217">
-                <caret line="295" column="17" lean-forward="true" selection-start-line="295" selection-start-column="17" selection-end-line="295" selection-end-column="17" />
+              <first_editor relative-caret-position="612">
+                <caret line="116" lean-forward="true" selection-start-line="116" selection-end-line="116" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -146,12 +139,12 @@
       <option name="presentableId" value="Default" />
       <updated>1553602207628</updated>
       <workItem from="1553602209181" duration="623000" />
-      <workItem from="1553603476956" duration="329000" />
+      <workItem from="1553603476956" duration="547000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="952000" />
+    <option name="totallyTimeSpent" value="1170000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-241" y="-1057" width="1920" height="1057" extended-state="6" />
@@ -195,8 +188,8 @@
     <entry file="file://$PROJECT_DIR$/ES6相关知识点/arrow-function.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="217">
-            <caret line="295" column="17" lean-forward="true" selection-start-line="295" selection-start-column="17" selection-end-line="295" selection-end-column="17" />
+          <first_editor relative-caret-position="612">
+            <caret line="116" lean-forward="true" selection-start-line="116" selection-end-line="116" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
