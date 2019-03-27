@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+             <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+                         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+             <title>Document</title>
+</head>
+<body>
+
+<script >
+var a1 = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2', 'D1', 'D2'];
+var a2 =['A','B','C','D'];
+
+var a3 = a2.map((item) => {
+    return item + 3
+  });
+
+// let a4 = [...a1, ...a3].sort().map((item) => {
+//     if(item.includes('3')){
+//       return item.split('')[0]
+//     }
+//     return item
+//   })
+
+// console.log(a4, '1')
+
+let arr0 = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2', 'D1', 'D2'];
+let arr1 = ['A','B','C','D'];
+
+const handle = (arr0 ,arr1) => {
+    let res = arr1.map((item, index) => {
+        return [arr0[index*2], arr0[index*2 + 1], item]
+    });
+    console.log(res, 'res')
+    return [].concat(...res)
+}
+handle(arr0, arr1)
+
+// https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/39
+</script>
+
+</body>
+</html>

@@ -3,7 +3,6 @@
     - const const定义的基本类型不能改变，但是定义的对象是可以通过修改对象属性等方法来改变的
 
         定义一个const对象的时候，我们说的常量其实是指针，就是const对象对应的堆内存指向是不变的，
-
         但是堆内存中的数据本身的大小或者属性是可变的
     - import命令
     - class命名
@@ -13,6 +12,9 @@
         ```
         const {a: aaa, b , c} = {a: '1', b: '2', cc: '3'}
         ```
+
+    <font color="#006600">注意：</font>var声明的变量在window上，let const class 声明的变量不在window上，而是在块作用域（Script）上，其实就是在一个{}里面
+    <font color="#006600">参考：</font> https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/30
 - 顶层对象属性
     - 浏览器环境window,Node指的是global
 - 变量结构赋值
