@@ -38,6 +38,19 @@ const handle = (arr0 ,arr1) => {
 handle(arr0, arr1)
 
 // https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/39
+
+function setName(obj) {
+  obj.name = 'laowang';
+  console.log(obj, 'obj1')
+  obj = new Object();
+  obj.name = 'Tom';
+  console.log(obj, 'obj')
+  console.log(person, 'person')
+
+}
+var person = new Object();
+setName(person);
+console.log(person.name); //laowang
 </script>
 
 </body>
