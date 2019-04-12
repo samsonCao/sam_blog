@@ -111,4 +111,7 @@ console.log('7');  // 6
 - 继续找宏任务，没有宏任务了，程序终止
 
 
+async函数返回一个 Promise 对象，可以使用then方法添加回调函数。当函数执行的时候，一旦遇到await就会先返回，等到异步操作完成，再接着执行函数体内后面的语句。
+补充一下队列任务优先级：promise.Trick()>promise的回调>async>setTimeout>setImmediate，
 参考： https://segmentfault.com/a/1190000012925872
+参考： https://segmentfault.com/a/1190000018316444?utm_source=tag-newest
