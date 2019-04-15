@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20f2280d-97d2-425f-9b9d-e8390077f175" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/JavaScript设计模式/单例模式.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaScript设计模式/发布订阅模式.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaScript设计模式/命令模式.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JavaScript设计模式/工厂模式.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/宏任务和微任务.md" beforeDir="false" afterPath="$PROJECT_DIR$/宏任务和微任务--setTimeout、promise、async、await详解.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/列举115个html标签.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,15 +15,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/JavaScript设计模式/单例模式.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" selection-start-line="16" selection-end-line="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JavaScript设计模式/工厂模式.js">
           <provider selected="true" editor-type-id="text-editor" />
@@ -92,7 +78,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/宏任务和微任务--setTimeout、promise、async、await详解.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
@@ -102,6 +88,15 @@
               <second_editor>
                 <markdownNavigatorState />
               </second_editor>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/列举115个html标签.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="396">
+              <caret line="96" column="30" lean-forward="true" selection-start-line="96" selection-start-column="30" selection-end-line="96" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -176,6 +171,7 @@
         <option value="$PROJECT_DIR$/JavaScript设计模式/单例模式.js" />
         <option value="$PROJECT_DIR$/JavaScript设计模式/命令模式.js" />
         <option value="$PROJECT_DIR$/宏任务和微任务--setTimeout、promise、async、await详解.md" />
+        <option value="$PROJECT_DIR$/列举114个html标签.js" />
       </list>
     </option>
   </component>
@@ -203,7 +199,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -211,15 +206,11 @@
               <item name="sam_blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="sam_blog" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="sam_blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sam_blog" type="462c0819:PsiDirectoryNode" />
-              <item name="JavaScript设计模式" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -311,11 +302,12 @@
       <workItem from="1555048885739" duration="680000" />
       <workItem from="1555051073319" duration="230000" />
       <workItem from="1555055065361" duration="336000" />
+      <workItem from="1555298877259" duration="452000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26710000" />
+    <option name="totallyTimeSpent" value="27162000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-241" y="-1057" width="1920" height="1057" extended-state="6" />
@@ -536,6 +528,13 @@
     <entry file="file://$PROJECT_DIR$/JavaScript设计模式/工厂模式.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/JavaScript设计模式/命令模式.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ES6相关知识点/箭头函数.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
@@ -596,13 +595,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JavaScript设计模式/命令模式.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/宏任务和微任务--setTimeout、promise、async、await详解.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
@@ -612,6 +604,13 @@
           <second_editor>
             <markdownNavigatorState />
           </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/列举115个html标签.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="96" column="30" lean-forward="true" selection-start-line="96" selection-start-column="30" selection-end-line="96" selection-end-column="30" />
         </state>
       </provider>
     </entry>
