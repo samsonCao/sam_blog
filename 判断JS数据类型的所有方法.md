@@ -58,20 +58,24 @@ https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects
 
 
 ### 二、typeof 方法
+typeof 操作符是确定一个变量是字符串、数值、布尔值，还是 undefined 的最佳工具。
+如果变 量的值是一个对象或 null，则 typeof 操作符会像下面例子中所示的那样返回"object":
 ```
-typeof null === 'object';
 typeof undefined === 'undefined';
+typeof 123 === 'number'
+typeof '121' === 'string'
 typeof true === 'bollean'
+
+typeof null === 'object';
 typeof {} === 'object'
 typeof function xxx(){} === 'function'
 typeof [] === 'object'
 typeof new Date === 'object'
-typeof 123 === 'number'
-typeof '121' === 'string'
-typeof new RegExp() === 'object'
+typeof new RegExp() === 'object' // safari5之前的和Chrome7之前的正则返回function
 ```
 
 ### 三、instanceof 方法 前提是已知是对象 要不然会报错
+确定一个值是哪种引用类型可以使用 instanceof 操作符。
 ```
 [] instanceof Array
 new Date() instanceof Date
