@@ -1,4 +1,4 @@
-```
+```javascript
 // 1.
 var a = 11
 function test () {

@@ -49,7 +49,7 @@ rm -rf xxxx .xxx 删除某个文件夹和文件夹内的文件 慎用此命令 �
 - git push origin xxx自己的分支名字
 ###### 其它git配置命令
 git config -e 打开git配置的文档,看起来大概是在这样的，可以修改并保存:wq。
-```
+```javascript
 [core]
         repositoryformatversion = 0
         filemode = true

@@ -1,6 +1,6 @@
 // 已知 List 和 values, 通过values的值，从List中找到对应的label值，生成新的数组['A', 'B', 'D']
 
-```
+```javascript
 const List = [
     {
         label: 'A',

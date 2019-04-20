@@ -3,7 +3,7 @@
 
 
 ### 一、prototype.toString方法
-```
+```javascript
 Object.prototype.toString.call(new Date());         // '[object Date]'
 Object.prototype.toString.call([]);                 // '[object Array]'
 Object.prototype.toString.call(new RegExp());       // '[object RegExp]'
@@ -16,12 +16,13 @@ Object.prototype.toString.call(undefined);          // '[object Undefined]'
 Object.prototype.toString.call(true);               //'[object Boolean]'
 Object.prototype.toString.call(document.getElementsByTagName('body')); `
 ```
-```
+```javascript
 [object HTMLCollection]'html节点类型 此处是判断对象是不是dom
 
 ```
 
-```function args(a,b) {
+```javascript
+function args(a,b) {
          let args = arguments;
          let type = Object.prototype.toString.call(args)
          console.log(type)
@@ -31,7 +32,7 @@ Object.prototype.toString.call(document.getElementsByTagName('body')); `
 ```
 
 #### 除此之外还有很多种object对应的数据类型，这里列出返回的数据结构，但是不一一举例，有兴趣的同学可以自己查询含义
-```
+```javascript
 [object Error]
 [object Map]
 [object Set]
@@ -60,7 +61,7 @@ https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects
 ### 二、typeof 方法
 typeof 操作符是确定一个变量是字符串、数值、布尔值，还是 undefined 的最佳工具。
 如果变 量的值是一个对象或 null，则 typeof 操作符会像下面例子中所示的那样返回"object":
-```
+```javascript
 typeof undefined === 'undefined';
 typeof 123 === 'number'
 typeof '121' === 'string'
@@ -76,7 +77,7 @@ typeof new RegExp() === 'object' // safari5之前的和Chrome7之前的正则返
 
 ### 三、instanceof 方法 前提是已知是对象 要不然会报错
 确定一个值是哪种引用类型可以使用 instanceof 操作符。
-```
+```javascript
 [] instanceof Array
 new Date() instanceof Date
 new RegExp() instanceof RegExp
@@ -84,7 +85,7 @@ new RegExp() instanceof RegExp
 ```
 
 ### 四、constructor方法 前提是已知是对象 要不然会报错
-```
+```javascript
 [].constructor === Array
 new Date().constructor === Date
 (function xxx(){}).constructor === Function

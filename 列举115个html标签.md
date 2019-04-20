@@ -1,4 +1,4 @@
-```
+```javascript
 const HTMLElementTagNameMap = {
     "a": HTMLAnchorElement,
     "abbr": HTMLElement,

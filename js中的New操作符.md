@@ -10,7 +10,7 @@
 4.返回新对象
 
 
-    ```
+    ```javascript
     var obj = new Base();
 
     var obj = {};  // 创建了一个空对象obj
@@ -20,7 +20,7 @@
 
 * 注意： 返回的是新对象
 * 学习了上面的知识，我们来看一个简单的例子
-```
+```javascript
 var a = new String('123')
 var b = new String('123')
 console.log( a == b ) // false
