@@ -3,4 +3,7 @@
 
 ![测试插入图片](https://github.com/samsonCao/sam_blog/blob/master/Image/image.png)
 
+[原型模式](https://github.com/samsonCao/sam_blog/issues/1)
+
+
 持续更新......
