@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20f2280d-97d2-425f-9b9d-e8390077f175" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的6种方式/4.原型式继承.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/函数相关/2.闭包.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/函数相关/3.模仿块级作用域.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的6种方式/2.借用构造函数继承.md" beforeDir="false" afterPath="$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的6种方式/2.借用构造函数继承.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的6种方式/组合继承.md" beforeDir="false" afterPath="$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的6种方式/3.组合继承.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/函数是按照参数传递的-深度解析.md" beforeDir="false" afterPath="$PROJECT_DIR$/函数相关/2.函数是按照参数传递的-深度解析.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/函数相关/1.函数基本概念.md" beforeDir="false" afterPath="$PROJECT_DIR$/函数相关/1.函数基本概念.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -36,8 +37,8 @@
         <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的6种方式/2.借用构造函数继承.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="336">
-                <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+              <first_editor relative-caret-position="380">
+                <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -46,12 +47,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的6种方式/4.原型式继承.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="577">
-                <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+              <first_editor relative-caret-position="538">
+                <caret line="31" column="31" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -64,8 +65,8 @@
         <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的6种方式/3.组合继承.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="259">
-                <caret line="22" column="28" lean-forward="true" selection-start-line="21" selection-start-column="23" selection-end-line="22" selection-end-column="28" />
+              <first_editor relative-caret-position="418">
+                <caret line="22" column="28" selection-start-line="21" selection-start-column="23" selection-end-line="22" selection-end-column="28" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -79,7 +80,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="57">
-                <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+                <caret line="3" selection-start-line="3" selection-end-line="3" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -92,8 +93,34 @@
         <entry file="file://$PROJECT_DIR$/函数相关/1.函数基本概念.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="57">
-                <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
+              <first_editor relative-caret-position="328">
+                <caret line="132" column="41" selection-start-line="132" selection-start-column="41" selection-end-line="132" selection-end-column="41" />
+              </first_editor>
+              <second_editor>
+                <markdownNavigatorState />
+              </second_editor>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/函数相关/3.模仿块级作用域.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor>
+                <markdownNavigatorState />
+              </second_editor>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/函数相关/2.函数是按照参数传递的-深度解析.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="248">
+                <caret line="83" selection-start-line="83" selection-end-line="92" selection-end-column="3" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -123,7 +150,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/前端工程化的理解.md" />
         <option value="$PROJECT_DIR$/浏览器解析原理.md" />
         <option value="$PROJECT_DIR$/浏览器v8引擎关系.md" />
         <option value="$PROJECT_DIR$/常见排序算法JS版.js" />
@@ -168,12 +194,13 @@
         <option value="$PROJECT_DIR$/创建对象、继承、设计模式/1.创建对象的7种模式/6寄生构造函数模式.md" />
         <option value="$PROJECT_DIR$/创建对象、继承、设计模式/1.创建对象的7种模式/7稳妥构造函数模式.md" />
         <option value="$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的6种方式/1.原型链继承.md" />
-        <option value="$PROJECT_DIR$/函数相关/1.函数基本概念.md" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的6种方式/组合继承.md" />
         <option value="$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的6种方式/3.组合继承.md" />
         <option value="$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的6种方式/2.借用构造函数继承.md" />
         <option value="$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的6种方式/4.原型式继承.md" />
+        <option value="$PROJECT_DIR$/函数相关/2.函数是按照参数传递的-深度解析.md" />
+        <option value="$PROJECT_DIR$/函数相关/1.函数基本概念.md" />
       </list>
     </option>
   </component>
@@ -189,11 +216,11 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-216" />
-    <option name="y" value="-1057" />
-    <option name="width" value="1861" />
-    <option name="height" value="1057" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="54" />
+    <option name="y" value="23" />
+    <option name="width" value="1386" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -201,7 +228,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -212,18 +238,18 @@
             <path>
               <item name="sam_blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="sam_blog" type="462c0819:PsiDirectoryNode" />
-              <item name="创建对象、继承、设计模式" type="462c0819:PsiDirectoryNode" />
+              <item name="函数相关" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sam_blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="sam_blog" type="462c0819:PsiDirectoryNode" />
               <item name="创建对象、继承、设计模式" type="462c0819:PsiDirectoryNode" />
-              <item name="2.继承的6种方式" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -247,11 +273,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/函数相关" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/DOM和DOM对象扩展" />
       <recent name="$PROJECT_DIR$/创建对象、继承、设计模式/3.23种设计模式" />
       <recent name="$PROJECT_DIR$/创建对象、继承、设计模式/继承的6种方式" />
-      <recent name="$PROJECT_DIR$/JavaScript设计模式/创建对象的7种模式" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -340,18 +366,19 @@
       <workItem from="1555935670562" duration="300000" />
       <workItem from="1555936876061" duration="1308000" />
       <workItem from="1556017704834" duration="1569000" />
-      <workItem from="1556019785234" duration="849000" />
+      <workItem from="1556019785234" duration="1078000" />
+      <workItem from="1556114002840" duration="2758000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51617000" />
+    <option name="totallyTimeSpent" value="54604000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-216" y="-1057" width="1861" height="1057" extended-state="0" />
+    <frame x="54" y="23" width="1386" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10815217" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1912088" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -363,7 +390,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.112953365" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.11210191" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -514,18 +541,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
           <caret line="27" column="3" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/函数是按照参数传递的-深度解析.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="57">
-            <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
         </state>
       </provider>
     </entry>
@@ -859,23 +874,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的6种方式/JavaScript继承的多种方式和优缺点.md">
+    <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的6种方式/2.借用构造函数继承.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="57">
-            <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/函数相关/1.函数基本概念.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="57">
-            <caret line="3" column="37" selection-start-line="3" selection-start-column="37" selection-end-line="3" selection-end-column="37" />
+          <first_editor relative-caret-position="380">
+            <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
@@ -886,8 +889,8 @@
     <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的6种方式/3.组合继承.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="259">
-            <caret line="22" column="28" lean-forward="true" selection-start-line="21" selection-start-column="23" selection-end-line="22" selection-end-column="28" />
+          <first_editor relative-caret-position="418">
+            <caret line="22" column="28" selection-start-line="21" selection-start-column="23" selection-end-line="22" selection-end-column="28" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
@@ -895,11 +898,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的6种方式/2.借用构造函数继承.md">
+    <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的6种方式/JavaScript继承的多种方式和优缺点.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="336">
-            <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+          <first_editor relative-caret-position="57">
+            <caret line="3" selection-start-line="3" selection-end-line="3" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
@@ -910,9 +913,43 @@
     <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的6种方式/4.原型式继承.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="577">
-            <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+          <first_editor relative-caret-position="538">
+            <caret line="31" column="31" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
           </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/函数相关/2.函数是按照参数传递的-深度解析.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="248">
+            <caret line="83" selection-start-line="83" selection-end-line="92" selection-end-column="3" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/函数相关/1.函数基本概念.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="328">
+            <caret line="132" column="41" selection-start-line="132" selection-start-column="41" selection-end-line="132" selection-end-column="41" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/函数相关/3.模仿块级作用域.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor />
           <second_editor>
             <markdownNavigatorState />
           </second_editor>
