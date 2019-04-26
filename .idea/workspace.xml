@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20f2280d-97d2-425f-9b9d-e8390077f175" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/中高级前端面试题汇总.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/函数相关/thisdemo.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/三种方式实现从数组对象中找到某个值得方法.js" beforeDir="false" afterPath="$PROJECT_DIR$/三种方式实现从数组对象中找到某个值得方法.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/函数相关/2.this详解.md" beforeDir="false" afterPath="$PROJECT_DIR$/函数相关/2.this详解.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,11 +18,11 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/中高级前端面试题汇总.md">
+        <entry file="file://$PROJECT_DIR$/函数相关/3.闭包详解.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="5415">
-                <caret line="285" column="1" lean-forward="true" selection-start-line="285" selection-start-column="1" selection-end-line="285" selection-end-column="1" />
+              <first_editor relative-caret-position="456">
+                <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -32,22 +32,24 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/三种方式实现从数组对象中找到某个值得方法.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        <entry file="file://$PROJECT_DIR$/函数相关/2.this详解.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="228">
+                <caret line="12" selection-start-line="12" selection-end-line="12" />
+              </first_editor>
+              <second_editor>
+                <markdownNavigatorState />
+              </second_editor>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/函数相关/4.模仿块级作用域.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-            <state split_layout="SPLIT">
-              <first_editor />
-              <second_editor>
-                <markdownNavigatorState />
-              </second_editor>
+        <entry file="file://$PROJECT_DIR$/函数相关/thisdemo.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1273">
+              <caret line="67" column="43" selection-start-line="67" selection-start-column="10" selection-end-line="67" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -167,8 +169,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/算法.html" />
-        <option value="$PROJECT_DIR$/ES6相关知识点/数组合并的几个方法.html" />
         <option value="$PROJECT_DIR$/JavaScript设计模式/工厂模式.js" />
         <option value="$PROJECT_DIR$/JavaScript设计模式/工厂模式.md" />
         <option value="$PROJECT_DIR$/JavaScript设计模式/构造函数模式.md" />
@@ -210,7 +210,6 @@
         <option value="$PROJECT_DIR$/函数相关/示例代码.js" />
         <option value="$PROJECT_DIR$/React深入系列7个概念/7. React Hooks.md" />
         <option value="$PROJECT_DIR$/函数相关/6.函数的参数是按照值传递的-深度解析.md" />
-        <option value="$PROJECT_DIR$/函数相关/2.this详解.md" />
         <option value="$PROJECT_DIR$/函数相关/1.函数的10个基本概念.md" />
         <option value="$PROJECT_DIR$/函数相关/4.模仿块级作用域.md" />
         <option value="$PROJECT_DIR$/函数相关/3.闭包.md" />
@@ -218,6 +217,9 @@
         <option value="$PROJECT_DIR$/函数相关/3.闭包详解.md" />
         <option value="$PROJECT_DIR$/中高级前端面试题汇总.md" />
         <option value="$PROJECT_DIR$/三种方式实现从数组对象中找到某个值得方法.js" />
+        <option value="$PROJECT_DIR$/三种方式实现从数组对象中找到某个值得方法.md" />
+        <option value="$PROJECT_DIR$/函数相关/thisdemo.html" />
+        <option value="$PROJECT_DIR$/函数相关/2.this详解.md" />
       </list>
     </option>
   </component>
@@ -252,6 +254,11 @@
             <path>
               <item name="sam_blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="sam_blog" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sam_blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sam_blog" type="462c0819:PsiDirectoryNode" />
+              <item name="函数相关" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -299,7 +306,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.thisdemo.html">
     <configuration name="算法.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/sam_blog/算法.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -309,8 +316,12 @@
     <configuration name="数组合并的几个方法.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/sam_blog/ES6相关知识点/数组合并的几个方法.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
+    <configuration name="thisdemo.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/sam_blog/函数相关/thisdemo.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.thisdemo.html" />
         <item itemvalue="JavaScript Debug.算法.html" />
       </list>
     </recent_temporary>
@@ -383,18 +394,25 @@
       <workItem from="1556193111426" duration="1211000" />
       <workItem from="1556195249216" duration="1015000" />
       <workItem from="1556201336742" duration="913000" />
-      <workItem from="1556242388895" duration="682000" />
+      <workItem from="1556242388895" duration="913000" />
+      <workItem from="1556250099684" duration="146000" />
+      <workItem from="1556250826172" duration="11000" />
+      <workItem from="1556256063742" duration="1584000" />
+      <workItem from="1556258216632" duration="157000" />
+      <workItem from="1556258493656" duration="18000" />
+      <workItem from="1556258774154" duration="382000" />
+      <workItem from="1556274473553" duration="11000" />
+      <workItem from="1556274837837" duration="1000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60700000" />
+    <option name="totallyTimeSpent" value="63241000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-150" y="-1057" width="1769" height="1057" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20709382" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20652173" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -406,7 +424,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.10259067" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.10259067" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -417,18 +435,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/判断JS数据类型的所有方法.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="538">
-            <caret line="87" column="13" selection-start-line="87" selection-start-column="13" selection-end-line="87" selection-end-column="13" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/前端工程化的理解.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
@@ -810,18 +816,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/函数相关/2.this详解.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="171">
-            <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/React深入系列8个概念/3. setState 异步队列.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
@@ -843,18 +837,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/函数相关/3.闭包.md" />
-    <entry file="file://$PROJECT_DIR$/函数相关/3.闭包详解.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="456">
-            <caret line="24" column="18" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
@@ -867,6 +849,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/中高级前端面试题汇总.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="266">
+            <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/三种方式实现从数组对象中找到某个值得方法.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor>
+            <caret column="8" selection-start-column="8" selection-end-column="8" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="539">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/函数相关/4.模仿块级作用域.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
@@ -874,6 +885,25 @@
           <second_editor>
             <markdownNavigatorState />
           </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/函数相关/3.闭包详解.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="456">
+            <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/函数相关/thisdemo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1273">
+          <caret line="67" column="43" selection-start-line="67" selection-start-column="10" selection-end-line="67" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -950,22 +980,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/中高级前端面试题汇总.md">
+    <entry file="file://$PROJECT_DIR$/函数相关/2.this详解.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="5415">
-            <caret line="285" column="1" lean-forward="true" selection-start-line="285" selection-start-column="1" selection-end-line="285" selection-end-column="1" />
+          <first_editor relative-caret-position="228">
+            <caret line="12" selection-start-line="12" selection-end-line="12" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
           </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/三种方式实现从数组对象中找到某个值得方法.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
         </state>
       </provider>
     </entry>
