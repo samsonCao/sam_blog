@@ -142,7 +142,7 @@
         <entry file="file://$PROJECT_DIR$/函数相关/7.函数相关总结.md">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="95">
-              <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+              <caret line="5" column="37" selection-start-line="5" selection-end-line="5" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -177,7 +177,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/JavaScript设计模式/1工厂模式.md" />
         <option value="$PROJECT_DIR$/JavaScript设计模式/2构造函数模式.md" />
         <option value="$PROJECT_DIR$/ES6相关知识点/ES6-API.md" />
         <option value="$PROJECT_DIR$/ES6相关知识点/箭头函数.md" />
@@ -228,6 +227,7 @@
         <option value="$PROJECT_DIR$/函数相关/4.模仿块级作用域.md" />
         <option value="$PROJECT_DIR$/函数相关/5.私有变量.md" />
         <option value="$PROJECT_DIR$/函数相关/函数相关总结.md" />
+        <option value="$PROJECT_DIR$/函数相关/7.函数相关总结.md" />
       </list>
     </option>
   </component>
@@ -412,18 +412,17 @@
       <workItem from="1556274473553" duration="11000" />
       <workItem from="1556274837837" duration="1000" />
       <workItem from="1556285212504" duration="3218000" />
-      <workItem from="1556362270187" duration="1441000" />
+      <workItem from="1556362270187" duration="1760000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67900000" />
+    <option name="totallyTimeSpent" value="68219000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="52" y="23" width="1388" height="877" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.11631309" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11631309" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -435,7 +434,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.03821656" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.19872612" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -997,7 +996,7 @@
     <entry file="file://$PROJECT_DIR$/函数相关/7.函数相关总结.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
-          <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+          <caret line="5" column="37" selection-start-line="5" selection-end-line="5" selection-end-column="37" />
         </state>
       </provider>
     </entry>
