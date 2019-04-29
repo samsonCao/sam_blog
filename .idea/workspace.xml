@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20f2280d-97d2-425f-9b9d-e8390077f175" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/数组和数组对象深度操作.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/同数组A获取相关的数组B的值.md" beforeDir="false" afterPath="$PROJECT_DIR$/同数组A获取相关的数组B的值.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/同数组A获取相关的数组B的值.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/数组对象去重和数组去重.md" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -44,37 +46,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/数组对象去重和数组去重.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="38">
-                <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-              </first_editor>
-              <second_editor>
-                <markdownNavigatorState />
-              </second_editor>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/同数组A获取相关的数组B的值.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-            <state split_layout="SPLIT">
-              <first_editor />
-              <second_editor>
-                <markdownNavigatorState />
-              </second_editor>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/数组和数组对象深度操作.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor />
+              <first_editor relative-caret-position="-1914">
+                <caret line="40" column="16" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
+              </first_editor>
               <second_editor>
                 <markdownNavigatorState />
               </second_editor>
@@ -174,7 +152,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/宏任务和微任务--setTimeout、promise、async、await详解.md" />
         <option value="$PROJECT_DIR$/JavaScript继承的多种方式和优缺点.md" />
         <option value="$PROJECT_DIR$/JavaScript设计模式/JavaScript继承的多种方式和优缺点.md" />
         <option value="$PROJECT_DIR$/JS数据类型的深度解析.md" />
@@ -225,6 +202,7 @@
         <option value="$PROJECT_DIR$/demo.html" />
         <option value="$PROJECT_DIR$/数组对象去重和数组去重.md" />
         <option value="$PROJECT_DIR$/同数组A获取相关的数组B的值.md" />
+        <option value="$PROJECT_DIR$/数组和数组对象深度操作.md" />
       </list>
     </option>
   </component>
@@ -430,17 +408,17 @@
       <workItem from="1556530883216" duration="112000" />
       <workItem from="1556531022615" duration="1273000" />
       <workItem from="1556532380839" duration="86000" />
-      <workItem from="1556537173885" duration="236000" />
+      <workItem from="1556537173885" duration="473000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78134000" />
+    <option name="totallyTimeSpent" value="78371000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-155" y="-1057" width="1680" height="1057" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14104882" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14104882" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -452,7 +430,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.16062176" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.16062176" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -463,18 +441,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/堆栈和数组操作.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="114">
-            <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/宏任务和微任务--setTimeout、promise、async、await详解.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
@@ -1011,11 +977,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/同数组A获取相关的数组B的值.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/数组对象去重和数组去重.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="38">
-            <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+          <first_editor relative-caret-position="247">
+            <caret line="13" column="17" lean-forward="true" selection-end-line="131" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
@@ -1023,10 +999,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/同数组A获取相关的数组B的值.md">
+    <entry file="file://$PROJECT_DIR$/数组和数组对象深度操作.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor />
+          <first_editor relative-caret-position="-1914">
+            <caret line="40" column="16" selection-start-line="40" selection-start-column="16" selection-end-line="40" selection-end-column="16" />
+          </first_editor>
           <second_editor>
             <markdownNavigatorState />
           </second_editor>
