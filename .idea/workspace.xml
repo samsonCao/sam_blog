@@ -80,8 +80,8 @@
         <entry file="file://$PROJECT_DIR$/数组对象去重和数组去重.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="-42">
-                <caret line="91" column="22" selection-start-line="91" selection-start-column="22" selection-end-line="91" selection-end-column="22" />
+              <first_editor relative-caret-position="110">
+                <caret line="113" column="30" selection-start-line="113" selection-start-column="30" selection-end-line="113" selection-end-column="30" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -249,8 +249,8 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-63" />
-    <option name="y" value="29" />
+    <option name="x" value="20" />
+    <option name="y" value="-968" />
     <option name="width" value="1680" />
     <option name="height" value="877" />
   </component>
@@ -436,18 +436,17 @@
       <workItem from="1556516436393" duration="16000" />
       <workItem from="1556530673285" duration="165000" />
       <workItem from="1556530883216" duration="112000" />
-      <workItem from="1556531022615" duration="1024000" />
+      <workItem from="1556531022615" duration="1273000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77563000" />
+    <option name="totallyTimeSpent" value="77812000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-63" y="29" width="1680" height="877" extended-state="0" />
-    <editor active="true" />
+    <frame x="20" y="-968" width="1680" height="877" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.09825196" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09825196" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -459,7 +458,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.19745223" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.19745223" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -1033,8 +1032,8 @@
     <entry file="file://$PROJECT_DIR$/数组对象去重和数组去重.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-42">
-            <caret line="91" column="22" selection-start-line="91" selection-start-column="22" selection-end-line="91" selection-end-column="22" />
+          <first_editor relative-caret-position="110">
+            <caret line="113" column="30" selection-start-line="113" selection-start-column="30" selection-end-line="113" selection-end-column="30" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
