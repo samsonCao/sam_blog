@@ -8,27 +8,27 @@
 
 <script >
 function myNew(){
-　  //1.拿到传入的参数中的第一个参数，即构造函数名Func
-　  var Func = [].shift.call(arguments);
-    console.log(Func)
-   if (typeof Func !== "function") {
-         throw new Error("myNew argument[0] - what is trying to be bound is not callable");
-   }
-　　//2.创建一个空对象obj
-   var obj = {};
+//1.拿到传入的参数中的第一个参数，即构造函数名Func
+var Func = [].shift.call(arguments);
+console.log(Func)
+if (typeof Func !== "function") {
+      throw new Error("myNew argument[0] - what is trying to be bound is not callable");
+}
+//2.创建一个空对象obj
+var obj = {};
 
-   /**
-   * 3.将这个空对象的__proto__成员指向了Func构造函数prototype成员对象
-   * js里所有的对象都有proto属性(对象，函数)，指向构造该对象的构造函数的原型。
-   * obj.__proto__初始化时指向Object,手动修改指向构造函数，此处示例的是Person
-   **/
-   obj.__proto__= Func.prototype;
+/**
+* 3.将这个空对象的__proto__成员指向了Func构造函数prototype成员对象
+* js里所有的对象都有proto属性(对象，函数)，指向构造该对象的构造函数的原型。
+* obj.__proto__初始化时指向Object,手动修改指向构造函数，此处示例的是Person
+**/
+obj.__proto__= Func.prototype;
 
-　　//4.当myNew执行时，在obj对象中执行构造函数Func
-　　Func.apply(obj,arguments);
+//4.当myNew执行时，在obj对象中执行构造函数Func
+Func.apply(obj,arguments);
 
-　　//5.返回创建的对象obj,这个返回的obj就是构造函数的实例
-　　return obj
+//5.返回创建的对象obj,这个返回的obj就是构造函数的实例
+return obj
 }
 var person = myNew(Person,'xiaoming',18)
 console.log(person, 'person') //{name: "xiaoming", age: 18}
