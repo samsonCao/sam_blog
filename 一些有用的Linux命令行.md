@@ -79,3 +79,6 @@ git config -e 打开git配置的文档,看起来大概是在这样的，可以�
 
 - 更新git本地分支和远程分支同步 git remote update origin --prune
 - 删除本地git仓库 rm -rf .git
+
+
+大牛整理的完整版Linux: https://github.com/jaywcjlove/linux-command
