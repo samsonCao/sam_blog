@@ -209,6 +209,7 @@ function.bind(thisArg[, arg1[, arg2[, ...]]])
 2. bind含义
 
 bind()方法创建一个新的函数，在调用时设置this关键字为提供的值。并在调用新函数时，将给定参数列表作为原函数的参数序列的前若干项。
+
 `注意bind和call、apply不同的是返回值是个新函数，并没有执行`
 
 3. bind体验
@@ -314,6 +315,7 @@ console.log(boundGetX()); // 42
 // boundGetX.prototype.value = '1';
 // console.log(module.getX.prototype.value) // '1'
 ```
+参考： https://github.com/mqyqingfeng/Blog/issues/12
 
 
 ### 4.new操作符内部实现
@@ -327,15 +329,12 @@ new 操作符的基本过程
 3.新对象增加构造函数的基本方法和属性。
 
 4.返回新对象
-
-
-    ```javascript
-    var obj = new Base();
-
-    var obj = {};  // 创建了一个空对象obj
-    obj.__proto__ = Base.prototype; // 将这个空对象的__proto__成员指向了Base函数对象prototype成员对象
-    Base.call(obj); //Base函数对象的this指针替换成obj，然后再调用Base函数，于是我们就给obj对象赋值了一个id成员变量，这个成员变量的值是”base”，
-    ```
+ ```javascript
+ var obj = new Base();
+ var obj = {};  // 创建了一个空对象obj
+ obj.__proto__ = Base.prototype; // 将这个空对象的__proto__成员指向了Base函数对象prototype成员对象
+ Base.call(obj); //Base函数对象的this指针替换成obj，然后再调用Base函数，于是我们就给obj对象赋值了一个id成员变量，这个成员变量的值是base
+```
 
 > 注意：返回的是新对象
 
