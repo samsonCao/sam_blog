@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20f2280d-97d2-425f-9b9d-e8390077f175" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JS中一些特殊方法的内部实现原理.md" beforeDir="false" afterPath="$PROJECT_DIR$/JS中一些特殊方法的内部实现原理.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.html" beforeDir="false" afterPath="$PROJECT_DIR$/demo.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -58,8 +56,8 @@
         <entry file="file://$PROJECT_DIR$/JS中一些特殊方法的内部实现原理.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="134">
-                <caret line="314" column="50" selection-start-line="314" selection-start-column="50" selection-end-line="314" selection-end-column="50" />
+              <first_editor relative-caret-position="251">
+                <caret line="316" lean-forward="true" selection-start-line="316" selection-end-line="316" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -415,15 +413,16 @@
       <workItem from="1556595745989" duration="3346000" />
       <workItem from="1556603134933" duration="4579000" />
       <workItem from="1556609880040" duration="130000" />
-      <workItem from="1556610594246" duration="4090000" />
+      <workItem from="1556610594246" duration="4284000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94554000" />
+    <option name="totallyTimeSpent" value="94748000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="55" y="23" width="1385" height="841" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1686217" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -943,8 +942,8 @@
     <entry file="file://$PROJECT_DIR$/JS中一些特殊方法的内部实现原理.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="134">
-            <caret line="314" column="50" selection-start-line="314" selection-start-column="50" selection-end-line="314" selection-end-column="50" />
+          <first_editor relative-caret-position="251">
+            <caret line="316" lean-forward="true" selection-start-line="316" selection-end-line="316" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />

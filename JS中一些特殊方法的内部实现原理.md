@@ -210,8 +210,6 @@ function.bind(thisArg[, arg1[, arg2[, ...]]])
 
 bind()方法创建一个新的函数，在调用时设置this关键字为提供的值。并在调用新函数时，将给定参数列表作为原函数的参数序列的前若干项。
 
-`注意bind和call、apply不同的是返回值是个新函数，并没有执行`
-
 3. bind体验
 ```javascript
 var module = {
@@ -315,6 +313,8 @@ console.log(boundGetX()); // 42
 // boundGetX.prototype.value = '1';
 // console.log(module.getX.prototype.value) // '1'
 ```
+`注意bind和call、apply不同的是返回值是个新函数，并没有执行`
+
 参考： https://github.com/mqyqingfeng/Blog/issues/12
 
 
