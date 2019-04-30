@@ -7,88 +7,31 @@
 <body>
 
 <script >
-var module = {
-  x: 42,
-  getX: function() {
-    return this.x;
-  }
+function myNew(){
+　  //1.拿到传入的参数中的第一个参数，即构造函数名Func
+　  var Func = [].shift.call(arguments);
+    console.log(Func)
+   if (typeof Func !== "function") {
+         throw new Error("myNew argument[0] - what is trying to be bound is not callable");
+   }
+　　//2.创建一个空对象obj
+   var obj = {};
+
+   /**
+   * 3.将这个空对象的__proto__成员指向了Func构造函数prototype成员对象
+   * js里所有的对象都有proto属性(对象，函数)，指向构造该对象的构造函数的原型。
+   * obj.__proto__初始化时指向Object,手动修改指向构造函数，此处示例的是Person
+   **/
+   obj.__proto__= Func.prototype;
+
+　　//4.当myNew执行时，在obj对象中执行构造函数Func
+　　Func.apply(obj,arguments);
+
+　　//5.返回创建的对象obj,这个返回的obj就是构造函数的实例
+　　return obj
 }
-
-Function.prototype.myBind = function (context) {
-    // 此处的context是module对象
-
-    if (typeof this !== "function") {
-      throw new Error("Function.prototype.bind - what is trying to be bound is not callable");
-    }
-
-    // 此处的this是getX函数
-    var self = this;
-    // 去掉第一个参数thisArg之后的剩余参数,组成一个数组[arg2,arg3,arg4....]
-    var args = Array.prototype.slice.call(arguments, 1);
-
-    // 函数声明的方式创建一个函数，
-    var samFunc = function () {};
-
-    var samBound = function () {
-        /**
-        * 此处的this是samBound执行上下文中的this,self是myBind执行作用域中的this
-        *
-        * 1.当作为构造函数(new出来有自己的作用域)时，this指向实例samBound{}，
-          self指向绑定函数module.getX{},
-
-        * 2.当作为普通函数时，this 指向 window,因为samBound最终是在window的作用域下执行的，
-          self指向绑定函数module.getX{}，此时结果为 false，当结果为 false 的时候，this 指向绑定的 context。
-        */
-
-        // instanceof判断一个实例this是否属于某种类型self
-        console.log(this, 'samBound-this')
-        console.log(self, 'samBound-self')
-        console.log(this instanceof self, 'istrue');
-        console.log(context, 'context')
-
-        // 返回绑定函数执行的结果
-        return self.apply(this instanceof self ? this : context, args.concat(Array.prototype.slice.call(arguments)));
-    }
-
-    /**
-    * 下面这段代码是精华
-    * 使用了原型模式继承用
-    * 把绑定函数this的prototype赋值给声明函数samFunc的prototype，
-    * 实例new samFunc()可以继承samFunc.prototype中的值
-    * 也就是继承self.prototype中的值
-    * 也就是继承getX中的值
-    */
-
-
-    samFunc.prototype = self.prototype;
-    samBound.prototype = new samFunc();
-    /**
-    * samBound的prototype指向了samFunc的实例，继承了samFunc的prototype中的方法
-    * samFunc的prototype指向了self.prototype，继承了self.prototype的方法，而self就是执行时的getX
-    * 通过new samFunc把self和samBound关联起来，同时又不至于共享prototype的属性和方法
-    */
-
-    /**
-    * 两行代码合成一行会出问题
-    * samBound.prototype = self.prototype;
-    */
-
-    // 返回构造函数bind
-    return samBound;
-
-}
-
-var boundGetX = module.getX.myBind(module, '1', '2');
-console.log(boundGetX()); // 42
-
-/**
-* samFunc.prototype = self.prototype;
-* samBound.prototype = new samFunc();
-* 两行代码合成一行会出问题
-* samBound.prototype = self.prototype;
-*/
-// boundGetX.prototype.value = '1';
-// console.log(module.getX.prototype.value) // '1'
+var person = myNew(Person,'xiaoming',18)
+console.log(person, 'person') //{name: "xiaoming", age: 18}
 
 </script>
 

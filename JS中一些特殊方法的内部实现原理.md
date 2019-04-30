@@ -1,7 +1,7 @@
 #### 此文必定是超级长文，里面的方法会逐个实现，敬请期待......
 
 
-### 1.call内部实现
+### 1.call模拟实现
 
 1. call语法
 ```javascript
@@ -37,7 +37,7 @@ var another = {
 person.eat.call(another, '99', '88', '77'); // eating/tom/eat
 ```
 
-4. call实现
+4. call模拟实现
 ```javascript
 /**
 * A.myCall(B) 做两件事
@@ -110,7 +110,7 @@ var another = {
 person.eat.myCall(another, '99', '88', '77'); // eating/tom/eat
 ```
 
-### 2.apply内部实现
+### 2.apply模拟实现
 
 
 1. apply语法
@@ -131,7 +131,7 @@ var min = Math.min.apply(null, numbers);
 console.log(min); // 2
 ```
 
-4. apply实现
+4. apply模拟实现
 ```javascript
 /**
 * A.myCall(B, []) 做两件事
@@ -199,7 +199,7 @@ console.info(array); // ["a", "b", 0, 1, 2]
 
 重要参考：https://www.zhihu.com/question/35787390
 
-### 3.bind内部实现
+### 3.bind模拟实现
 
 1. bind语法
 ```javascript
@@ -228,7 +228,7 @@ var boundGetX = unboundGetX.bind(module);
 console.log(boundGetX()); // 42
 ```
 
-4. bind实现
+4. bind模拟实现
 ```javascript
 var module = {
   x: 42,
@@ -281,8 +281,6 @@ Function.prototype.myBind = function (context) {
     * 也就是继承self.prototype中的值
     * 也就是继承getX中的值
     */
-
-
     samFunc.prototype = self.prototype;
     samBound.prototype = new samFunc();
     /**
@@ -318,22 +316,67 @@ console.log(boundGetX()); // 42
 参考： https://github.com/mqyqingfeng/Blog/issues/12
 
 
-### 4.new操作符内部实现
+### 4.new操作符模拟实现
 
-new 操作符的基本过程
+1. 含义
+
+执行某个声明的函数，并返回这个函数的一个实例
+
+2. 语法
+```javascript
+new constructor[([arguments])]
+```
+
+3. 体验
+```javascript
+function Car(make, model, year) {
+   this.make = make;
+   this.model = model;
+   this.year = year;
+}
+var mycar = new Car("Eagle", "Talon TSi", 1993);
+console.log(mycar); //Car {make: "Eagle", model: "Talon TSi", year: 1993}
+```
+
+new 操作符的内部执行过程基本过程
 
 1.创建一个新的空对象。
 
-2.将构造函数的作用域赋给它（即this指向它）。
+2.将构造函数的作用域赋给新对象（即this指向它）。
 
 3.新对象增加构造函数的基本方法和属性。
 
 4.返回新对象
  ```javascript
- var obj = new Base();
- var obj = {};  // 创建了一个空对象obj
- obj.__proto__ = Base.prototype; // 将这个空对象的__proto__成员指向了Base函数对象prototype成员对象
- Base.call(obj); //Base函数对象的this指针替换成obj，然后再调用Base函数，于是我们就给obj对象赋值了一个id成员变量，这个成员变量的值是base
+function Person(name,age){
+　　this.name = name;
+　　this.age = age;
+}
+function myNew(){
+　  //1.拿到传入的参数中的第一个参数，即构造函数名Func
+　  var Func = [].shift.call(arguments);
+    console.log(Func)
+   if (typeof Func !== "function") {
+         throw new Error("myNew argument[0] - what is trying to be bound is not callable");
+   }
+　　//2.创建一个空对象obj
+   var obj = {};
+
+   /**
+   * 3.将这个空对象的__proto__成员指向了Func构造函数prototype成员对象
+   * js里所有的对象都有proto属性(对象，函数)，指向构造该对象的构造函数的原型。
+   * obj.__proto__初始化时指向Object,手动修改指向构造函数，此处示例的是Person
+   **/
+   obj.__proto__= Func.prototype;
+
+　　//4.当myNew执行时，在obj对象中执行构造函数Func
+　　Func.apply(obj,arguments);
+
+　　//5.返回创建的对象obj,这个返回的obj就是构造函数的实例
+　　return obj
+}
+var person = myNew(Person,'xiaoming',18)
+console.log(person, 'person') //{name: "xiaoming", age: 18}
 ```
 
 > 注意：返回的是新对象
@@ -347,25 +390,25 @@ console.log( a == b ) // false
 // 因此a 和 b的指向完全不是同一个地址，当然不相等
 ```
 
-instanceof的内部实现
+instanceof的模拟实现
 
-JSON.stringify/JSON.parse内部实现
+JSON.stringify/JSON.parse模拟实现
 
 使用setTimeout实现setInterval
 
-class构造以及集成的低层实现
+class构造以及集成的模拟实现
 
-Set内部实现
+Set模拟实现
 
-Promise内部实现
+Promise模拟实现
 
-async/await内部实现
+async/await模拟实现
 
-Symbol类型实现
+Symbol模拟实现
 
-深拷贝内部实现
+深拷贝模拟实现
 
-树形结构数组改为一级结构实现
+树形结构数组改为一级结构模拟实现
 
 函数防抖实现
 
