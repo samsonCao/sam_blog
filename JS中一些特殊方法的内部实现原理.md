@@ -2,8 +2,42 @@
 
 
 ### 1.call内部实现
-call定义： call()方法在使用一个指定的this值和若干个指定的参数值的前提下调用某个函数或方法然后执行该方法。
 
+1. call语法
+```javascript
+fun.call(thisArg, arg1, arg2, ...)
+```
+
+2. call含义
+
+call()方法在使用一个指定的this值和若干个指定的参数值的前提下调用某个函数或方法然后执行该方法。
+
+3. call体验
+```javascript
+var person = {
+    name: 'sam',
+    eat: function(){
+        console.log('eating!');
+        console.log(this.name);
+        return 'eat';
+    }
+};
+
+var another = {
+	name: 'tom',
+	drink: function(){
+		console.log('drinking!');
+		console.log(this.name);
+		return 'drink'
+	}
+};
+
+// eat函数在another的作用域中执行
+// 因此返回eating, this.name指向的是another的name/tom
+person.eat.call(another, '99', '88', '77'); // eating/tom/eat
+```
+
+4. call实现
 ```javascript
 /**
 * A.myCall(B) 做两件事
@@ -77,6 +111,27 @@ person.eat.myCall(another, '99', '88', '77'); // eating/tom/eat
 ```
 
 ### 2.apply内部实现
+
+
+1. apply语法
+```javascript
+func.apply(thisArg, [argsArray])
+```
+
+2. apply含义
+
+apply() 方法调用一个具有给定this值的函数，以及作为一个数组（或类似数组对象）提供的参数。
+
+3. apply体验
+```javascript
+var numbers = [5, 6, 2, 3, 7];
+var min = Math.min.apply(null, numbers);
+
+// 获取数组最小值
+console.log(min); // 2
+```
+
+4. apply实现
 ```javascript
 /**
 * A.myCall(B, []) 做两件事
@@ -124,10 +179,142 @@ var another = {
 
 person.eat.myApply(another, ['999', '888', 4]);
 ```
+apply巧妙用例
+
+1. 获取一个数组的最大值
+```javascript
+// apply内部会把array数组转为参数列表在max函数的作用域内执行
+var max=Math.max.apply(null,array)
+```
+
+2. 数组合并
+```javascript
+var array = ['a', 'b'];
+var elements = [0, 1, 2];
+array.push.apply(array, elements);
+console.info(array); // ["a", "b", 0, 1, 2]
+```
+
+`注意：call()方法的作用和 apply() 方法类似，区别就是call()方法接受的是参数列表，而apply()方法接受的是一个参数数组。`
+
+重要参考：https://www.zhihu.com/question/35787390
 
 ### 3.bind内部实现
 
-重要参考：https://www.zhihu.com/question/35787390
+1. bind语法
+```javascript
+function.bind(thisArg[, arg1[, arg2[, ...]]])
+```
+
+2. bind含义
+
+bind()方法创建一个新的函数，在调用时设置this关键字为提供的值。并在调用新函数时，将给定参数列表作为原函数的参数序列的前若干项。
+`注意bind和call、apply不同的是返回值是个新函数，并没有执行`
+
+3. bind体验
+```javascript
+var module = {
+  x: 42,
+  getX: function() {
+    return this.x;
+  }
+}
+
+var unboundGetX = module.getX;
+// window下面是没有x属性的，因此unboundGetX在window执行上下文执行时输出undefined
+console.log(unboundGetX()); // undefined
+
+// 让unboundGetX在module的作用域下执行，this.x就是module作用域下的x=> 42
+var boundGetX = unboundGetX.bind(module);
+console.log(boundGetX()); // 42
+```
+
+4. bind实现
+```javascript
+var module = {
+  x: 42,
+  getX: function() {
+    return this.x;
+  }
+}
+
+Function.prototype.myBind = function (context) {
+    // 此处的context是module对象
+
+    if (typeof this !== "function") {
+      throw new Error("Function.prototype.bind - what is trying to be bound is not callable");
+    }
+
+    // 此处的this是getX函数
+    var self = this;
+    // 去掉第一个参数thisArg之后的剩余参数,组成一个数组[arg2,arg3,arg4....]
+    var args = Array.prototype.slice.call(arguments, 1);
+
+    // 函数声明的方式创建一个函数，
+    var samFunc = function () {};
+
+    var samBound = function () {
+        /**
+        * 此处的this是samBound执行上下文中的this,self是myBind执行作用域中的this
+        *
+        * 1.当作为构造函数(new出来有自己的作用域)时，this指向实例samBound{}，
+          self指向绑定函数module.getX{},
+
+        * 2.当作为普通函数时，this 指向 window,因为samBound最终是在window的作用域下执行的，
+          self指向绑定函数module.getX{}，此时结果为 false，当结果为 false 的时候，this 指向绑定的 context。
+        */
+
+        // instanceof判断一个实例this是否属于某种类型self
+        console.log(this, 'samBound-this')
+        console.log(self, 'samBound-self')
+        console.log(this instanceof self, 'istrue');
+        console.log(context, 'context')
+
+        // 返回绑定函数执行的结果
+        return self.apply(this instanceof self ? this : context, args.concat(Array.prototype.slice.call(arguments)));
+    }
+
+    /**
+    * 下面这段代码是精华
+    * 使用了原型模式继承用
+    * 把绑定函数this的prototype赋值给声明函数samFunc的prototype，
+    * 实例new samFunc()可以继承samFunc.prototype中的值
+    * 也就是继承self.prototype中的值
+    * 也就是继承getX中的值
+    */
+
+
+    samFunc.prototype = self.prototype;
+    samBound.prototype = new samFunc();
+    /**
+    * samBound的prototype指向了samFunc的实例，继承了samFunc的prototype中的方法
+    * samFunc的prototype指向了self.prototype，继承了self.prototype的方法，而self就是执行时的getX
+    * 通过new samFunc把self和samBound关联起来，同时又不至于共享prototype的属性和方法
+    */
+
+    /**
+    * 两行代码合成一行会出问题
+    * samBound.prototype = self.prototype;
+    */
+
+    // 返回构造函数bind
+    return samBound;
+
+}
+
+var boundGetX = module.getX.myBind(module, '1', '2');
+console.log(boundGetX()); // 42
+
+/**
+* samFunc.prototype = self.prototype;
+* samBound.prototype = new samFunc();
+* 两行代码合成一行会出问题
+* samBound.prototype = self.prototype;
+*/
+// boundGetX.prototype.value = '1';
+// console.log(module.getX.prototype.value) // '1'
+```
+
 
 ### 4.new操作符内部实现
 
