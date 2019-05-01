@@ -390,7 +390,80 @@ console.log( a == b ) // false
 // 因此a 和 b的指向完全不是同一个地址，当然不相等
 ```
 
-instanceof的模拟实现
+### 5.instanceof的模拟实现
+1. instanceof语法
+```javascript
+object instanceof constructor
+```
+
+2. instanceof含义
+
+`instanceof 运算符用来检测 constructor.prototype 是否存在于参数 object 的原型链上。`
+
+instanceof运算符用于测试构造函数的prototype属性是否出现在对象的`原型链中的任何位置`
+
+3. instanceof体验
+```javascript
+// 定义构造函数
+function A(){};
+
+var o = new A();
+
+// o 是 A的实例
+// Object.getPrototypeOf(o) === A.prototype
+o instanceof A; // true
+
+// 参数o的原型链上有Object.prototype,因为A也是Object的实例
+// Object.prototype.isPrototypeOf(o)返回true
+o instanceof Object; // true
+
+A.prototype instanceof Object // true,同上
+
+/**
+*
+* 更改A.prototype指向一个空对象
+* 实例化此时的A
+*/
+A.prototype = {};
+var o2 = new A();
+
+o2 instanceof A; // true
+
+// A.prototype指向了一个空对象,这个空对象不在o的原型链上.
+o instanceof A; // false
+```
+
+4. instanceof模拟实现
+```javascript
+function instance_of(left, right) {
+    // 取右表达式的 prototype 值
+    let rightProto = right.prototype;
+
+    // 取左表达式的__proto__值
+    left = left.__proto__;
+    while (true) {
+    	if (left === null) {
+            return false;
+        }
+        if (left === rightProto) {
+            return true;
+        }
+
+        // 上面两个条件都不满足时，找上级的__proto__，一直往上找，直到找到null
+        left = left.__proto__
+    }
+}
+
+```
+
+`如果表达式 obj instanceof Foo 返回true，则并不意味着该表达式会永远返回true，
+因为Foo.prototype属性的值有可能会改变，改变之后的值很有可能不存在于obj的原型链上，
+这时原表达式的值就会成为false。另外一种情况下，原表达式的值也会改变，
+就是改变对象obj的原型链的情况，虽然在目前的ES规范中，我们只能读取对象的原型而不能改变它，
+但借助于非标准的__proto__伪属性，是可以实现的。
+比如执行obj.__proto__ = {}之后，obj instanceof Foo就会返回false了。`
+
+参考：https://juejin.im/post/5b0b9b9051882515773ae714
 
 JSON.stringify/JSON.parse模拟实现
 
