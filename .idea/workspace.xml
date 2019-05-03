@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="20f2280d-97d2-425f-9b9d-e8390077f175" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JS中一些特殊方法的内部实现原理.md" beforeDir="false" afterPath="$PROJECT_DIR$/JS中一些特殊方法的内部实现原理.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS中13个关键词内部实现原理.md" beforeDir="false" afterPath="$PROJECT_DIR$/JS中13个关键词内部实现原理.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo.html" beforeDir="false" afterPath="$PROJECT_DIR$/demo.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,18 +20,18 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" selection-start-line="10" selection-end-line="30" selection-end-column="10" />
+            <state relative-caret-position="395">
+              <caret line="46" column="1" lean-forward="true" selection-start-line="9" selection-end-line="46" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/JS中一些特殊方法的内部实现原理.md">
+        <entry file="file://$PROJECT_DIR$/JS中13个关键词内部实现原理.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="300">
-                <caret line="452" column="12" lean-forward="true" selection-start-line="452" selection-start-column="12" selection-end-line="452" selection-end-column="12" />
+              <first_editor relative-caret-position="240">
+                <caret line="494" column="13" selection-start-line="494" selection-start-column="13" selection-end-line="494" selection-end-column="13" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -98,7 +99,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/创建对象、继承、设计模式/1.创建对象的7种模式/2构造函数模式.md" />
         <option value="$PROJECT_DIR$/创建对象、继承、设计模式/1.创建对象的7种模式/1工厂模式.md" />
         <option value="$PROJECT_DIR$/创建对象、继承、设计模式/1.创建对象的7种模式/3原型模式.md" />
         <option value="$PROJECT_DIR$/创建对象、继承、设计模式/1.创建对象的7种模式/5动态原型模式.md" />
@@ -147,8 +147,9 @@
         <option value="$PROJECT_DIR$/数组和数组对象深度操作.md" />
         <option value="$PROJECT_DIR$/一些有用的Linux命令行.md" />
         <option value="$PROJECT_DIR$/js中的New操作符.md" />
-        <option value="$PROJECT_DIR$/demo.html" />
         <option value="$PROJECT_DIR$/JS中一些特殊方法的内部实现原理.md" />
+        <option value="$PROJECT_DIR$/demo.html" />
+        <option value="$PROJECT_DIR$/JS中13个关键词内部实现原理.md" />
       </list>
     </option>
   </component>
@@ -176,6 +177,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -183,27 +185,10 @@
               <item name="sam_blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="sam_blog" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="sam_blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sam_blog" type="462c0819:PsiDirectoryNode" />
-              <item name="函数相关" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sam_blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sam_blog" type="462c0819:PsiDirectoryNode" />
-              <item name="创建对象、继承、设计模式" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sam_blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sam_blog" type="462c0819:PsiDirectoryNode" />
-              <item name="创建对象、继承、设计模式" type="462c0819:PsiDirectoryNode" />
-              <item name="1.创建对象的7种模式" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -379,12 +364,14 @@
       <workItem from="1556609880040" duration="130000" />
       <workItem from="1556610594246" duration="5037000" />
       <workItem from="1556617113438" duration="1766000" />
-      <workItem from="1556721854073" duration="1524000" />
+      <workItem from="1556721854073" duration="1788000" />
+      <workItem from="1556892071002" duration="324000" />
+      <workItem from="1556893042986" duration="1196000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98791000" />
+    <option name="totallyTimeSpent" value="100575000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="55" y="23" width="1385" height="841" extended-state="0" />
@@ -402,7 +389,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.20694259" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.08678237" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -874,13 +861,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" selection-start-line="10" selection-end-line="30" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/函数相关/2.this详解10种情况和示例.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
@@ -905,11 +885,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JS中一些特殊方法的内部实现原理.md">
+    <entry file="file://$PROJECT_DIR$/demo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="395">
+          <caret line="46" column="1" lean-forward="true" selection-start-line="9" selection-end-line="46" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS中13个关键词内部实现原理.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="300">
-            <caret line="452" column="12" lean-forward="true" selection-start-line="452" selection-start-column="12" selection-end-line="452" selection-end-column="12" />
+          <first_editor relative-caret-position="240">
+            <caret line="494" column="13" selection-start-line="494" selection-start-column="13" selection-end-line="494" selection-end-column="13" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
