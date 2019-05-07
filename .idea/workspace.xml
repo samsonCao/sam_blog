@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20f2280d-97d2-425f-9b9d-e8390077f175" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JS中13个关键词内部实现原理.md" beforeDir="false" afterPath="$PROJECT_DIR$/JS中13个关键词内部实现原理.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -81,8 +80,8 @@
         <entry file="file://$PROJECT_DIR$/JS中13个关键词内部实现原理.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="147">
-                <caret line="565" lean-forward="true" selection-start-line="565" selection-end-line="565" />
+              <first_editor relative-caret-position="324">
+                <caret line="852" column="7" selection-start-line="852" selection-start-column="7" selection-end-line="852" selection-end-column="7" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -462,12 +461,12 @@
       <workItem from="1557216014614" duration="192000" />
       <workItem from="1557231916499" duration="1471000" />
       <workItem from="1557234866556" duration="598000" />
-      <workItem from="1557239158415" duration="1967000" />
+      <workItem from="1557239158415" duration="2353000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108333000" />
+    <option name="totallyTimeSpent" value="108719000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="52" y="23" width="1380" height="877" extended-state="0" />
@@ -984,8 +983,8 @@
     <entry file="file://$PROJECT_DIR$/JS中13个关键词内部实现原理.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="147">
-            <caret line="565" lean-forward="true" selection-start-line="565" selection-end-line="565" />
+          <first_editor relative-caret-position="324">
+            <caret line="852" column="7" selection-start-line="852" selection-start-column="7" selection-end-line="852" selection-end-column="7" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
