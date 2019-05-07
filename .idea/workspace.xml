@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20f2280d-97d2-425f-9b9d-e8390077f175" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/es6的class实现原理解析.md" beforeDir="false" afterPath="$PROJECT_DIR$/es6的class实现原理解析.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -95,8 +94,8 @@
         <entry file="file://$PROJECT_DIR$/es6的class实现原理解析.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="-1694">
-                <caret line="72" column="3" selection-start-line="72" selection-start-column="3" selection-end-line="72" selection-end-column="3" />
+              <first_editor relative-caret-position="243">
+                <caret line="211" column="13" selection-start-line="211" selection-start-column="13" selection-end-line="211" selection-end-column="13" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -162,9 +161,11 @@
       <find>prototype.png</find>
       <find>_inherits</find>
       <find>_setPrototypeOf</find>
-      <find>_createClass</find>
-      <find>_possibleConstructorReturn</find>
       <find>constructor</find>
+      <find>_possibleConstructorReturn</find>
+      <find>_classCallCheck</find>
+      <find>_instanceof</find>
+      <find>_createClass</find>
     </findStrings>
     <replaceStrings>
       <replace>let</replace>
@@ -460,12 +461,12 @@
       <workItem from="1557216014614" duration="192000" />
       <workItem from="1557231916499" duration="1471000" />
       <workItem from="1557234866556" duration="598000" />
-      <workItem from="1557239158415" duration="670000" />
+      <workItem from="1557239158415" duration="1449000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107036000" />
+    <option name="totallyTimeSpent" value="107815000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="52" y="23" width="1380" height="877" extended-state="0" />
@@ -483,7 +484,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.072611466" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.13503185" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -982,8 +983,8 @@
     <entry file="file://$PROJECT_DIR$/es6的class实现原理解析.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-1694">
-            <caret line="72" column="3" selection-start-line="72" selection-start-column="3" selection-end-line="72" selection-end-column="3" />
+          <first_editor relative-caret-position="243">
+            <caret line="211" column="13" selection-start-line="211" selection-start-column="13" selection-end-line="211" selection-end-column="13" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />

@@ -28,6 +28,9 @@ class Parent {
     thiscall() {
       console.log(b)
         return 8;
+    };
+    static fn(){
+        console.log('static')
     }
 }
 
@@ -101,12 +104,12 @@ function _assertThisInitialized(self) {
 // 可以看出extend背后是通过js的原型链实现的。
 // 其中在class b extends a中要将a传入b中。
 function _inherits(subClass, superClass) {
- // 确保superClass为function
+    // 检测父类是否可继承，确保superClass为function
     if (typeof superClass !== "function" && superClass !== null) {
         throw new TypeError("Super expression must either be null or a function");
     }
      // subClass.prototype的[[prototype]]关联到superClass superClass.prototype
-        // 给subClass添加constructor这个属性
+     // 使子类继承父类的属性，并且将constructor指向子类的构造函数
     subClass.prototype = Object.create(superClass && superClass.prototype, {
         constructor: {
             value: subClass,
@@ -127,6 +130,7 @@ function _setPrototypeOf(o, p) {
     return _setPrototypeOf(o, p);
 }
 
+// 检测左边的是右边的实例，说明是new出来的
 function _instanceof(left, right) {
     if (right != null && typeof Symbol !== "undefined" && right[Symbol.hasInstance]) {
         return right[Symbol.hasInstance](left);
@@ -135,7 +139,7 @@ function _instanceof(left, right) {
     }
 }
 
-//
+//类型检测，检测对象是否是new出来的
 function _classCallCheck(instance, Constructor) {
     if (!_instanceof(instance, Constructor)) {
         throw new TypeError("Cannot call a class as a function");
@@ -153,8 +157,12 @@ function _defineProperties(target, props) {
 
 // class实现原理
 // 创建类基本属性和静态属性此处是Parent添加方法render...
+// function _createClass(目标对象, 共有方法数组, 私有方法数组) {}
 function _createClass(Constructor, protoProps, staticProps) {
+    // 共有方法prototype原型对象上
     if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+
+    // 私有方法写在了类上只有通过类才可以调用，实例化对象无法调用
     if (staticProps) _defineProperties(Constructor, staticProps);
     return Constructor;
 }
@@ -199,7 +207,14 @@ function () {
       console.log(b);
       return 8;
     }
-  }]);
+  }],[
+    {
+     key: "fn",
+     value: function fn() {
+        console.log('static');
+     }
+    }]
+   );
 
   return Parent;
 }(); //_inherits(Child, _Parent);
