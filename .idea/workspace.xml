@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20f2280d-97d2-425f-9b9d-e8390077f175" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/es6的class实现原理解析.md" beforeDir="false" afterPath="$PROJECT_DIR$/es6的class实现原理解析.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS中13个关键词内部实现原理.md" beforeDir="false" afterPath="$PROJECT_DIR$/JS中13个关键词内部实现原理.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -76,12 +77,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/JS中13个关键词内部实现原理.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="10849">
-                <caret line="571" column="121" selection-start-line="571" selection-start-column="121" selection-end-line="571" selection-end-column="121" />
+              <first_editor relative-caret-position="147">
+                <caret line="565" lean-forward="true" selection-start-line="565" selection-end-line="565" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -90,12 +91,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/es6的class实现原理解析.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="243">
-                <caret line="211" column="13" selection-start-line="211" selection-start-column="13" selection-end-line="211" selection-end-column="13" />
+              <first_editor relative-caret-position="133">
+                <caret line="7" column="10" selection-end-line="250" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -226,11 +227,11 @@
         <option value="$PROJECT_DIR$/js中的New操作符.md" />
         <option value="$PROJECT_DIR$/JS中一些特殊方法的内部实现原理.md" />
         <option value="$PROJECT_DIR$/函数防抖和函数节流.html" />
-        <option value="$PROJECT_DIR$/JS中13个关键词内部实现原理.md" />
         <option value="$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的6种方式/2.借用构造函数继承.md" />
         <option value="$PROJECT_DIR$/创建对象、继承、设计模式/原型和原型链.md" />
         <option value="$PROJECT_DIR$/demo.html" />
         <option value="$PROJECT_DIR$/es6的class实现原理解析.md" />
+        <option value="$PROJECT_DIR$/JS中13个关键词内部实现原理.md" />
       </list>
     </option>
   </component>
@@ -461,12 +462,12 @@
       <workItem from="1557216014614" duration="192000" />
       <workItem from="1557231916499" duration="1471000" />
       <workItem from="1557234866556" duration="598000" />
-      <workItem from="1557239158415" duration="1449000" />
+      <workItem from="1557239158415" duration="1967000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="107815000" />
+    <option name="totallyTimeSpent" value="108333000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="52" y="23" width="1380" height="877" extended-state="0" />
@@ -937,18 +938,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JS中13个关键词内部实现原理.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="10849">
-            <caret line="571" column="121" selection-start-line="571" selection-start-column="121" selection-end-line="571" selection-end-column="121" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/函数防抖和函数节流.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -983,8 +972,20 @@
     <entry file="file://$PROJECT_DIR$/es6的class实现原理解析.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="243">
-            <caret line="211" column="13" selection-start-line="211" selection-start-column="13" selection-end-line="211" selection-end-column="13" />
+          <first_editor relative-caret-position="133">
+            <caret line="7" column="10" selection-end-line="250" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JS中13个关键词内部实现原理.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="147">
+            <caret line="565" lean-forward="true" selection-start-line="565" selection-end-line="565" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
