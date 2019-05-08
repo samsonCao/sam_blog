@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="20f2280d-97d2-425f-9b9d-e8390077f175" name="Default Changelist" comment="" />
+    <list default="true" id="20f2280d-97d2-425f-9b9d-e8390077f175" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/JS数据类型的深度解析.md" beforeDir="false" afterPath="$PROJECT_DIR$/JS数据类型的深度解析.md" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -45,8 +47,8 @@
         <entry file="file://$PROJECT_DIR$/JS数据类型的深度解析.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="855">
-                <caret line="153" column="3" selection-start-line="153" selection-start-column="3" selection-end-line="153" selection-end-column="3" />
+              <first_editor relative-caret-position="179">
+                <caret line="117" selection-start-line="117" selection-end-line="117" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -174,6 +176,7 @@
       <find>_instanceof</find>
       <find>_createClass</find>
       <find>red</find>
+      <find>color</find>
     </findStrings>
     <replaceStrings>
       <replace>let</replace>
@@ -471,12 +474,12 @@
       <workItem from="1557234866556" duration="598000" />
       <workItem from="1557239158415" duration="2489000" />
       <workItem from="1557314858271" duration="556000" />
-      <workItem from="1557322022168" duration="2061000" />
+      <workItem from="1557322022168" duration="2318000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="111472000" />
+    <option name="totallyTimeSpent" value="111729000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="23" width="1386" height="877" extended-state="6" />
@@ -996,8 +999,8 @@
     <entry file="file://$PROJECT_DIR$/JS数据类型的深度解析.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="855">
-            <caret line="153" column="3" selection-start-line="153" selection-start-column="3" selection-end-line="153" selection-end-column="3" />
+          <first_editor relative-caret-position="179">
+            <caret line="117" selection-start-line="117" selection-end-line="117" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
