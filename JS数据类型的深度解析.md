@@ -152,5 +152,4 @@ console.log( typeof objNum.toString() ); // string
 
 console.log( typeof objStr.toString() ); // string
 ```
-5、总结
 
