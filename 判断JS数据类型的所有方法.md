@@ -15,6 +15,7 @@ Object.prototype.toString.call(null);               // '[object Null]'
 Object.prototype.toString.call(undefined);          // '[object Undefined]'
 Object.prototype.toString.call(true);               //'[object Boolean]'
 Object.prototype.toString.call(document.getElementsByTagName('body')); `
+Object.prototype.toString.call([]).slice(8, -1) // 'Array'
 ```
 ```javascript
 [object HTMLCollection]'html节点类型 此处是判断对象是不是dom

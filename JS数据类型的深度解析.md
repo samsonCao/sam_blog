@@ -1,6 +1,6 @@
 - 基本类型（值类型或者原始类型）： Number、Boolean、String、NULL、Undefined以及ES6的Symbol
 
-- 引用类型：Object、Array、Function、Date等
+- 引用类型：只有一个Object(Array、Function、Date等都是Object的`子类`)
 
 - 在内存中的位置不同
 
@@ -23,8 +23,8 @@
 和原数据是否指向同一对象
 
 - 浅拷贝
-数组常用的浅拷贝方法有slice,concat,Array.from() ,以及es6的析构
-对象常用的浅拷贝方法Object.assign(),es6析构
+数组常用的浅拷贝方法有slice,concat,Array.from() ,以及es6的结构[...a, ...b]
+对象常用的浅拷贝方法Object.assign(),es6结构
 
 我们自己实现一个浅拷贝
 
@@ -95,6 +95,5 @@ console.log(person.name); //laowang
 实际上，当定义 obj = new Object()时，此时的obj是一个新的局部变量，和函数括号内形参obj已经不是同一个东西了
 这是一个局部变量了。而这个变量会在函数执行结束后销毁)
 
-Object.prototype.toString.call([]).slice(8, -1)有兴趣的同学可以看一下这个是干什么的
 5、总结
 
