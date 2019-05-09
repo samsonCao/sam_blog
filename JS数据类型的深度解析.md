@@ -1,4 +1,10 @@
-- 基本类型（值类型或者原始类型）： Number、Boolean、String、NULL、Undefined以及ES6的Symbol
+- 基本类型（值类型或者原始类型）：
+    Undefined 未定义，任何变量在赋值前是 Undefined 类型、值为 undefined.为了避免无意中被篡改，我建议使用 void 0 来获取 undefined
+    NULL 定义了但为空
+    Number、 比较浮点数是否相等的方法  `console.log( Math.abs(0.1 + 0.2 - 0.3) <= Number.EPSILON);`
+    Boolean、
+    String、
+    以及ES6的Symbol
 
 - 引用类型：只有一个Object(Array、Function、Date等都是Object的`子类`)
 
