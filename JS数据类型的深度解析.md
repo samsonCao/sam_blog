@@ -107,6 +107,8 @@ var deepCopy = function(obj) {
     return newObj;
 }
 ```
+------
+### 装箱和拆箱操作
 
 ##### 4.基本类型有装箱操作(JS隐式类型转换的一种情况)
 - 把基本数据类型转换为对应的引用类型的操作称为装箱
@@ -140,6 +142,10 @@ s1 = null;
 
 > 对象到 String 和 Number 的转换都遵循“先拆箱再转换”的规则。通过拆箱转换，把对象变成基本类型，再从基本类型转换为对应的 String 或者 Number。
 ```javascript
+var value = "25";
+
+var number = Number(value); //转型函数 alert(typeof number); //"number"
+
 var objNum = new Number(888);
 
 var objStr =new String("888");
