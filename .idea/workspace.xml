@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20f2280d-97d2-425f-9b9d-e8390077f175" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Image/TCP.TPtransfer.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Image/three.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/TCP/TP和HTTP.md" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/[科普]14种常用的http状态码介绍.md" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/[科普]为什么https比http安全.md" afterDir="false" />
@@ -94,8 +96,8 @@
         <entry file="file://$PROJECT_DIR$/[科普]为什么https比http安全.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="336">
-                <caret line="165" column="23" selection-start-line="165" selection-start-column="23" selection-end-line="165" selection-end-column="23" />
+              <first_editor relative-caret-position="372">
+                <caret line="169" selection-start-line="169" selection-end-line="169" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -487,12 +489,12 @@
       <workItem from="1557405996149" duration="42000" />
       <workItem from="1557539208025" duration="222000" />
       <workItem from="1557723850744" duration="177000" />
-      <workItem from="1557726970596" duration="8646000" />
+      <workItem from="1557726970596" duration="8986000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124141000" />
+    <option name="totallyTimeSpent" value="124481000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="53" y="23" width="1387" height="877" extended-state="6" />
@@ -1037,8 +1039,8 @@
     <entry file="file://$PROJECT_DIR$/[科普]为什么https比http安全.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="336">
-            <caret line="165" column="23" selection-start-line="165" selection-start-column="23" selection-end-line="165" selection-end-column="23" />
+          <first_editor relative-caret-position="372">
+            <caret line="169" selection-start-line="169" selection-end-line="169" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
