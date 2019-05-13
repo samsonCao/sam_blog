@@ -64,7 +64,7 @@ http协议无法证明通信的报文完整性，因此，请求或者响应在�
 防止篡改：常用的方法有MD5和SHA-1等散列值校验的方法，以及来确认文件的数字签名方法
 
 
-
+------
 ### HTTP+加密+认证+完整性保护=HTTPS
 
 1. 通常把添加了加密和身份认证机制的http协议称为https（HTTP Secure）；证书可证明服务器或者客户端的身份
@@ -170,4 +170,5 @@ HTTPS使用SSL（Secure Socket Layer：安全套接字层）和TLS（Transport L
 非敏感信息使用HTTP通信，包含个人敏感信息用HTTPS
 
 参考： https://www.cnblogs.com/imyalost/p/6233191.html
+
 参考：《图解HTTP》
