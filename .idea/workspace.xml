@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20f2280d-97d2-425f-9b9d-e8390077f175" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Image/TCP.TPtransfer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Image/three.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TCP/TP和HTTP.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/[科普]14种常用的http状态码介绍.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/[科普]为什么https比http安全.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/收录一些优秀的文章链接.md" beforeDir="false" afterPath="$PROJECT_DIR$/收录一些优秀的文章链接.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/[科普]14种常用的http状态码介绍.md" beforeDir="false" afterPath="$PROJECT_DIR$/[科普]14种常用的http状态码介绍.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -78,12 +71,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/[科普]14种常用的http状态码介绍.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="179">
-                <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
+              <first_editor relative-caret-position="311">
+                <caret line="95" column="5" selection-start-line="95" selection-start-column="5" selection-end-line="95" selection-end-column="5" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -92,12 +85,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/[科普]为什么https比http安全.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="372">
-                <caret line="169" selection-start-line="169" selection-end-line="169" />
+              <first_editor relative-caret-position="340">
+                <caret line="66" column="6" selection-start-line="66" selection-start-column="6" selection-end-line="66" selection-end-column="6" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -251,8 +244,8 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/TCP/TP和HTTP.md" />
         <option value="$PROJECT_DIR$/http状态码介绍.md" />
-        <option value="$PROJECT_DIR$/[科普]14种常用的http状态码介绍.md" />
         <option value="$PROJECT_DIR$/[科普]为什么https比http安全.md" />
+        <option value="$PROJECT_DIR$/[科普]14种常用的http状态码介绍.md" />
       </list>
     </option>
   </component>
@@ -489,12 +482,12 @@
       <workItem from="1557405996149" duration="42000" />
       <workItem from="1557539208025" duration="222000" />
       <workItem from="1557723850744" duration="177000" />
-      <workItem from="1557726970596" duration="8986000" />
+      <workItem from="1557726970596" duration="9226000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124481000" />
+    <option name="totallyTimeSpent" value="124721000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="53" y="23" width="1387" height="877" extended-state="6" />
@@ -1024,11 +1017,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/[科普]14种常用的http状态码介绍.md">
+    <entry file="file://$PROJECT_DIR$/[科普]为什么https比http安全.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="179">
-            <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
+          <first_editor relative-caret-position="340">
+            <caret line="66" column="6" selection-start-line="66" selection-start-column="6" selection-end-line="66" selection-end-column="6" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
@@ -1036,11 +1029,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/[科普]为什么https比http安全.md">
+    <entry file="file://$PROJECT_DIR$/[科普]14种常用的http状态码介绍.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="372">
-            <caret line="169" selection-start-line="169" selection-end-line="169" />
+          <first_editor relative-caret-position="311">
+            <caret line="95" column="5" selection-start-line="95" selection-start-column="5" selection-end-line="95" selection-end-column="5" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
