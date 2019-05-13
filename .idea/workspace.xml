@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20f2280d-97d2-425f-9b9d-e8390077f175" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/创建对象、继承、设计模式/3.23种设计模式/1.创建型--工厂方法模式.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/创建对象、继承、设计模式/3.23种设计模式/2.创建型--简单工厂模式.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/创建对象、继承、设计模式/3.23种设计模式/3.创建类--抽象工厂模式.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JS数据类型的深度解析.md" beforeDir="false" afterPath="$PROJECT_DIR$/JS数据类型的深度解析.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/创建对象、继承、设计模式/3.23种设计模式/发布订阅模式.js" beforeDir="false" afterPath="$PROJECT_DIR$/创建对象、继承、设计模式/3.23种设计模式/发布订阅模式.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/基本包装类型.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/创建对象、继承、设计模式/1.创建对象的7种模式/1工厂模式.md" beforeDir="false" afterPath="$PROJECT_DIR$/创建对象、继承、设计模式/1.创建对象的7种模式/1工厂模式.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/创建对象、继承、设计模式/3.23种设计模式/1.创建型--工厂方法模式.md" beforeDir="false" afterPath="$PROJECT_DIR$/创建对象、继承、设计模式/3.23种设计模式/1.创建型--工厂方法模式.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/创建对象、继承、设计模式/3.23种设计模式/2.创建型--简单工厂模式.md" beforeDir="false" afterPath="$PROJECT_DIR$/创建对象、继承、设计模式/3.23种设计模式/2.创建型--简单工厂模式.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -62,8 +58,22 @@
         <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/3.23种设计模式/2.创建型--简单工厂模式.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="44">
-                <caret line="3" column="67" selection-start-line="3" selection-start-column="67" selection-end-line="3" selection-end-column="67" />
+              <first_editor relative-caret-position="402">
+                <caret line="101" selection-start-line="101" selection-end-line="101" />
+              </first_editor>
+              <second_editor>
+                <markdownNavigatorState />
+              </second_editor>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/1.创建对象的7种模式/1工厂模式.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="247">
+                <caret line="13" column="12" lean-forward="true" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -90,8 +100,8 @@
         <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/3.23种设计模式/1.创建型--工厂方法模式.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="251">
-                <caret line="35" column="28" selection-end-line="47" />
+              <first_editor relative-caret-position="517">
+                <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -130,6 +140,7 @@
       <find>font</find>
       <find>Image</find>
       <find>--</find>
+      <find>per</find>
     </findStrings>
     <replaceStrings>
       <replace>let</replace>
@@ -137,6 +148,7 @@
       <replace>```</replace>
       <replace>-</replace>
       <replace>--</replace>
+      <replace>obj</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -145,7 +157,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/函数相关/3.闭包.md" />
         <option value="$PROJECT_DIR$/函数相关/3闭包详解.md" />
         <option value="$PROJECT_DIR$/函数相关/3.闭包详解.md" />
         <option value="$PROJECT_DIR$/中高级前端面试题汇总.md" />
@@ -193,9 +204,10 @@
         <option value="$PROJECT_DIR$/JS数据类型的深度解析.md" />
         <option value="$PROJECT_DIR$/创建对象、继承、设计模式/3.23种设计模式/发布订阅模式.js" />
         <option value="$PROJECT_DIR$/创建对象、继承、设计模式/3.23种设计模式/1.创建型--简单工厂模式.md" />
+        <option value="$PROJECT_DIR$/创建对象、继承、设计模式/3.23种设计模式/3.创建类--抽象工厂模式.md" />
+        <option value="$PROJECT_DIR$/创建对象、继承、设计模式/1.创建对象的7种模式/1工厂模式.md" />
         <option value="$PROJECT_DIR$/创建对象、继承、设计模式/3.23种设计模式/1.创建型--工厂方法模式.md" />
         <option value="$PROJECT_DIR$/创建对象、继承、设计模式/3.23种设计模式/2.创建型--简单工厂模式.md" />
-        <option value="$PROJECT_DIR$/创建对象、继承、设计模式/3.23种设计模式/3.创建类--抽象工厂模式.md" />
       </list>
     </option>
   </component>
@@ -234,6 +246,12 @@
               <item name="sam_blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="sam_blog" type="462c0819:PsiDirectoryNode" />
               <item name="创建对象、继承、设计模式" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sam_blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sam_blog" type="462c0819:PsiDirectoryNode" />
+              <item name="创建对象、继承、设计模式" type="462c0819:PsiDirectoryNode" />
+              <item name="1.创建对象的7种模式" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sam_blog" type="b2602c69:ProjectViewProjectNode" />
@@ -443,12 +461,12 @@
       <workItem from="1557405996149" duration="42000" />
       <workItem from="1557539208025" duration="222000" />
       <workItem from="1557723850744" duration="177000" />
-      <workItem from="1557726970596" duration="11635000" />
+      <workItem from="1557726970596" duration="12559000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127130000" />
+    <option name="totallyTimeSpent" value="128054000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="53" y="23" width="1387" height="877" extended-state="6" />
@@ -477,23 +495,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/函数相关/7.函数相关总结.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor>
-            <caret column="11" selection-start-column="11" selection-end-column="11" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BOM浏览器对象模型/1.window对象.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
@@ -951,11 +952,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/1.创建对象的7种模式/1工厂模式.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="247">
+            <caret line="13" column="12" lean-forward="true" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/3.23种设计模式/1.创建型--工厂方法模式.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="251">
-            <caret line="35" column="28" selection-end-line="47" />
+          <first_editor relative-caret-position="517">
+            <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
@@ -966,8 +979,8 @@
     <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/3.23种设计模式/2.创建型--简单工厂模式.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="44">
-            <caret line="3" column="67" selection-start-line="3" selection-start-column="67" selection-end-line="3" selection-end-column="67" />
+          <first_editor relative-caret-position="402">
+            <caret line="101" selection-start-line="101" selection-end-line="101" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
