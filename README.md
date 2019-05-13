@@ -8,6 +8,12 @@
 
 项目文件结构会随着内容和主题的丰富逐渐更新
 
+### 5月6月写作计划
+
+- 设计模式23讲
+- 原型链知识点完善补全
+- react深入系列的8个概念
+
 issues中写文章的测试版：[原型模式](https://github.com/samsonCao/sam_blog/issues/1)
 
 后期会把相应的md文档迁移到issues中，方便阅读
