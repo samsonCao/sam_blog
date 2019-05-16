@@ -1,5 +1,7 @@
 ### 宏任务和微任务区别和由来
 
+- 采纳 JSC 引擎的术语，我们把宿主(我们开发者)发起的任务称为宏观任务，把 JavaScript 引擎发起的任务称为微观任务。
+
 - ES6新增的Promise让JS任务新增了一个概念：microtask---微任务
 - 因此JS中分为两种任务类型：macrotask和microtask，在ECMAScript中，microtask称为jobs，macrotask可称为task
 
@@ -19,9 +21,18 @@
 也就是说，在某一个macrotask执行完后，就会将在它执行期间产生的所有microtask都执行完毕（在渲
 
 - 宏任务和微任务场景区分
-    - macrotask：主代码块，setTimeout，setInterval等（可以看到，事件队列中的每一个事件都是一个macrotask）
-    - microtask：Promise，准确的说是Promise.resolve().then()产生了微任务。process.nextTick等
+    - macrotask宏任务：主代码块，setTimeout，setInterval等（可以看到，事件队列中的每一个事件都是一个macrotask）
+    - microtask微任务：Promise，准确的说是Promise.resolve().then()产生了微任务。process.nextTick等
     - 在node环境下，process.nextTick的优先级高于Promise__，也就是可以简单理解为：在宏任务结束后会先执行微任务队列中的nextTickQueue部分，然后才会执行微任务中的Promise部分
+
+--------
+### 重点解释Promise和setTimeout产生宏任务和微任务的原因
+
+因为 Promise 产生的是 JavaScript 引擎内部的微任务，
+
+而 setTimeout 是浏览器 API，它产生宏任务。
+
+--------
 
 总结下运行机制：
 
@@ -110,7 +121,35 @@ console.log('7');  // 6
 - 再去找微任务，没有微任务
 - 继续找宏任务，没有宏任务了，程序终止
 
+### 通过一系列的实验，我们可以总结一下如何分析异步执行的顺序：
 
+1. 首先我们分析有多少个宏任务；
+2. 在每个宏任务中，分析有多少个微任务；
+3. 根据调用次序，确定宏任务中的微任务执行次序；
+3. 根据宏任务的触发规则和调用次序，确定宏任务的执行次序；
+5. 确定整个顺序。
+
+#### 写一个红路灯功能,我们现在要实现一个红绿灯，把一个圆形 div 按照绿色 3 秒，黄色 1 秒，红色 2 秒循环改变背景色，
+```javascript
+function sleep(duration){
+    return new Promise(function(resolve){
+        setTimeout(resolve, duration);
+    })
+}
+async function changeColor(duration,color){
+    document.getElementById("traffic-light").style.background = color;
+    await sleep(duration);
+
+}
+async function main(){
+    while(true){
+        await changeColor(3000,"green");
+        await changeColor(1000, "yellow");
+        await changeColor(2000, "red");
+    }
+}
+main()
+```
 async函数返回一个 Promise 对象，可以使用then方法添加回调函数。当函数执行的时候，一旦遇到await就会先返回，等到异步操作完成，再接着执行函数体内后面的语句。
 补充一下队列任务优先级：promise.Trick()>promise的回调>async>setTimeout>setImmediate，
 参考： https://segmentfault.com/a/1190000012925872
