@@ -2,9 +2,9 @@
 
 
 ### 1. prototype.toString方法
-在 JavaScript 中，没有任何方法可以更改私有的 Class 属性，
+1. 在 JavaScript 中，没有任何方法可以更改私有的 Class 属性，
 
-因此 Object.prototype.toString 是可以准确识别对象对应的基本类型的方法，
+2. 因此 Object.prototype.toString 是可以准确识别对象对应的基本类型的方法，
 
 它比instanceof 更加准确。
 ```javascript
@@ -61,19 +61,25 @@ function args(a,b) {
 https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Int8Array#%E8%AF%AD%E6%B3%95
 
 ### 2. typeof 方法
-typeof 操作符是确定一个变量是字符串、数值、布尔值，还是 undefined 的最佳工具。
 
-如果变量的值是一个对象或 null，则 typeof 操作符会像下面例子中所示的那样返回"object":
+1. typeof 操作符是确定一个变量是字符串、数值、布尔值，还是 undefined 的最佳工具。
+
+2. 如果变量的值是一个对象或 null，则 typeof 操作符会像下面例子中所示的那样返回"object":
 ```javascript
+// 可以准确判断5种基本数据类型
 typeof undefined === 'undefined';
+typeof true === 'bollean'
 typeof 123 === 'number'
 typeof '121' === 'string'
-typeof true === 'bollean'
+typeof  Symbol("foo") === 'Symbol'
 
+// 判断null 居然是object
 typeof null === 'object'; // 怪胎
 
-typeof {} === 'object'
+// 可以准确判断function类型
 typeof function xxx(){} === 'function'
+
+typeof {} === 'object'
 typeof [] === 'object'
 typeof new Date === 'object'
 typeof new RegExp() === 'object' // safari5之前的和Chrome7之前的正则返回function
@@ -81,16 +87,20 @@ typeof new RegExp() === 'object' // safari5之前的和Chrome7之前的正则返
 
 ### 3. instanceof方法, 左侧的对象是右侧类的实例，则返回true
 
-前提是已知是对象 要不然会报错
+1. 前提是已知是对象 要不然会报错
 
-确定一个值是哪种引用类型可以使用 instanceof 操作符。
+2. 确定一个值是哪种引用类型可以使用 instanceof 操作符。
+
+3. a instanceof B ， 即a的原型链上是否存在B构造函数
+
 ```javascript
 [] instanceof Array
 new Date() instanceof Date
 new RegExp() instanceof RegExp
 (function xxx(){}) instanceof Function({}) instanceof Object
 
-1 instanceof Number // false因为1不是对象
+1 instanceof Number // false因为1不是对像，它并不是 Number 构造函数构造出来的实例对象
+new Number(5) instanceof Number // true
 
 undefined instanceof Object // false,undefined不是Object的实例
 undefined instanceof undefined // Right-hand side of 'instanceof' is not an object
@@ -101,9 +111,12 @@ null instanceof null // Right-hand side of 'instanceof' is not an object
 
 ### 4. constructor方法,慎用
 
-undefined、null、数字没有constructor属性，会报错
+1. undefined、null、数字number,没有constructor属性，会报错
 
-Symbol的constructor是Function
+2. Symbol的constructor是Function
+
+3. constructor 返回的是构造函数本身，一般使用它来判断类型的情况并不多见。
+
 ```javascript
 [].constructor === Array
 new Date().constructor === Date
