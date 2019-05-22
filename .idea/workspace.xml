@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20f2280d-97d2-425f-9b9d-e8390077f175" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BOM浏览器对象模型/1.window对象.md" beforeDir="false" afterPath="$PROJECT_DIR$/BOM浏览器对象模型/1.window对象.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CSS几个核心概念/BFC、BEM相关概念.md" beforeDir="false" afterPath="$PROJECT_DIR$/CSS几个核心概念/BFC、BEM相关概念.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ES6相关知识点/BOM对象模型.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/HTML语义化标签使用的好处.md" beforeDir="false" afterPath="$PROJECT_DIR$/[科普]HTML语义化标签使用的好处.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JS中13个关键词内部实现原理.md" beforeDir="false" afterPath="$PROJECT_DIR$/JS中13个关键词内部实现原理.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JS数据类型的深度解析.md" beforeDir="false" afterPath="$PROJECT_DIR$/JS中7种数据类型深度解析.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/[算法]堆栈和数组操作.md" beforeDir="false" afterPath="$PROJECT_DIR$/[算法]堆栈和数组操作.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/[算法]深度遍历和广度遍历.md" beforeDir="false" afterPath="$PROJECT_DIR$/[算法]深度遍历和广度遍历.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/[科普]HTML语义化标签使用的好处.md" beforeDir="false" afterPath="$PROJECT_DIR$/[科普]HTML语义化标签使用的好处.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -69,8 +61,8 @@
         <entry file="file://$PROJECT_DIR$/[科普]HTML语义化标签使用的好处.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="197">
-                <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+              <first_editor relative-caret-position="399">
+                <caret line="21" column="3" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -200,7 +192,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/TCP/TP和HTTP.md" />
         <option value="$PROJECT_DIR$/http状态码介绍.md" />
         <option value="$PROJECT_DIR$/[科普]为什么https比http安全.md" />
         <option value="$PROJECT_DIR$/基本包装类型.md" />
@@ -251,6 +242,7 @@
         <option value="$PROJECT_DIR$/JS数据类型的深度解析.md" />
         <option value="$PROJECT_DIR$/JS中7种数据类型深度解析.md" />
         <option value="$PROJECT_DIR$/HTML/HTML语义化标签使用的好处.md" />
+        <option value="$PROJECT_DIR$/[科普]HTML语义化标签使用的好处.md" />
       </list>
     </option>
   </component>
@@ -267,8 +259,8 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-32" />
-    <option name="y" value="-1057" />
+    <option name="x" value="209" />
+    <option name="y" value="23" />
     <option name="width" value="1378" />
     <option name="height" value="1057" />
   </component>
@@ -512,17 +504,18 @@
       <workItem from="1558427264878" duration="431000" />
       <workItem from="1558428905500" duration="978000" />
       <workItem from="1558492633713" duration="3240000" />
-      <workItem from="1558502380405" duration="6953000" />
+      <workItem from="1558502380405" duration="7628000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="161641000" />
+    <option name="totallyTimeSpent" value="162316000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-32" y="-1057" width="1378" height="1057" extended-state="0" />
+    <frame x="209" y="23" width="1378" height="1057" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22918202" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22918202" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -534,7 +527,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.098445594" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.0880829" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -1107,8 +1100,8 @@
     <entry file="file://$PROJECT_DIR$/[科普]HTML语义化标签使用的好处.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="197">
-            <caret line="17" column="23" lean-forward="true" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
+          <first_editor relative-caret-position="399">
+            <caret line="21" column="3" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
