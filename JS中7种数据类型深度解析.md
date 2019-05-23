@@ -73,8 +73,6 @@ console.log(person.name); //laowang
 数组常用的浅拷贝方法有slice,concat,Array.from() ,以及es6的结构[...a, ...b]
 对象常用的浅拷贝方法Object.assign(),es6结构
 
-我们自己实现一个浅拷贝
-
 ```javascript
 var shallowCopy = function(obj) {
     // 只拷贝对象
@@ -89,6 +87,43 @@ var shallowCopy = function(obj) {
         }
     }
     return newObj;
+}
+```
+
+手动实现一个Object.assign方法
+```JavaScript
+if (typeof Object.assign != 'function') {
+  // Must be writable: true, enumerable: false, configurable: true
+  Object.defineProperty(Object, "assign", {
+    value: function assign(target, varArgs) { // .length of function is 2
+      'use strict';
+      if (target == null) { // TypeError if undefined or null
+        throw new TypeError('Cannot convert undefined or null to object');
+      }
+
+      let to = Object(target);
+
+      // 其实很简单，核心代码就是for循环
+      for (var index = 1; index < arguments.length; index++) {
+        var nextSource = arguments[index];
+
+        // 跳过 undefined or null 这样的数据类型
+        if (nextSource != null) {
+            // 必须得是对象类型的，其它基本类型无法用in 操作符遍历
+          for (let nextKey in nextSource) {
+            // Avoid bugs when hasOwnProperty is shadowed， 返回一个布尔值，指示对象自身属性中是否具有指定的属性
+            // 必须是可枚举的属性
+            if (Object.prototype.hasOwnProperty.call(nextSource, nextKey)) {
+              to[nextKey] = nextSource[nextKey];
+            }
+          }
+        }
+      }
+      return to;
+    },
+    writable: true,
+    configurable: true
+  });
 }
 ```
 

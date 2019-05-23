@@ -126,7 +126,7 @@ console.log('7');  // 6
 1. 首先我们分析有多少个宏任务；
 2. 在每个宏任务中，分析有多少个微任务；
 3. 根据调用次序，确定宏任务中的微任务执行次序；
-3. 根据宏任务的触发规则和调用次序，确定宏任务的执行次序；
+4. 根据宏任务的触发规则和调用次序，确定宏任务的执行次序；
 5. 确定整个顺序。
 
 #### 写一个红路灯功能,我们现在要实现一个红绿灯，把一个圆形 div 按照绿色 3 秒，黄色 1 秒，红色 2 秒循环改变背景色，
@@ -150,7 +150,10 @@ async function main(){
 }
 main()
 ```
+
 async函数返回一个 Promise 对象，可以使用then方法添加回调函数。当函数执行的时候，一旦遇到await就会先返回，等到异步操作完成，再接着执行函数体内后面的语句。
-补充一下队列任务优先级：promise.Trick()>promise的回调>async>setTimeout>setImmediate，
+
+补充一下队列任务优先级：promise.Trick()>promise的回调>async>setTimeout>setImmediate
+
 参考： https://segmentfault.com/a/1190000012925872
 参考： https://segmentfault.com/a/1190000018316444?utm_source=tag-newest

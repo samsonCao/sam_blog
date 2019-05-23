@@ -8,61 +8,7 @@
 
 <script >
 
-// 此处是基础类，抽象出了一些共享的属性
-var commonClass = function(param1, param2) {
-  this.param1 = param1;
-  this.param2 = param2;
-}
 
-// 此处是基础类，抽象出了一些共享的方法，后面的其它类如果继承commonClass就可以获取这些方法
-commonClass.prototype = {
-    createHouse: function() {
-      console.log('创建教室的方法')
-    },
-    createBread: function() {
-      console.log('创建面包的方法')
-    }
-}
-
-// -------------------------------------------------------------------------
-
-// 定义其它类，通过call获取基础类的属性
-var childClass = function(param1, param2) {
-  commonClass.call(this, param1, param2)
-}
-
-// 通过组合继承的方法继承基础类commonClass的createHouse方法和createBread方法
-childClass.prototype = new commonClass();
-
-// 定义子类自己特有的方法
-childClass.prototype.changeChild = function() {
-  console.log('我还能创建衣服')
-};
-
-// 子类构造函数创建实例
-var child = new childClass('sam', 'jim');
-console.log(child.param1);
-console.log(child.param2);
-console.log(child.createHouse()); // 基础类的方法
-console.log(child.createBread()); // 基础类的方法
-console.log(child.changeChild()); // 自己特有的方法
-
-// -------------------------------------------------------------------------
-
-var anotherClass = function(param1, param2) {
-  commonClass.call(this, param1, param2)
-}
-anotherClass.prototype = new commonClass();
-anotherClass.prototype.anotherChild = function() {
-  console.log('我还能创建戒指')
-};
-
-var another = new anotherClass('anotherClasssam', 'anotherClassjim');
-console.log(another.param1);
-console.log(another.param2);
-console.log(child.createHouse()); // 基础类的方法
-console.log(child.createBread()); // 基础类的方法
-console.log(child.changeChild()); // 自己特有的方法
 
 </script>
 
