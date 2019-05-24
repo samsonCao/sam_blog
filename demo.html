@@ -7,8 +7,46 @@
 <body>
 
 <script >
+var twoSum = function(nums) {
+    console.log(nums, '213')
+    var arr = [];
+    for(var i = 0; i < nums.length - 2;  i++) {
+        for(var j = i + 1; j < nums.length - 1; j++) {
+            for(var k = j + 1; k < nums.length; k++) {
+                if (nums[i] + nums[j] + nums[k] === 0) {
+                   let result = [nums[i], nums[j], nums[k]].sort();
+                   if (arr.length === 0) {
+                       arr.push(result)
+                   } else{
+                       for(var l = 0; l < arr.length; l++) {
+                              console.log(arr[l].join(), result.join(), result.join() === arr[l].join(),'----------')
+                              if (arr[l].join() !== result.join()) {
+                                    arr.push(result)
+                              }
+                              if (arr[l].join() === result.join()) {
+                                  arr.splice(l, 1);
+                                  arr.push(result)
+                              }
+                       }
+                   }
 
+                }
+            }
+        }
+    }
+    return arr;
+};
+// let a  = twoSum([3,0,-2,-1,1,2])
+// console.log(a, '1')
 
+var spliceArr = [1,2,3,4,5,6];
+var resul1 = spliceArr.splice(1);
+// console.log(resul1, spliceArr); // 删除从1开始的所有的，返回剩下的1
+
+var resul2 = spliceArr.splice(1, 1);
+console.log(resul2, spliceArr);
+// var resul3 = spliceArr.splice(1, 1, 'a');
+// var resul4 = spliceArr.splice(1, 1, 'a', 'b');
 
 </script>
 
