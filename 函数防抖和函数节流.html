@@ -13,18 +13,20 @@
      </style>
 </head>
 <body>
-<div>函数防抖测试</div>
-<p>函数节流测试</p>
+<div>函数防抖测试debounce</div>
+<p>函数节流测试throttle</p>
 <script>
-// 函数节流是指一定时间内js方法只跑一次。比如人的眨眼睛，就是一定时间内眨一次。这是函数节流最形象的解释。类似setInterval
+// 节流--一定时间内js方法只跑一次。比如人的眨眼睛，就是一定时间内眨一次。这是函数节流最形象的解释。类似setInterval
 
- // 函数防抖是指频繁触发的情况下，只有足够的空闲时间，才执行代码一次。比如生活中的坐公交，就是一定时间内，如果有人陆续刷卡上车，司机就不会开车。只有别人没刷卡了，司机才开车。
+// 节流--throttle-第一次执行完之后间隔一定时间再执行，防止input输入框每次输入都会发送请求给服务端
 
-// 节流--throttle-第一次执行完之后间隔一定时间再执行，防止input输入框每次输入都会发送请求给服务端 防抖--debounce-当调用动作n毫秒后，才会执行该动作，若在这n毫秒内又调用此动作则将重新计算执行时间。
+// 防抖--debounce-当调用动作n毫秒后，才会执行该动作，若在这n毫秒内又调用此动作则将重新计算执行时间。
+
+
     let divDom = document.getElementsByTagName('div')[0];
     let pDom = document.getElementsByTagName('p')[0];
 
-    //点击后间隔一定毫秒数才执行
+    //所有的点击停止后，间隔一定毫秒数才执行
     divDom.addEventListener('click', debounce(function () {
         console.log(121212)
     }, 1000), false)
@@ -69,41 +71,35 @@
      *
      * @return {Function}     返回一个“去弹跳”了的函数
      */
-//    function debounce(fn, delay) {
-//
-//        // 定时器，用来 setTimeout
-//        var timer
-//
-//        // 返回一个函数，这个函数会在一个时间区间结束后的 delay 毫秒时执行 fn 函数
-//        return function () {
-//
-//            // 保存函数调用时的上下文和参数，传递给 fn
-//            var context = this
-//            var args = arguments
-//
-//            // 每次这个返回的函数被调用，就清除定时器，以保证不执行 fn
-//            clearTimeout(timer)
-//
-//            // 当返回的函数被最后一次调用后（也就是用户停止了某个连续的操作），
-//            // 再过 delay 毫秒就执行 fn
-//            timer = setTimeout(function () {
-//                fn.apply(context, args)
-//            }, delay)
-//        }
-//    }
+   function debounce(fn, delay) {
+
+       // 定时器，用来 setTimeout
+       var timer
+
+       // 返回一个函数，这个函数会在一个时间区间结束后的 delay 毫秒时执行 fn 函数
+       return function () {
+
+           // 保存函数调用时的上下文和参数，传递给 fn
+           var context = this
+           var args = arguments
+
+           // 每次这个返回的函数被调用，就清除定时器，以保证不执行 fn
+           clearTimeout(timer)
+
+           // 当返回的函数被最后一次调用后（也就是用户停止了某个连续的操作），
+           // 再过 delay 毫秒就执行 fn
+           timer = setTimeout(function () {
+               fn.apply(context, args)
+           }, delay)
+       }
+   }
 
 
+   // 函数节流测试
     //第一次执行后间隔一定毫秒再执行第二次
     pDom.addEventListener('click',throttle(function () {
         console.log(10012)
     },1000, true), false)
-
-    /**假设网站有个搜索框, 用户输入文本我们会自动联想匹配出
-     * 一些结果供用户选择,我们可能首先想到的做法就是监听keypress事件,
-     * 然后异步查询结果. 但是如果用户快速的输入了一串字符, 假设是10个字符,
-     * 那么就会在瞬间触发10次请求, 这无疑不是我们想要的,
-     * 我们想要的是用户停止输入的时候才去触发查询的请求.
-     **/
 
 
     //第一次执行之后 间隔一定毫秒再执行第二次 如果在间隔时间内有点击 则重新开始计时

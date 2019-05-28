@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20f2280d-97d2-425f-9b9d-e8390077f175" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Jenkins配置/1.static静态资源配置.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Jenkins配置/2.noe中间层资源配置.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/函数防抖和函数节流.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/数据请求---ajax、axios、fetch对比.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TCP、IP和HTTP/TCP和HTTP.md" beforeDir="false" afterPath="$PROJECT_DIR$/TCP、IP和HTTP/TCP和HTTP.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/[算法]堆栈和数组30个方法总结.md" beforeDir="false" afterPath="$PROJECT_DIR$/[算法]堆栈和数组30个方法总结.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demo.html" beforeDir="false" afterPath="$PROJECT_DIR$/demo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/React深入系列8个概念/7. React Hooks.md" beforeDir="false" afterPath="$PROJECT_DIR$/React深入系列8个概念/7. React Hooks.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/中高级前端面试题汇总.md" beforeDir="false" afterPath="$PROJECT_DIR$/中高级前端面试题汇总.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/函数防抖和函数节流.html" beforeDir="false" afterPath="$PROJECT_DIR$/函数防抖和函数节流.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/前端工程化的理解.md" beforeDir="false" afterPath="$PROJECT_DIR$/前端工程化的理解.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/收录一些优秀的文章链接.md" beforeDir="false" afterPath="$PROJECT_DIR$/收录一些优秀的文章链接.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,10 +25,29 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="454">
-              <caret line="48" column="21" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
+        <entry file="file://$PROJECT_DIR$/Jenkins配置/1.static静态资源配置.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="1102">
+                <caret line="58" column="10" selection-start-line="58" selection-start-column="10" selection-end-line="58" selection-end-column="10" />
+              </first_editor>
+              <second_editor>
+                <markdownNavigatorState />
+              </second_editor>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/数据请求---ajax、axios、fetch对比.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="152">
+                <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+              </first_editor>
+              <second_editor>
+                <markdownNavigatorState />
+              </second_editor>
             </state>
           </provider>
         </entry>
@@ -31,8 +56,8 @@
         <entry file="file://$PROJECT_DIR$/中高级前端面试题汇总.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="105">
-                <caret line="307" column="15" selection-start-line="307" selection-start-column="15" selection-end-line="307" selection-end-column="15" />
+              <first_editor relative-caret-position="66">
+                <caret line="252" column="4" lean-forward="true" selection-start-line="252" selection-start-column="4" selection-end-line="252" selection-end-column="4" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -42,11 +67,11 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TCP、IP和HTTP/TCP和HTTP.md">
+        <entry file="file://$PROJECT_DIR$/[科普]14种常用的http状态码介绍.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="248">
-                <caret line="135" selection-start-line="135" selection-end-line="135" />
+              <first_editor relative-caret-position="136">
+                <caret line="79" column="10" selection-start-line="79" selection-start-column="10" selection-end-line="79" selection-end-column="10" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -56,21 +81,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/[算法]堆栈和数组30个方法总结.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="170">
-                <caret line="157" lean-forward="true" selection-start-line="157" selection-end-line="157" />
-              </first_editor>
-              <second_editor>
-                <markdownNavigatorState />
-              </second_editor>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/3.23种设计模式/2.创建型--简单工厂模式.md">
+        <entry file="file://$PROJECT_DIR$/Jenkins配置/2.noe中间层资源配置.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
               <first_editor />
@@ -82,7 +93,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/3.23种设计模式/3.创建类--抽象工厂模式.md">
+        <entry file="file://$PROJECT_DIR$/React深入系列8个概念/React事件机制深深入解析.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
               <first_editor />
@@ -94,21 +105,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/3.23种设计模式/发布订阅模式&amp;观察者模式.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="589">
-                <caret line="31" column="11" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
-              </first_editor>
-              <second_editor>
-                <markdownNavigatorState />
-              </second_editor>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/3.23种设计模式/4.创建型--建造者模式.md">
+        <entry file="file://$PROJECT_DIR$/React深入系列8个概念/5. React的render渲染逻辑.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
               <first_editor />
@@ -120,11 +117,23 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/3.23种设计模式/9.结构型--代理模式.md">
+        <entry file="file://$PROJECT_DIR$/React深入系列8个概念/8.高阶函数及其使用场景.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="760">
-                <caret line="40" column="114" selection-start-line="40" selection-start-column="114" selection-end-line="40" selection-end-column="114" />
+              <first_editor />
+              <second_editor>
+                <markdownNavigatorState />
+              </second_editor>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/React深入系列8个概念/1. createElement如何构建虚拟dom.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="513">
+                <caret line="27" selection-start-line="27" selection-end-line="27" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -196,13 +205,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/创建对象、继承、设计模式/1.创建对象的7种模式/1工厂模式.md" />
-        <option value="$PROJECT_DIR$/创建对象、继承、设计模式/3.23种设计模式/2.创建型--简单工厂模式.md" />
-        <option value="$PROJECT_DIR$/创建对象、继承、设计模式/3.23种设计模式/3.创建类--抽象工厂模式.md" />
-        <option value="$PROJECT_DIR$/创建对象、继承、设计模式/3.23种设计模式/4.创建型--建造者模式.md" />
-        <option value="$PROJECT_DIR$/创建对象、继承、设计模式/1.创建对象的7种模式/3原型模式.md" />
-        <option value="$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的6种方式/3.组合继承.md" />
-        <option value="$PROJECT_DIR$/[科普]14种常用的http状态码介绍.md" />
         <option value="$PROJECT_DIR$/创建对象、继承、设计模式/3.23种设计模式/6.简造型--单例模式.md" />
         <option value="$PROJECT_DIR$/创建对象、继承、设计模式/3.23种设计模式/7.结构型-外观模式.md" />
         <option value="$PROJECT_DIR$/创建对象、继承、设计模式/3.23种设计模式/5.创建型--原型模式.md" />
@@ -227,7 +229,6 @@
         <option value="$PROJECT_DIR$/创建对象、继承、设计模式/3.23种设计模式/8.结构型-适配器模式.md" />
         <option value="$PROJECT_DIR$/创建对象、继承、设计模式/3.23种设计模式/10.结构型--装饰者模式.md" />
         <option value="$PROJECT_DIR$/创建对象、继承、设计模式/3.23种设计模式/9.结构型--代理模式.md" />
-        <option value="$PROJECT_DIR$/收录一些优秀的文章链接.md" />
         <option value="$PROJECT_DIR$/BOM浏览器对象模型/1.window对象.md" />
         <option value="$PROJECT_DIR$/JS中13个关键词内部实现原理.md" />
         <option value="$PROJECT_DIR$/CSS几个核心概念/BFC、BEM相关概念.md" />
@@ -247,6 +248,14 @@
         <option value="$PROJECT_DIR$/demo.html" />
         <option value="$PROJECT_DIR$/TCP、IP和HTTP/TCP和HTTP.md" />
         <option value="$PROJECT_DIR$/[算法]堆栈和数组30个方法总结.md" />
+        <option value="$PROJECT_DIR$/函数防抖和函数节流.html" />
+        <option value="$PROJECT_DIR$/函数防抖和函数节流.md" />
+        <option value="$PROJECT_DIR$/前端工程化的理解.md" />
+        <option value="$PROJECT_DIR$/React深入系列8个概念/7. React Hooks.md" />
+        <option value="$PROJECT_DIR$/收录一些优秀的文章链接.md" />
+        <option value="$PROJECT_DIR$/Jenkins配置/1.static静态资源配置.md" />
+        <option value="$PROJECT_DIR$/数据请求---ajax、axios、fetch对比.md" />
+        <option value="$PROJECT_DIR$/中高级前端面试题汇总.md" />
       </list>
     </option>
   </component>
@@ -262,10 +271,10 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="98" />
-    <option name="y" value="-1039" />
-    <option name="width" value="1378" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="46" />
+    <option name="y" value="-1057" />
+    <option name="width" value="1380" />
     <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -285,12 +294,7 @@
             <path>
               <item name="sam_blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="sam_blog" type="462c0819:PsiDirectoryNode" />
-              <item name="TCP、IP和HTTP" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sam_blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sam_blog" type="462c0819:PsiDirectoryNode" />
-              <item name="创建对象、继承、设计模式" type="462c0819:PsiDirectoryNode" />
+              <item name="React深入系列8个概念" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -341,6 +345,9 @@
   </component>
   <component name="RunManager" selected="JavaScript Debug.demo.html">
     <configuration name="算法.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/sam_blog/算法.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="函数防抖和函数节流.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/sam_blog/函数防抖和函数节流.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="数组合并的几个方法.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/sam_blog/ES6相关知识点/数组合并的几个方法.html" useBuiltInWebServerPort="true">
@@ -524,17 +531,34 @@
       <workItem from="1558599752712" duration="5663000" />
       <workItem from="1558614760561" duration="2807000" />
       <workItem from="1558662484481" duration="786000" />
-      <workItem from="1558689294145" duration="2288000" />
+      <workItem from="1558689294145" duration="2384000" />
+      <workItem from="1558921395660" duration="1000" />
+      <workItem from="1558926154074" duration="40000" />
+      <workItem from="1558926292930" duration="3748000" />
+      <workItem from="1558937116739" duration="1125000" />
+      <workItem from="1558940955633" duration="6000" />
+      <workItem from="1558940977349" duration="72000" />
+      <workItem from="1558941707046" duration="351000" />
+      <workItem from="1558945255471" duration="540000" />
+      <workItem from="1558947305909" duration="977000" />
+      <workItem from="1558949344458" duration="228000" />
+      <workItem from="1559026018027" duration="1295000" />
+      <workItem from="1559029882955" duration="404000" />
+      <workItem from="1559031462910" duration="414000" />
+      <workItem from="1559032075627" duration="118000" />
+      <workItem from="1559032239313" duration="3031000" />
+      <workItem from="1559037037133" duration="921000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="183356000" />
+    <option name="totallyTimeSpent" value="196723000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="98" y="-1039" width="1378" height="877" extended-state="0" />
+    <frame x="-241" y="-1057" width="1920" height="1057" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22918202" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22854134" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -546,7 +570,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.48025477" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.037305698" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -557,172 +581,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/函数相关/3.闭包详解.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="304">
-            <caret line="16" selection-start-line="16" selection-end-line="16" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/函数相关/1.函数的10个基本概念.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="3895">
-            <caret line="205" column="3" selection-start-line="205" selection-start-column="3" selection-end-line="205" selection-end-column="3" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/函数相关/2.this详解10种情况和示例.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="4674">
-            <caret line="246" column="19" selection-start-line="246" selection-start-column="19" selection-end-line="246" selection-end-column="19" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/React深入系列8个概念/1. createElement如何构建虚拟dom.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="513">
-            <caret line="27" selection-start-line="27" selection-end-line="27" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/React深入系列8个概念/2. React.Component 如何实现组件化.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="228">
-            <caret line="12" selection-start-line="12" selection-end-line="12" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/React深入系列8个概念/5. React的render渲染逻辑.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor>
-            <caret column="40" selection-start-column="40" selection-end-column="40" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/判断JS数据类型的所有方法.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="2223">
-            <caret line="117" column="3" selection-start-line="117" selection-start-column="3" selection-end-line="117" selection-end-column="3" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/函数相关/6.函数的参数是按照值传递的-深度解析.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="2489">
-            <caret line="131" column="44" selection-start-line="131" selection-start-column="44" selection-end-line="131" selection-end-column="44" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/React深入系列8个概念/3. setState 异步队列.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/3.23种设计模式/12.结构型--组合模式.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="323">
-            <caret line="17" selection-start-line="17" selection-end-line="17" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/收录一些优秀的文章链接.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="190">
-            <caret line="10" selection-start-line="10" selection-end-line="10" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/3.23种设计模式/13.结构型--享元模式.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="323">
-            <caret line="17" selection-start-line="17" selection-end-line="17" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/3.23种设计模式/11.结构型--桥接模式.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="323">
-            <caret line="17" selection-start-line="17" selection-end-line="17" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/3.23种设计模式/10.结构型--装饰者模式.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="418">
-            <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/3.23种设计模式/7.结构型-外观模式.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
@@ -833,18 +691,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/[科普]14种常用的http状态码介绍.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="639">
-            <caret line="79" column="10" selection-start-line="79" selection-start-column="10" selection-end-line="79" selection-end-column="10" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/[科普]9种实现跨域的方法.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
@@ -876,13 +722,6 @@
           <second_editor>
             <markdownNavigatorState />
           </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/函数防抖和函数节流.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="68" selection-start-line="18" selection-start-column="68" selection-end-line="18" selection-end-column="68" />
         </state>
       </provider>
     </entry>
@@ -1013,6 +852,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/demo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="912">
+          <caret line="48" column="21" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/函数防抖和函数节流.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="33" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/函数防抖和函数节流.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="158">
+            <caret line="131" column="7" selection-start-line="131" selection-start-column="7" selection-end-line="131" selection-end-column="7" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/前端工程化的理解.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="722">
+            <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TCP、IP和HTTP/TCP和HTTP.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="2565">
+            <caret line="135" selection-start-line="135" selection-end-line="135" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/[算法]堆栈和数组30个方法总结.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="2983">
+            <caret line="157" lean-forward="true" selection-start-line="157" selection-end-line="157" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/3.23种设计模式/2.创建型--简单工厂模式.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
@@ -1034,11 +935,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/3.23种设计模式/发布订阅模式&amp;观察者模式.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="1501">
-          <caret line="79" column="3" selection-start-line="79" selection-start-column="3" selection-end-line="79" selection-end-column="3" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="589">
@@ -1047,6 +943,11 @@
           <second_editor>
             <markdownNavigatorState />
           </second_editor>
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="1501">
+          <caret line="79" column="3" selection-start-line="79" selection-start-column="3" selection-end-line="79" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -1072,6 +973,136 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/React深入系列8个概念/7. React Hooks.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor>
+            <caret column="58" selection-start-column="58" selection-end-column="58" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/React深入系列8个概念/4. dom 的 diff 算法.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/React深入系列8个概念/3. setState 异步队列.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/React深入系列8个概念/2. React.Component 如何实现组件化.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/收录一些优秀的文章链接.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="323">
+            <caret line="17" column="21" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Jenkins配置/1.static静态资源配置.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="1102">
+            <caret line="58" column="10" selection-start-line="58" selection-start-column="10" selection-end-line="58" selection-end-column="10" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/数据请求---ajax、axios、fetch对比.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="152">
+            <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Jenkins配置/2.noe中间层资源配置.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/React深入系列8个概念/React事件机制深深入解析.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/React深入系列8个概念/5. React的render渲染逻辑.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/React深入系列8个概念/8.高阶函数及其使用场景.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/React深入系列8个概念/1. createElement如何构建虚拟dom.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="513">
+            <caret line="27" selection-start-line="27" selection-end-line="27" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/3.23种设计模式/8.结构型-适配器模式.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
@@ -1084,42 +1115,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TCP、IP和HTTP/TCP和HTTP.md">
+    <entry file="file://$PROJECT_DIR$/[科普]14种常用的http状态码介绍.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="248">
-            <caret line="135" selection-start-line="135" selection-end-line="135" />
+          <first_editor relative-caret-position="136">
+            <caret line="79" column="10" selection-start-line="79" selection-start-column="10" selection-end-line="79" selection-end-column="10" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
           </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/[算法]堆栈和数组30个方法总结.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="170">
-            <caret line="157" lean-forward="true" selection-start-line="157" selection-end-line="157" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="48" column="21" selection-start-line="48" selection-start-column="21" selection-end-line="48" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/中高级前端面试题汇总.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="105">
-            <caret line="307" column="15" selection-start-line="307" selection-start-column="15" selection-end-line="307" selection-end-column="15" />
+          <first_editor relative-caret-position="66">
+            <caret line="252" column="4" lean-forward="true" selection-start-line="252" selection-start-column="4" selection-end-line="252" selection-end-column="4" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
