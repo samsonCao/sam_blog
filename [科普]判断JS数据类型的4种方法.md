@@ -87,7 +87,7 @@ typeof new RegExp() === 'object' // safari5之前的和Chrome7之前的正则返
 
 ### 3. instanceof方法, 左侧的对象是右侧类的实例，则返回true
 
-1. 前提是已知是对象 要不然会报错
+1. 前提是右边必须是对象Object类型或者是Object衍生的子类，要不然会报错
 
 2. 确定一个值是哪种引用类型可以使用 instanceof 操作符。
 
@@ -99,7 +99,8 @@ new Date() instanceof Date
 new RegExp() instanceof RegExp
 (function xxx(){}) instanceof Function({}) instanceof Object
 
-1 instanceof Number // false因为1不是对像，它并不是 Number 构造函数构造出来的实例对象
+1 instanceof Number // false    因为1不是对像，它并不是 Number 构造函数构造出来的实例对象
+
 new Number(5) instanceof Number // true
 
 undefined instanceof Object // false,undefined不是Object的实例
