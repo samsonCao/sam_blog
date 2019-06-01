@@ -21,7 +21,7 @@
 也就是说，在某一个macrotask执行完后，就会将在它执行期间产生的所有microtask都执行完毕（在渲
 
 - 宏任务和微任务场景区分
-    - macrotask宏任务：主代码块，setTimeout，setInterval等（可以看到，事件队列中的每一个事件都是一个macrotask）
+    - macrotask宏任务：script主代码块，setTimeout，setInterval等（可以看到，事件队列中的每一个事件都是一个macrotask）
     - microtask微任务：Promise，准确的说是Promise.resolve().then()产生了微任务。process.nextTick等
     - 在node环境下，process.nextTick的优先级高于Promise__，也就是可以简单理解为：在宏任务结束后会先执行微任务队列中的nextTickQueue部分，然后才会执行微任务中的Promise部分
 
@@ -43,7 +43,7 @@
 渲染完毕后，JS线程继续接管，开始下一个宏任务（从事件队列中获取）
  ```javascript
      大致看起来是这个样子的
-    （`task->微任务(如果有)->渲染---->task->微任务(如果有)->渲染...`）
+    （`整体代码script->微任务如Promises(如果有)-->渲染UI---->宏任务如setTimeout>微任务如Promises(如果有)->渲染UI...`）
  ```
 
  学完上面的知识，来做一个简单的练习题吧
