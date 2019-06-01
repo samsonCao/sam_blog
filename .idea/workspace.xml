@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20f2280d-97d2-425f-9b9d-e8390077f175" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的7种方式/5.寄生式继承.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的7种方式/6.寄生组合式继承.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的7种方式/7.ES6的class实现继承.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/中高级前端面试题汇总.md" beforeDir="false" afterPath="$PROJECT_DIR$/中高级前端面试题汇总.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的6种方式/1.原型链继承.md" beforeDir="false" afterPath="$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的7种方式/1.原型链继承.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的6种方式/2.借用构造函数继承.md" beforeDir="false" afterPath="$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的7种方式/2.借用构造函数继承.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的6种方式/3.组合继承.md" beforeDir="false" afterPath="$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的7种方式/3.组合继承.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的6种方式/4.原型式继承.md" beforeDir="false" afterPath="$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的7种方式/4.原型式继承.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的6种方式/JavaScript继承的多种方式和优缺点.md" beforeDir="false" afterPath="$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的7种方式/JavaScript继承的多种方式和优缺点.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的7种方式/3.组合继承.md" beforeDir="false" afterPath="$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的7种方式/3.组合继承.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的7种方式/6.寄生组合式继承.md" beforeDir="false" afterPath="$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的7种方式/6.寄生组合式继承.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的7种方式/JavaScript继承的多种方式和优缺点.md" beforeDir="false" afterPath="$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的7种方式/7种继承方式核心代码总结.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,11 +19,11 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的7种方式/2.借用构造函数继承.md">
+        <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的7种方式/6.寄生组合式继承.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="342">
-                <caret line="18" column="31" lean-forward="true" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="31" />
+              <first_editor relative-caret-position="617">
+                <caret line="50" column="10" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="10" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -39,11 +33,25 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的7种方式/3.组合继承.md">
+        <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的7种方式/5.寄生式继承.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="391">
-                <caret line="30" selection-start-line="30" selection-end-line="33" selection-end-column="40" />
+              <first_editor relative-caret-position="285">
+                <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+              </first_editor>
+              <second_editor>
+                <markdownNavigatorState />
+              </second_editor>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的7种方式/7种继承方式核心代码总结.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="218">
+                <caret line="18" column="32" lean-forward="true" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -56,7 +64,7 @@
         <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的7种方式/4.原型式继承.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="983">
+              <first_editor relative-caret-position="520">
                 <caret line="53" column="3" lean-forward="true" selection-start-line="53" selection-start-column="3" selection-end-line="53" selection-end-column="3" />
               </first_editor>
               <second_editor>
@@ -67,11 +75,11 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的7种方式/5.寄生式继承.md">
+        <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的7种方式/3.组合继承.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="380">
-                <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+              <first_editor relative-caret-position="117">
+                <caret line="23" column="53" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="53" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -81,12 +89,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的7种方式/JavaScript继承的多种方式和优缺点.md">
+        <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/1.创建对象的7种模式/3原型模式.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="570">
-                <caret line="30" selection-start-line="30" selection-end-line="30" />
-              </first_editor>
+              <first_editor />
               <second_editor>
                 <markdownNavigatorState />
               </second_editor>
@@ -95,12 +101,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的7种方式/1.原型链继承.md">
+        <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/1.创建对象的7种模式/4组合使用构造函数模式和原型模式.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="440">
-                <caret line="42" selection-start-line="42" selection-end-line="42" selection-end-column="36" />
-              </first_editor>
+              <first_editor />
               <second_editor>
                 <markdownNavigatorState />
               </second_editor>
@@ -109,12 +113,34 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的7种方式/7.ES6的class实现继承.md">
+        <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/1.创建对象的7种模式/5动态原型模式.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="171">
-                <caret line="9" column="3" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-              </first_editor>
+              <first_editor />
+              <second_editor>
+                <markdownNavigatorState />
+              </second_editor>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/1.创建对象的7种模式/6寄生构造函数模式.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor>
+                <markdownNavigatorState />
+              </second_editor>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/1.创建对象的7种模式/7稳妥构造函数模式.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="-126" />
               <second_editor>
                 <markdownNavigatorState />
               </second_editor>
@@ -172,8 +198,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/[科普]9个前端项目优化的建议.md" />
-        <option value="$PROJECT_DIR$/TCP、IP和HTTP/[科普]为什么https比http安全.md" />
         <option value="$PROJECT_DIR$/BOM浏览器对象模型/[科普]web安全问题总结.md" />
         <option value="$PROJECT_DIR$/[科普]线上代码检测.md" />
         <option value="$PROJECT_DIR$/函数相关/3.闭包详解.md" />
@@ -219,10 +243,12 @@
         <option value="$PROJECT_DIR$/中高级前端面试题汇总.md" />
         <option value="$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的7种方式/7.ES6的class实现继承.md" />
         <option value="$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的7种方式/2.借用构造函数继承.md" />
-        <option value="$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的7种方式/3.组合继承.md" />
         <option value="$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的7种方式/4.原型式继承.md" />
-        <option value="$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的7种方式/JavaScript继承的多种方式和优缺点.md" />
         <option value="$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的7种方式/5.寄生式继承.md" />
+        <option value="$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的7种方式/JavaScript继承的多种方式和优缺点.md" />
+        <option value="$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的7种方式/7种继承方式核心代码总结.md" />
+        <option value="$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的7种方式/6.寄生组合式继承.md" />
+        <option value="$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的7种方式/3.组合继承.md" />
       </list>
     </option>
   </component>
@@ -266,7 +292,7 @@
             <path>
               <item name="sam_blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="sam_blog" type="462c0819:PsiDirectoryNode" />
-              <item name="DOM和DOM对象扩展" type="462c0819:PsiDirectoryNode" />
+              <item name="React深入系列8个概念" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sam_blog" type="b2602c69:ProjectViewProjectNode" />
@@ -277,6 +303,12 @@
               <item name="sam_blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="sam_blog" type="462c0819:PsiDirectoryNode" />
               <item name="创建对象、继承、设计模式" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sam_blog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sam_blog" type="462c0819:PsiDirectoryNode" />
+              <item name="创建对象、继承、设计模式" type="462c0819:PsiDirectoryNode" />
+              <item name="1.创建对象的7种模式" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sam_blog" type="b2602c69:ProjectViewProjectNode" />
@@ -545,12 +577,12 @@
       <workItem from="1559209775478" duration="408000" />
       <workItem from="1559267023812" duration="24000" />
       <workItem from="1559280838929" duration="426000" />
-      <workItem from="1559358538675" duration="6154000" />
+      <workItem from="1559358538675" duration="9462000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="208965000" />
+    <option name="totallyTimeSpent" value="212273000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-166" y="-1055" width="1629" height="1055" extended-state="0" />
@@ -568,7 +600,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.11214953" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.11734164" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -579,83 +611,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/[科普]9种前端项目优化的方法.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="38">
-            <caret line="2" selection-start-line="2" selection-end-line="2" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JS解析过程和运行机制.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/[算法]深度遍历和广度遍历.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="722">
-            <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/[算法]常见排序算法JS版.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1387">
-          <caret line="73" column="1" lean-forward="true" selection-start-line="73" selection-start-column="1" selection-end-line="73" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/[算法]数组和数组对象深度操作.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="5130">
-            <caret line="270" column="57" selection-start-line="270" selection-start-column="57" selection-end-line="270" selection-end-column="57" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/[科普]HTML语义化标签使用的好处.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="228">
-            <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JS中7种数据类型深度解析.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="1786">
-            <caret line="94" selection-start-line="94" selection-end-line="126" selection-end-column="1" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
@@ -1063,16 +1018,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的7种方式/6.寄生组合式继承.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的7种方式/7.ES6的class实现继承.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
@@ -1109,23 +1054,81 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的7种方式/3.组合继承.md">
+    <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/1.创建对象的7种模式/1工厂模式.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="391">
-            <caret line="30" selection-start-line="30" selection-end-line="33" selection-end-column="40" />
-          </first_editor>
+          <first_editor />
           <second_editor>
             <markdownNavigatorState />
           </second_editor>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的7种方式/JavaScript继承的多种方式和优缺点.md">
+    <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/1.创建对象的7种模式/2构造函数模式.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="570">
-            <caret line="30" selection-start-line="30" selection-end-line="30" />
+          <first_editor />
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/1.创建对象的7种模式/3原型模式.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/1.创建对象的7种模式/4组合使用构造函数模式和原型模式.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/1.创建对象的7种模式/5动态原型模式.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/1.创建对象的7种模式/6寄生构造函数模式.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/1.创建对象的7种模式/7稳妥构造函数模式.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-126" />
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的7种方式/7种继承方式核心代码总结.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="218">
+            <caret line="18" column="32" lean-forward="true" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
@@ -1136,7 +1139,7 @@
     <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的7种方式/4.原型式继承.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="983">
+          <first_editor relative-caret-position="520">
             <caret line="53" column="3" lean-forward="true" selection-start-line="53" selection-start-column="3" selection-end-line="53" selection-end-column="3" />
           </first_editor>
           <second_editor>
@@ -1148,8 +1151,32 @@
     <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的7种方式/5.寄生式继承.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="380">
-            <caret line="20" column="40" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+          <first_editor relative-caret-position="285">
+            <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的7种方式/6.寄生组合式继承.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="617">
+            <caret line="50" column="10" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="10" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/2.继承的7种方式/3.组合继承.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="117">
+            <caret line="23" column="53" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="53" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
