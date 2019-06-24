@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20f2280d-97d2-425f-9b9d-e8390077f175" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/[总结]用node做前后端分离的中间层有什么好处.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/[科普]String类型的方法总结.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/[科普]for&amp;in&amp;of在数组和对象中的区别.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commit规范.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JS中13个关键词内部实现原理.md" beforeDir="false" afterPath="$PROJECT_DIR$/[科普]13个JS中关键词内部实现原理.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JS中7种数据类型深度解析.md" beforeDir="false" afterPath="$PROJECT_DIR$/[科普]7种JS数据类型深度解析.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/[科普]9种实现跨域的方法.md" beforeDir="false" afterPath="$PROJECT_DIR$/[科普]9种实现跨域的方法.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/[科普]判断JS数据类型的4种方法.md" beforeDir="false" afterPath="$PROJECT_DIR$/[科普]4种判断JS数据类型的方法.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/中高级前端面试题汇总.md" beforeDir="false" afterPath="$PROJECT_DIR$/中高级前端面试题汇总.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,11 +18,11 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/[算法]深度遍历和广度遍历.md">
+        <entry file="file://$PROJECT_DIR$/函数防抖和函数节流.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="855">
-                <caret line="45" column="7" lean-forward="true" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
+              <first_editor relative-caret-position="2489">
+                <caret line="131" column="28" selection-start-line="131" selection-start-column="28" selection-end-line="131" selection-end-column="28" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -37,11 +32,11 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CSS几个核心概念/BFC、BEM相关概念.md">
+        <entry file="file://$PROJECT_DIR$/commit规范.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor>
-                <caret column="9" selection-start-column="9" selection-end-column="9" />
+              <first_editor relative-caret-position="133">
+                <caret line="7" selection-start-line="7" selection-end-line="7" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -51,11 +46,11 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/函数防抖和函数节流.md">
+        <entry file="file://$PROJECT_DIR$/[科普]for&amp;in&amp;of在数组和对象中的区别.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="224">
-                <caret line="137" column="10" lean-forward="true" selection-start-line="137" selection-start-column="10" selection-end-line="137" selection-end-column="10" />
+              <first_editor relative-caret-position="114">
+                <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -127,7 +122,7 @@
         <entry file="file://$PROJECT_DIR$/[科普]13个JS中关键词内部实现原理.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="95">
+              <first_editor relative-caret-position="14060">
                 <caret line="740" column="3" selection-start-line="740" selection-start-column="3" selection-end-line="740" selection-end-column="3" />
               </first_editor>
               <second_editor>
@@ -201,8 +196,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/判断JS数据类型的所有方法.md" />
-        <option value="$PROJECT_DIR$/函数相关/6.函数的参数是按照值传递的-深度解析.md" />
         <option value="$PROJECT_DIR$/React深入系列8个概念/1. createElement如何构建虚拟dom.md" />
         <option value="$PROJECT_DIR$/React深入系列8个概念/2. React.Component 如何实现组件化.md" />
         <option value="$PROJECT_DIR$/React深入系列8个概念/5. render 渲染逻辑.md" />
@@ -252,6 +245,8 @@
         <option value="$PROJECT_DIR$/[科普]9种实现跨域的方法.md" />
         <option value="$PROJECT_DIR$/中高级前端面试题汇总.md" />
         <option value="$PROJECT_DIR$/[科普]13个JS中关键词内部实现原理.md" />
+        <option value="$PROJECT_DIR$/commit规范.md" />
+        <option value="$PROJECT_DIR$/[科普]for&amp;in&amp;of在数组和对象中的区别.md" />
       </list>
     </option>
   </component>
@@ -267,7 +262,7 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-166" />
     <option name="y" value="-1055" />
     <option name="width" value="1629" />
@@ -285,26 +280,6 @@
             <path>
               <item name="sam_blog" type="b2602c69:ProjectViewProjectNode" />
               <item name="sam_blog" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sam_blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sam_blog" type="462c0819:PsiDirectoryNode" />
-              <item name="CSS几个核心概念" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sam_blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sam_blog" type="462c0819:PsiDirectoryNode" />
-              <item name="ES6相关知识点" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sam_blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sam_blog" type="462c0819:PsiDirectoryNode" />
-              <item name="函数相关" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sam_blog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sam_blog" type="462c0819:PsiDirectoryNode" />
-              <item name="创建对象、继承、设计模式" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -579,17 +554,22 @@
       <workItem from="1559544819354" duration="735000" />
       <workItem from="1559546412895" duration="1826000" />
       <workItem from="1559550254693" duration="524000" />
+      <workItem from="1559646635372" duration="43000" />
+      <workItem from="1559699309556" duration="7000" />
+      <workItem from="1559703675787" duration="32000" />
+      <workItem from="1561365259421" duration="964000" />
+      <workItem from="1561366972922" duration="491000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="223886000" />
+    <option name="totallyTimeSpent" value="225423000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-166" y="-1055" width="1629" height="1055" extended-state="0" />
+    <frame x="-241" y="-1057" width="1920" height="1057" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22823383" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22801474" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -601,7 +581,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.1443406" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.14404145" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -612,36 +592,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Jenkins配置/2.node中间层资源配置.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/React深入系列8个概念/React事件机制深深入解析.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/React深入系列8个概念/5. React的render渲染逻辑.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/React深入系列8个概念/8.高阶函数及其使用场景.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
@@ -1069,7 +1019,44 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="855">
-            <caret line="45" column="7" lean-forward="true" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
+            <caret line="45" column="7" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CSS几个核心概念/BFC、BEM相关概念.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor>
+            <caret column="9" selection-start-column="9" selection-end-column="9" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/创建对象、继承、设计模式/[科普]for&amp;in&amp;of在数组和对象中的区别.md/in/of在数组和对象中的区别.md" />
+    <entry file="file://$PROJECT_DIR$/函数防抖和函数节流.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="2489">
+            <caret line="131" column="28" selection-start-line="131" selection-start-column="28" selection-end-line="131" selection-end-column="28" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/commit规范.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="133">
+            <caret line="7" selection-start-line="7" selection-end-line="7" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
@@ -1126,6 +1113,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/[科普]13个JS中关键词内部实现原理.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="14060">
+            <caret line="740" column="3" selection-start-line="740" selection-start-column="3" selection-end-line="740" selection-end-column="3" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/[科普]4种判断JS数据类型的方法.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
@@ -1138,35 +1137,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/[科普]13个JS中关键词内部实现原理.md">
+    <entry file="file://$PROJECT_DIR$/[科普]for&amp;in&amp;of在数组和对象中的区别.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="95">
-            <caret line="740" column="3" selection-start-line="740" selection-start-column="3" selection-end-line="740" selection-end-column="3" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CSS几个核心概念/BFC、BEM相关概念.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor>
-            <caret column="9" selection-start-column="9" selection-end-column="9" />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/函数防抖和函数节流.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="224">
-            <caret line="137" column="10" lean-forward="true" selection-start-line="137" selection-start-column="10" selection-end-line="137" selection-end-column="10" />
+          <first_editor relative-caret-position="114">
+            <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />
