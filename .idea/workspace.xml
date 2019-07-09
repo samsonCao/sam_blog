@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20f2280d-97d2-425f-9b9d-e8390077f175" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/[笔记]antd-form表单的双向数据绑定.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/收录一些优秀的文章链接.md" beforeDir="false" afterPath="$PROJECT_DIR$/收录一些优秀的文章链接.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -63,8 +61,8 @@
         <entry file="file://$PROJECT_DIR$/[笔记]antd-form表单的双向数据绑定.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="169">
-                <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
+              <first_editor relative-caret-position="178">
+                <caret line="111" column="23" lean-forward="true" selection-start-line="111" selection-start-column="23" selection-end-line="111" selection-end-column="23" />
               </first_editor>
               <second_editor>
                 <markdownNavigatorState />
@@ -262,10 +260,10 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="95" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="60" />
     <option name="y" value="23" />
-    <option name="width" value="1920" />
+    <option name="width" value="1380" />
     <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -565,11 +563,12 @@
       <workItem from="1562662896507" duration="2320000" />
       <workItem from="1562665591922" duration="284000" />
       <workItem from="1562666008793" duration="1769000" />
+      <workItem from="1562673450588" duration="160000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="230004000" />
+    <option name="totallyTimeSpent" value="230164000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="60" y="23" width="1380" height="877" extended-state="6" />
@@ -1148,8 +1147,8 @@
     <entry file="file://$PROJECT_DIR$/[笔记]antd-form表单的双向数据绑定.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="169">
-            <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
+          <first_editor relative-caret-position="178">
+            <caret line="111" column="23" lean-forward="true" selection-start-line="111" selection-start-column="23" selection-end-line="111" selection-end-column="23" />
           </first_editor>
           <second_editor>
             <markdownNavigatorState />

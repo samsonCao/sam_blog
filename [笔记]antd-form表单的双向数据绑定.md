@@ -113,7 +113,26 @@ if (trigger && validateTriggers.indexOf(trigger) === -1) {
 
 createBaseForm函数在createDOM函数中用到，也在createDOMForm中用到
 
-这里的fieldsMeta存的数据相当于一个react中的props,通过更新props从而更新页面的视图，所以我们看到了页面的实时更新
+
+再来看一个核心的函数setFields,
+```
+setFields: function setFields(maybeNestedFields, callback) {
+        var _this4 = this;
+
+        var fields = this.fieldsStore.flattenRegisteredFields(maybeNestedFields);
+        this.fieldsStore.setFields(fields);
+        if (onFieldsChange) {
+          var changedFields = Object.keys(fields).reduce(function (acc, name) {
+            return set(acc, name, _this4.fieldsStore.getField(name));
+          }, {});
+          onFieldsChange(_extends(_defineProperty({}, formPropName, this.getForm()), this.props), changedFields, this.fieldsStore.getNestedAllFields());
+        }
+        this.forceUpdate(callback);
+```
+这个函数内包含了forceUpdate
+
+>如果 render() 方法从 this.props 或者 this.state 之外的地方读取数据，你需要通过调用 forceUpdate() 告诉 React 什么时候需要再次运行 render()。如果直接改变了 this.state，也需要调用 forceUpdate()。调用 forceUpdate() 将会导致 render() 方法在相应的组件上被调用，并且子级组件也会调用自己的 render()，但是如果标记改变了，那么 React 仅会更新 DOM。
+
 
 
 
