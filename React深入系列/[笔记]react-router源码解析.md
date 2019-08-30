@@ -1,3 +1,15 @@
+### 路由简介
+1. 路由是干什么的？
+
+- 根据不同的 url 地址展示不同的内容或页面。
+
+- 单页面应用最大的特点就是只有一个 web 页面。因而所有的页面跳转都需要通过javascript实现。
+当需要根据用户操作展示不同的页面时，我们就需要根据访问路径使用js控制页面展示内容。
+
+- React Router 是专为 React 设计的路由解决方案。它利用HTML5 的history API，来操作浏览器的 session history (会话历史)。
+
+- 使用了 HTML5 的 history API (pushState, replaceState and the popstate event) 用于保证你的地址栏信息与界面保持一致。
+
 ### react-router源码解析
 
 #### 基于react-router-dom,其实是在react-router基础上的简单封装，差别不是特别大。

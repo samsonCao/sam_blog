@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .aaa {
+        width: 100px;
+        height: 100px;
+        border: 1px solid #ddd;
+    }
+    .bbb {
+        width: 100px;
+        height: 100px;
+        border: 1px solid #ddd;
+    }
+    .ccc {
+        color: red;
+    }
+    .ddd {
+        color: blue;
+    }
+    .eee {
+        color: #0a0a0a;
+    }
+    .fff {
+        font-size: 20px;
+    }
+    .hhh {
+
+    }
+
+
+  </style>
+</head>
+<body>
+<div class="aaa">
+    <p class="bbb">
+        <span class="ccc">1231</span>
+    </p>
+</div>
+<div class="ddd">12312</div>
+<div class="eee">12312</div>
+<div class="fff">12312</div>
+<div class="ggg">ggggg</div>
+<div class="hhh">hhhhh</div>
+<script >
+
+// 获取列表 把类数组对象转为数组 数组是 .aaa .bbb .ccc .ddd .eee .fff
+// 看起来像是基于深度遍历优先的方法获取的样式列表
+// ggg 只有class 没有样式，会被丢弃
+// hhh 有class对象 但是没有值 会被保存到styleSheets中
+var docSheet = [].slice.call(document.styleSheets);
+
+// 获取所有的class标签样式，并把类数组对象转为数组
+var divSheet = [].slice.call(docSheet[0].cssRules)
+// var divSheet = Array.from(docSheet[0].cssRules)
+console.log(docSheet, 'docSheet')
+console.log(divSheet, 'divSheet');
+console.log(divSheet[4], 'divSheet[4]');
+divSheet[4].style.color = 'skyblue';
+
+// 修改某一个标签对应的值，此处最好用for循环+break
+divSheet.forEach(item => {
+    console.log(item.selectorText);
+    if (item.selectorText === '.fff') {
+        item.style.color = 'red'
+    }
+})
+
+
+</script>
+</body>
+</html>
