@@ -7,7 +7,6 @@
     .aaa {
         width: 100px;
         height: 100px;
-        border: 1px solid #ddd;
     }
     .bbb {
         width: 100px;
@@ -16,6 +15,9 @@
     }
     .ccc {
         color: red;
+    }
+    .DDD {
+
     }
     .ddd {
         color: blue;
@@ -29,6 +31,12 @@
     .hhh {
 
     }
+    div {
+        width: 100px;
+        height: 100px;
+        background: azure;
+        margin-bottom: 10px;
+    }
 
 
   </style>
@@ -39,17 +47,18 @@
         <span class="ccc">1231</span>
     </p>
 </div>
-<div class="ddd">12312</div>
-<div class="eee">12312</div>
-<div class="fff">12312</div>
+<div class="ddd DDD">ddd</div>
+<div class="eee">eee</div>
+<div class="fff">fff</div>
 <div class="ggg">ggggg</div>
 <div class="hhh">hhhhh</div>
 <script >
 
-// 获取列表 把类数组对象转为数组 数组是 .aaa .bbb .ccc .ddd .eee .fff
-// 看起来像是基于深度遍历优先的方法获取的样式列表
-// ggg 只有class 没有样式，会被丢弃
-// hhh 有class对象 但是没有值 会被保存到styleSheets中
+// 1.获取列表 把类数组对象转为数组 可以看出数组中没有ggg 因为style标签中无.ggg {}
+// 2.遍历的顺序是以style样式表的先后顺序为准
+// 3.div 和 clas一样，都会被当做一条数据遍历出来
+// 4.ggg 只有class 没有样式，会被丢弃
+// 5.hhh 有class对象 但是没有值 会被保存到styleSheets中
 var docSheet = [].slice.call(document.styleSheets);
 
 // 获取所有的class标签样式，并把类数组对象转为数组

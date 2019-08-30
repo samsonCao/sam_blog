@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+             <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+                         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+             <title>Document</title>
+</head>
+<style>
+    div {
+        width: 100px;
+        height: 100px;
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+    }
+</style>
+<body>
+  <div class="aaa bbb ccc ddd">abcd</div>
+
+  <script >
+
+  // 一个classList属性
+  // 5个方法  add remove toogle contains replace
+    // 下列方法IE不支持，IE只支持classList 慎用 移动端兼容性基于chrom的比较好 其它也不好
+
+    var div = document.getElementsByTagName('div')[0];
+    var classList = div.classList;
+    console.log(classList, 'classList');
+    // DOMTokenList: ['aaa', 'bbb', 'ccc', 'ddd'] length: 4, value: 'aaa bbb ccc ddd'
+
+    // 新增class
+    div.classList.add("anotherclass");
+
+    // 删除class
+    div.classList.remove("anotherclass");
+
+
+    // // 批量添加和批量删除
+    const cls = ["foo", "bar"];
+    div.classList.add(...cls);
+    div.classList.remove(...cls);
+
+    // 如果有anotherclass就删除，如果没有就新增
+    div.classList.toggle("anotherclass");
+    // div.classList.toggle("visible");
+
+    // 是否包含某个class
+    console.log(div.classList.contains("aaa"));
+
+    // 把foo替换为bar 如果不存在foo则不替换也不新增bar
+    div.classList.replace("foo", "bar");
+  </script>
+</body>
+</html>
