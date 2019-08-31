@@ -1,0 +1,460 @@
+### React中的几个概念
+
+#### 1. 代码分隔
+
+官方的方法是React.lazy
+```jsx harmony
+const OtherComponent = React.lazy(() => import('./OtherComponent'));
+
+function MyComponent() {
+  return (
+    <div>
+      <OtherComponent />
+    </div>
+  );
+}
+```
+
+加载指示器Suspense，可以接收加载的loading图标，具体在组件的哪一层可以自定义
+
+```jsx harmony
+<div>
+      <Suspense fallback={<div>Loading...</div>}>
+        <OtherComponent />
+      </Suspense>
+    </div>
+```
+
+社区用的比较多的react-loadable
+```jsx harmony
+const lazy = Name =>
+    Loadable({
+        loader: () => import(`./${Name}`),
+        loading: Loading, // Loading是封装的一个全局的loading动画
+    });
+```
+
+#### 2. [context](https://react.docschina.org/docs/context.html) 
+> Context 提供了一个无需为每层组件手动添加 props，就能在组件树间进行数据传递的方法。
+
+```jsx harmony
+const MyContext = React.createContext(defaultValue);
+```
+
+// 一个使用contxt的例子
+```jsx harmony
+// 参考： https://github.com/ant-design/ant-design/blob/master/components/checkbox/Group.tsx
+
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { Col, Checkbox } from '@/components';
+
+interface INJCkbGroupProps {
+    className?: string;
+    style?: React.CSSProperties;
+    disabled?: boolean;
+    defaultValue?: string[];
+    value?: string[];
+    options?: any[];
+    onChange?(values: string[]): any;
+}
+
+interface INJCkbGroupState {
+    value?: string[];
+}
+
+export default class NJCheckboxGroup extends Component<INJCkbGroupProps, INJCkbGroupState> {
+    static defaultProps = {
+        options: [],
+    };
+
+    /**
+     * 定义需要传递的变量checkboxGroup以及类型
+     * 放入context中
+     * 子组件可以通过this.context.checkboxGroup获取
+     * @type {{checkboxGroup: *}}
+     */
+    static childContextTypes = {
+        checkboxGroup: PropTypes.any,
+    };
+
+    /**
+     * 表示该组件通过context传递数据，该方法返回的对象就是context需要传递的数据
+     * 指定的传递给子组件的属性需要先通过childContextTypes来执行，不然会报错。
+     * 这个函数执行后是返回给子组件的纯对象，子组件接收这个对象
+     * @returns {{checkboxGroup: {toggleOption: NJCheckboxGroup.toggleOption, disabled: Boolean, value: *}}}
+     */
+    getChildContext() {
+        return {
+            checkboxGroup: {
+                toggleOption: this.toggleOption,
+                value: this.state.value,
+                disabled: this.props.disabled,
+            },
+        };
+    }
+
+    // 数字数组转字符串数组[].join(',').split(',')
+    constructor(props) {
+        super(props);
+        this.state = {
+            value:
+                (props.value && props.value.join(',').split(',')) ||
+                (props.defaultValue && props.defaultValue.join(',').split(',')) ||
+                [],
+        };
+    }
+
+    static getDerivedStateFromProps(nextProps) {
+        if ('value' in nextProps) {
+            return {
+                value: (nextProps.value && nextProps.value.join(',').split(',')) || [],
+            };
+        }
+        return null;
+    }
+
+    /**
+     * 处理父组件传递来的数组确保值为label value的数组
+     * @returns {*}
+     */
+    getOptions() {
+        const { options } = this.props;
+        if (!options) {
+            return [];
+        }
+        // https://github.com/Microsoft/TypeScript/issues/7960
+        return options.map(option => {
+            if (typeof option === 'string') {
+                return {
+                    label: option,
+                    value: option,
+                };
+            }
+            return option;
+        });
+    }
+
+    /**
+     * 选中和取消选中时触发，返回父组件，然后通过getDerivedStateFromProps接受value
+     * @param option
+     */
+    toggleOption = option => {
+        const optionIndex = this.state.value.indexOf(option.value);
+        const value = [...this.state.value];
+        if (optionIndex === -1) {
+            value.push(option.value);
+        } else {
+            value.splice(optionIndex, 1);
+        }
+        if (!('value' in this.props)) {
+            this.setState({ value });
+        }
+        const onChange = this.props.onChange;
+        const newValue = value.filter(item => item !== '');
+        if (onChange) {
+            onChange(newValue);
+        }
+    };
+
+    render() {
+        const { props, state } = this;
+        const { className, style, options, ...restProps } = props;
+        const prefixCls = 'ant-checkbox'; // 此处是为了复用ant-design的样式
+        const groupPrefixCls = `${prefixCls}-group`;
+
+        const domProps = _.omit(restProps, ['children', 'defaultValue', 'value', 'onChange', 'disabled']);
+
+        let children = props.children;
+        if (options && options.length > 0) {
+            children = this.getOptions().map(option => {
+                return (
+                    <Col span={12} key={option.value.toString()} className="mb15">
+                        <Checkbox
+                            prefixCls={prefixCls}
+                            disabled={'disabled' in option ? option.disabled : props.disabled}
+                            value={option.value}
+                            checked={state.value.indexOf(option.value) !== -1}
+                            onChange={option.onChange}
+                            className={`${groupPrefixCls}-item`}
+                        >
+                            {option.label}
+                        </Checkbox>
+                    </Col>
+                );
+            });
+        }
+
+        return (
+            <div className={`${groupPrefixCls} ${className}`} style={style} {...domProps}>
+                {children}
+            </div>
+        );
+    }
+}
+
+```
+
+#### 3. [refs转发](https://react.docschina.org/docs/forwarding-refs.html)
+> Ref 转发是一个可选特性，其允许某些组件接收 ref，并将其向下传递（换句话说，“转发”它）给子组件。
+一般用于让input自动获取焦点的操作、文本选择或媒体播放、触发强制动画、集成第三方 DOM 库
+```jsx harmony
+const FancyButton = React.forwardRef((props, ref) => (
+  <button ref={ref} className="FancyButton">
+    {props.children}
+  </button>
+));
+
+// 你可以直接获取 DOM button 的 ref：
+const ref = React.createRef();
+<FancyButton ref={ref}>Click me!</FancyButton>;
+```
+以下是对上述示例发生情况的逐步解释：
+
+- 我们通过调用 React.createRef 创建了一个 React ref 并将其赋值给 ref 变量。
+- 我们通过指定 ref 为 JSX 属性，将其向下传递给 <FancyButton ref={ref}>。
+- React 传递 ref 给 fowardRef 内函数 (props, ref) => ...，作为其第二个参数。
+- 我们向下转发该 ref 参数到 <button ref={ref}>，将其指定为 JSX 属性。
+- 当 ref 挂载完成，ref.current 将指向 <button> DOM 节点。
+
+// 一个使用ref包装的组件，下拉框点击页面空白位置失去焦点
+```jsx harmony
+import React, { Component } from 'react';
+
+interface IOutsideProps {
+    children?: any;
+    onClickOutside?(): any;
+}
+
+/**
+ * 点击某个DOM外部的时候会触发 onClickOutside 方法
+ */
+class OutsideWrapper extends Component<IOutsideProps> {
+    private wrapperRef: any;
+
+    constructor(props) {
+        super(props);
+
+        this.setWrapperRef = this.setWrapperRef.bind(this);
+        this.handleClickOutside = this.handleClickOutside.bind(this);
+    }
+
+    componentDidMount() {
+        document.addEventListener('mousedown', this.handleClickOutside);
+    }
+
+    componentWillUnmount() {
+        document.removeEventListener('mousedown', this.handleClickOutside);
+    }
+
+    /**
+     * Set the wrapper ref
+     */
+    setWrapperRef(node) {
+        this.wrapperRef = node;
+    }
+
+    /**
+     * Alert if clicked on outside of element
+     */
+    handleClickOutside(event) {
+        if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
+            this.props.onClickOutside();
+        }
+    }
+
+    render() {
+        return <div ref={this.setWrapperRef}>{this.props.children}</div>;
+    }
+}
+
+export default OutsideWrapper;
+
+```
+```jsx harmony
+<OutsideWrapper onClickOutside={() => this.setState({ showTree: false })}>
+    <div className="nj-tree-selector">
+        <div className="nj-tree-selector__search">
+            <Input
+                disabled={disabled}
+                readOnly
+                allowClear
+                placeholder={placeholder}
+            />
+        </div>
+        {/*select option代码*/}
+    </div>
+</OutsideWrapper>
+```
+#### 4. [Fragments](https://react.docschina.org/docs/fragments.html)
+> Fragments 允许你将子列表分组，而无需向 DOM 添加额外节点。
+ 
+#### 5. [高阶组件](https://react.docschina.org/docs/higher-order-components.html)
+> 高阶组件（HOC）是 React 中用于复用组件逻辑的一种高级技巧。
+HOC 自身不是 React API 的一部分，它是一种基于 React 的组合特性而形成的设计模式。
+```jsx harmony
+// 此函数接收一个组件...
+function withSubscription(WrappedComponent, selectData) {
+  // ...并返回另一个组件...
+  return class extends React.Component {
+    constructor(props) {
+      super(props);
+      this.handleChange = this.handleChange.bind(this);
+      this.state = {
+        data: selectData(DataSource, props)
+      };
+    }
+
+    componentDidMount() {
+      // ...负责订阅相关的操作...
+      DataSource.addChangeListener(this.handleChange);
+    }
+
+    componentWillUnmount() {
+      DataSource.removeChangeListener(this.handleChange);
+    }
+
+    handleChange() {
+      this.setState({
+        data: selectData(DataSource, this.props)
+      });
+    }
+
+    render() {
+      // ... 并使用新数据渲染被包装的组件!
+      // 请注意，我们可能还会传递其他属性
+      return <WrappedComponent data={this.state.data} {...this.props} />;
+    }
+  };
+}
+```
+#### 6. [JSX和createElement](https://react.docschina.org/docs/jsx-in-depth.html)
+
+> JSX 仅仅只是 React.createElement(component, props, ...children) 函数的语法糖。如下 JSX 代码：
+babel编译器可以把JSX转化为React.createElement的形式，最终生成虚拟dom树
+
+```jsx harmony
+<MyButton color="blue" shadowSize={2}>
+  Click Me
+</MyButton>
+
+// 等同于下面的代码
+React.createElement(
+  MyButton,
+  {color: 'blue', shadowSize: 2},
+  'Click Me'
+)
+```
+
+布尔类型、Null 以及 Undefined 将会忽略
+> false, null, undefined, and true 是合法的子元素。但它们并不会被渲染。以下的 JSX 表达式渲染结果相同：
+```jsx harmony
+<div />
+
+<div></div>
+
+<div>{false}</div>
+
+<div>{null}</div>
+
+<div>{undefined}</div>
+
+<div>{true}</div>
+```
+
+#### 7. [性能优化](https://react.docschina.org/docs/optimizing-performance.html)
+
+> 性能优化主要用到shouldComponentUpdate。 UI 更新需要昂贵的 DOM 操作，而 React 内部使用几种巧妙的技术以便最小化 DOM 操作次数。
+对于大部分应用而言，使用 React 时无需专门优化就已拥有高性能的用户界面
+
+社区中有用到[immutable-js](https://github.com/immutable-js/immutable-js)来区分引用类型数据是否变化的工具库
+
+
+#### 8. [Portals](https://react.docschina.org/docs/portals.html)
+
+> Portal 提供了一种将子节点渲染到存在于父组件以外的 DOM 节点的优秀的方案
+一把用在对话框，悬浮卡，以及提示框,此时的container一般是body
+
+```jsx harmony
+// 第一个参数（child）是任何可渲染的 React 子元素，
+// 例如一个元素，字符串或 fragment。
+// 第二个参数（container）是一个 DOM 元素。
+ReactDOM.createPortal(child, container)
+```
+
+#### 9. [Render Props](https://react.docschina.org/docs/render-props.html)
+
+> 给组件添加一个值为函数的属性，这个函数可以在组件渲染（render）的时候调用，
+那这个组件是干啥用的呢？就是为了给原有组件“注入”其它组件的代码
+如果你一个组件不知道自己渲染什么东西，或者说你一个组件的基础功能是提供”可变数据源“，
+具体展示UI可以从外部注入
+
+```jsx harmony
+// class组件1，  作用是获取x,y坐标，最后渲染一个{this.props.render(this.state)}
+class Mouse extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleMouseMove = this.handleMouseMove.bind(this);
+    this.state = { x: 0, y: 0 };
+  }
+
+  handleMouseMove(event) {
+    this.setState({
+      x: event.clientX,
+      y: event.clientY
+    });
+  }
+
+  render() {
+    return (
+      <div style={{ height: '100%' }} onMouseMove={this.handleMouseMove}>
+
+        {/* ...but how do we render something other than a <p>? */}
+        <p>The current mouse position is ({this.state.x}, {this.state.y})</p>
+        {this.props.render(this.state)} // 这个比较关键,这里会返回子组件的dom结构渲染出来
+      </div>
+    );
+  }
+}
+
+// class组件2   调用class组件1，调用class组件3，传入一个属性render属性，值是个函数{mouse => (<Cat mouse={mouse} />)}
+class MouseTracker extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>Move the mouse around!</h1>
+        {/*这里的mouse其实就是Mouse组件中传入的this.state代表的是坐标值*/}
+        <Mouse render={mouse => (
+          <Cat mouse={mouse} />
+        )}/>
+      </div>
+    );
+  }
+}
+
+// class组件3  被class组件2调用 最终获取坐标值
+class Cat extends React.Component {
+  render() {
+    const mouse = this.props.mouse;
+    return (
+      <img src="/cat.jpg" style={{ position: 'absolute', left: mouse.x, top: mouse.y }} />
+    );
+  }
+}
+
+```
+
+总结一下思路：
+1. 一个父组件MouseTracker
+2. 两个同级的子组件Mouse和Cat
+3. 同级的子组件Cat需要根据Mouse的值改变来渲染值，
+4. 两个子组件之间存在单项依赖，案例中是 Cat组件依赖 Mouse组件的值
+
+
+#### 10. [web component和 react组件混合使用] (https://react.docschina.org/docs/web-components.html)
+> 如果使用 Babel 来转换 class，此代码将不会起作用。请查阅该 issue 了解相关讨论。 
+在加载 Web Components 前请引入 custom-elements-es5-adapter.js 来解决该 issue。
+
+1. 在 React 中使用 Web Components
+
+2. 在 Web Components 中使用 React

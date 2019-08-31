@@ -30,28 +30,69 @@
 
 
     <script type="text/javascript">
-        var aImg = document.querySelectorAll('img');
-        var len = aImg.length;
-        var n = 0;//存储图片加载到的位置，避免每次都从第一张图片开始遍历
-        window.onscroll = function() {
-            var seeHeight = document.documentElement.clientHeight; // 可见区域高度，即视口高度，屏幕的高度
-            console.log(seeHeight, 'seeheight')
-            var scrollTop = document.body.scrollTop || document.documentElement.scrollTop; //页面滚动的高度
-            console.log(scrollTop, 'scrollTop')
-            for (var i = n; i < len; i++) {
-                console.log(aImg[i].offsetTop, 'aImg[i].offsetTop')
-                if (aImg[i].offsetTop < seeHeight + scrollTop) {
-                    if (aImg[i].getAttribute('src') == '') {
-                        aImg[i].src = aImg[i].getAttribute('guoyu-src');
-                    }
-                    n = i + 1;
-                    console.log('n = ' + n);
-                }
-            }
-        };
+        // var aImg = document.querySelectorAll('img');
+        // var len = aImg.length;
+        // var n = 0;//存储图片加载到的位置，避免每次都从第一张图片开始遍历
+        // window.onscroll = function() {
+        //     var seeHeight = document.documentElement.clientHeight; // 可见区域高度，即视口高度，屏幕的高度
+        //     console.log(seeHeight, 'seeheight')
+        //     var scrollTop = document.body.scrollTop || document.documentElement.scrollTop; //页面滚动的高度
+        //     console.log(scrollTop, 'scrollTop')
+        //     for (var i = n; i < len; i++) {
+        //         console.log(aImg[i].offsetTop, 'aImg[i].offsetTop')
+        //         if (aImg[i].offsetTop < seeHeight + scrollTop) {
+        //             if (aImg[i].getAttribute('src') == '') {
+        //                 aImg[i].src = aImg[i].getAttribute('guoyu-src');
+        //             }
+        //             n = i + 1;
+        //             console.log('n = ' + n);
+        //         }
+        //     }
+        // };
         /**
         *
 */
+        // var Bar = function(count) {
+        //   this.count = count;
+        // }
+        //
+        // Bar.prototype.output = function() {
+        //   console.log(this.count)
+        // };
+        //
+        // var foo = new Bar(0);
+        // foo.output();
+        // console.log(foo)
+        // console.log(Bar)
+
+        // Bar.count = 100;
+        // foo.count = 10;
+        // foo.output.call(Bar, 1000);
+        //
+        // Bar.prototype.count = 1;
+        // foo.output();
+        //
+        // var dog = foo.output;
+        // dog();
+        (function f(n) {
+          return n > 1 ? n * f(n -1) : n;
+        })(10)
+
+        var Foo = function() {
+
+        }
+
+        var Bar = function() {
+          return new Foo()
+        }
+        Foo.prototype.key = 'FOO';
+        Bar.prototype.key = 'Bar';
+        var obj = new Bar();
+        console.log(obj instanceof Foo);
+        console.log(Bar.prototype, '11')
+        obj.constructor.prototype = Bar.prototype;
+        console.log(obj, 'obj')
+        console.log(obj.key)
     </script>
 </body>
 </html>
