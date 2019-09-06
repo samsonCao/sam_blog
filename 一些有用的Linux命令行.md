@@ -82,3 +82,14 @@ git config -e 打开git配置的文档,看起来大概是在这样的，可以�
 
 
 大牛整理的完整版Linux: https://github.com/jaywcjlove/linux-command
+
+
+#### 自动生成项目树的方法
+1. mac电脑安装依赖
+```js
+brew install tree
+```
+2. 执行下面的命令 -L 3 代表遍历到文件的第三级，-I node_modules表示忽略node_modules包 
+```js
+tree -L 3 -I node_modules > tree.text
+```
