@@ -4,7 +4,7 @@
 
 如果说此有价值的话，价值在于分享一种学习方法
 
-从哲学的角度来讲，了解一个事物的基本步骤是
+了解一个事物的基本步骤是
 
 ###### 1. 基本概念是什么
 
@@ -64,7 +64,6 @@ var o = new Object(null);
 下面例子将一个空的Object对象存到o中
 ```javascript
 var o1 = new Object();
-// 报错Uncaught TypeError: Object prototype may only be an Object or null: undefined
 at Function.create (<anonymous>)
 at <anonymous>:1:16
 
