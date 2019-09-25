@@ -20,6 +20,7 @@
 
 [正则表达式图形化工具](https://github.com/zhoushengmufc/rline)
 
-### [深入理解 javascript 原型和闭包](https://www.cnblogs.com/wangfupeng1988/p/3977987.html)
+### 深入理解 javascript 原型和闭包
 
+[深入理解 JavaScript 原理和闭包](https://www.cnblogs.com/wangfupeng1988/p/3977987.html)
 可以作为高程的补充资料学习，迄今为止遇到的最好的解释原型和闭包的书，最喜欢执行上下文和作用域的分析
