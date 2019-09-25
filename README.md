@@ -1,4 +1,4 @@
-# sam cao的个人博客和学习笔记
+# sam cao 的个人博客和学习笔记
 
 分享学习心得，总结学习知识点，分享优秀的技术文章
 
@@ -10,8 +10,9 @@
 
 本博客纯粹自己学习用，如有侵权，请联系我删除......
 
+## 看过的比较好的学习资料
 
-#### 正则学习资料
+### 正则学习资料
 
 [正则表达式迷你书](https://github.com/qdlaoyao/js-regex-mini-book)
 
@@ -19,3 +20,6 @@
 
 [正则表达式图形化工具](https://github.com/zhoushengmufc/rline)
 
+### [深入理解 javascript 原型和闭包](https://www.cnblogs.com/wangfupeng1988/p/3977987.html)
+
+可以作为高程的补充资料学习，迄今为止遇到的最好的解释原型和闭包的书，最喜欢执行上下文和作用域的分析

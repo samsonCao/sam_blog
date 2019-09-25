@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20f2280d-97d2-425f-9b9d-e8390077f175" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sam_blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sam_blog.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/[科普]String类型的方法总结.md" beforeDir="false" afterPath="$PROJECT_DIR$/[科普]String类型的方法总结.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/[科普]引用类型Object的概念和方法总结.md" beforeDir="false" afterPath="$PROJECT_DIR$/[科普]Object的概念和方法总结.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/[科普]4种判断JS数据类型的方法.md" beforeDir="false" afterPath="$PROJECT_DIR$/[科普]4种判断JS数据类型的方法.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -403,7 +402,8 @@
       <workItem from="1567575755482" duration="147000" />
       <workItem from="1567771438334" duration="177000" />
       <workItem from="1569051234780" duration="1662000" />
-      <workItem from="1569053056187" duration="998000" />
+      <workItem from="1569053056187" duration="1610000" />
+      <workItem from="1569314937023" duration="78000" />
     </task>
     <servers />
   </component>

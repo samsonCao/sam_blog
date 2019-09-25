@@ -1,12 +1,14 @@
-# 判断js数据类型的几种方法，包含所有数据类型
+### 判断js数据类型的几种方法，包含所有数据类型
 
 
 ### 1. prototype.toString方法
+
 1. 在 JavaScript 中，没有任何方法可以更改私有的 Class 属性，
 
 2. 因此 Object.prototype.toString 是可以准确识别对象对应的基本类型的方法，
 
 它比instanceof 更加准确。
+
 ```javascript
 Object.prototype.toString.call(new Date());         // '[object Date]'
 Object.prototype.toString.call([]);                 // '[object Array]'
@@ -21,6 +23,7 @@ Object.prototype.toString.call(true);               //'[object Boolean]'
 Object.prototype.toString.call(document.getElementsByTagName('body')); `
 Object.prototype.toString.call([]).slice(8, -1) // 'Array'
 ```
+
 ```javascript
 [object HTMLCollection]'html节点类型 此处是判断对象是不是dom
 
@@ -37,6 +40,7 @@ function args(a,b) {
 ```
 
 > 除此之外还有很多种object对应的数据类型，这里列出返回的数据结构，但是不一一举例，有兴趣的同学可以自己查询含义
+
 ```javascript
 [object Error]
 [object Map]
@@ -58,13 +62,14 @@ function args(a,b) {
 
 官方文档请参考
 
-https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Int8Array#%E8%AF%AD%E6%B3%95
+<https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Int8Array#%E8%AF%AD%E6%B3%95>
 
 ### 2. typeof 方法
 
 1. typeof 操作符是确定一个变量是字符串、数值、布尔值，还是 undefined 的最佳工具。
 
 2. 如果变量的值是一个对象或 null，则 typeof 操作符会像下面例子中所示的那样返回"object":
+
 ```javascript
 // 可以准确判断5种基本数据类型
 typeof undefined === 'undefined';
