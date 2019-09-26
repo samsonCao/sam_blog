@@ -126,6 +126,7 @@ Array.prototype.heapSort = function() {
         }
     }
 }
+
 //生成随机数
 function generate() {
     var max = parseInt(txtMax.value),
@@ -140,6 +141,7 @@ function generate() {
     txtInput.value = array.join(",");
     txtOutput.value = "";
 }
+
 //返回排序时间
 function sortAlgorithm(type) {
     var timer=0;
