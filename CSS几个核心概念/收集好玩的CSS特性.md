@@ -9,4 +9,40 @@
     repeating-linear-gradient(45deg,#ccc 0, #ccc 0.45em,white 0,white 1em);
 }
 ```
+
+2. 固定定位到底部，并保证页面在浏览器上自适应
+参考：https://sky.baoinsurance.com/m/short/trial?wareId=20068&accountId=10000519686
+```html
+<div class="container">
+<div class="content">111</div>
+<div class="bottom">
+    <div class="fixed-button">
+        button123
+    </div>
+</div>
+</div>
+```
+
+```css
+.container {
+    word-break: break-all;
+    padding-bottom: env(safe-area-inset-bottom);
+}
+.bottom {
+    height: 85px;
+}
+
+.fixed-button {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    padding-bottom: env(safe-area-inset-bottom);
+    background: #f6f6f6;
+}
+```
     
