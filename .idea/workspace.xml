@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="20f2280d-97d2-425f-9b9d-e8390077f175" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sam_blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sam_blog.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/[科普]4种判断JS数据类型的方法.md" beforeDir="false" afterPath="$PROJECT_DIR$/[科普]4种判断JS数据类型的方法.md" afterDir="false" />
-    </list>
+    <list default="true" id="20f2280d-97d2-425f-9b9d-e8390077f175" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -404,6 +399,7 @@
       <workItem from="1569051234780" duration="1662000" />
       <workItem from="1569053056187" duration="1610000" />
       <workItem from="1569314937023" duration="78000" />
+      <workItem from="1594179222261" duration="368000" />
     </task>
     <servers />
   </component>
