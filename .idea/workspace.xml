@@ -80,7 +80,7 @@
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.16.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../iyb-new-code/iyb-cloud-shop-admin" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.jscs" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -400,6 +400,7 @@
       <workItem from="1569053056187" duration="1610000" />
       <workItem from="1569314937023" duration="78000" />
       <workItem from="1594179222261" duration="368000" />
+      <workItem from="1597370207477" duration="218000" />
     </task>
     <servers />
   </component>
