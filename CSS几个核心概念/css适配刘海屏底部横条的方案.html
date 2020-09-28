@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .content {
+        height: 1000px;
+        border: 1px solid #ddd;
+      }
+      .footer-wrapper {
+        margin-bottom: 44px;
+      }
+      .footer-content {
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+        height: 44px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background: #fff;
+        max-width: 750px;
+        margin: auto;
+        left: 0;
+        right: 0;
+        z-index: 99;
+        background: skyblue;
+      }
+
+      @supports (bottom: env(safe-area-inset-bottom)) {
+        .footer-wrapper {
+          padding-bottom: calc(env(safe-area-inset-bottom) + r(100));
+        }
+        .footer-content {
+          bottom: env(safe-area-inset-bottom);
+
+          /* &:after {
+            content: "";
+            height: env(safe-area-inset-bottom);
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: #fff;
+          } */
+        }
+        .footer-content::after {
+          content: "";
+          height: env(safe-area-inset-bottom);
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background-color: #fff;
+        }
+      }
+      /* 适配刘海屏底部横条的核心方法，如果不是定位在底部，但是依旧需要适配，只需在样式加下面的代码 */
+    /* padding-bottom: env(safe-area-inset-bottom); */
+    </style>
+  </head>
+  <body>
+   
+    <div class="content">123</div>
+    <div class="footer-wrapper">
+      <div class="footer-content"><button>我是底部按钮</button></div>
+    </div>
+  </body>
+</html>
