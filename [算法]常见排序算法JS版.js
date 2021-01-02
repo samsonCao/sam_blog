@@ -1,158 +1,176 @@
-window.onload=function(){
-//交换函数
-Array.prototype.swap = function(i, j) {
-    var temp = this[i];
-    this[i] = this[j];
-    this[j] = temp;
-}
-//JS内置排序
-Array.prototype.jsSort = function() {
-    return this.sort(function(a, b){
-        return a - b;
-    });
-}
-//冒泡排序
-Array.prototype.bubbleSort = function() {
-    for (var i = this.length - 1; i > 0; --i) {
-        for (var j = 0; j < i; ++j)
-            if (this[j] > this[j + 1])
-                this.swap(j, j + 1);
+/**
+ * 冒泡排序
+ * 原理：每循环一次，都会找出最大的放在最后一位
+ * 第一次循环，找出最大的一的，放在最后一位
+ * 第二次循环，找出剩下的最大的，放在倒数第二位
+ * 第三次循环，找出剩下的最大的，放在倒数第三位
+ * 直到最后一个最大的值在第一位
+ * [12, 8, 24, 16, 1]
+ * [8, 12, 16, 1, 24] // 第1轮，比较 5 - 1 次，每次都从0开始，j=0;
+ * [8, 12, 1, 16, 24] // 第2轮，比较 5 - 1 - 1次，每次都从0开始，j=0;
+ * [8, 1, 12, 16, 24] // 第3轮，比较 5 - 1 - 2次，每次都从0开始，j=0;
+ * [1, 8, 12, 16, 24] // 第4轮，比较 5- 1 - 3次，每次都从0开始，j=0;
+ */
+function bubble(ary) {
+  // 外层循环i控制比较的轮数，2个值比1轮，3个值比2轮，length-1
+  for (let i = 0; i < ary.length - 1; i++) {
+    // 内层循环控制每一轮比较的次数。
+    // 第一轮i = 0; 从
+    for(let j = 0; j < ary.length - 1 - i; j++) {
+      // 如果前一项比后一项大，前一项和后一项交换位置
+      if (ary[j] > ary[j+1]) {
+        // 交换位置
+        [ary[j+1], ary[j]] = [ary[j], ary[j+1]]
+      }
     }
+  }
+  return ary;
 }
-//选择排序
-Array.prototype.selectionSort = function() {
-    for (var i = 0; i < this.length; ++i) {
-        var index = i;
-        for (var j = i + 1; j < this.length; ++j) {
-            if (this[j] < this[index])
-                index = j;
-        }
-        this.swap(i, index);
+// let ary = [12, 8, 24, 16, 1];
+// console.log(bubble(ary));
+
+
+/**
+ * 插入排序
+ * 类似抓牌，每次抓一张牌，和手里的牌比较，按大小顺序插入手中合适的位置
+ * [12, 8, 24, 16, 1]
+ * 第1次抓拍，从前往后 [12] 比0次
+ * 第2次抓拍，从前往后 8 和 [12] 比较 [8, 12] 比1次
+ * 第3次抓拍，从前往后 24 和 [8，12] 比较 [8, 12，24] 比2次，比到到的break
+ * 第4次抓拍，从前往后 16 和 [8，12，24] 比较 [8，12，16，24] 比3次，比到到的break
+ * 第5次抓拍，从前往后 1 和 [8，12，16，24] 比较 [1，8，12，16，24] 比4次，比到到的break
+ */
+function insert (ary) {
+  // 准备一个新数组，放抓到的牌，先放一张牌进去
+  const handle = [];
+  handle.push(ary[0]);
+
+  // 从第二项开始依次抓牌，一直把牌抓完
+  for (let i = 1; i < ary.length; i++) {
+    // A 是新抓的牌
+    const tempA = ary[i];
+    // 和handle手里的牌比较，从后向前比
+    for (let j = handle.length; j >= 0; j--) {
+      // 每一次要比较的牌
+      const tempB = handle[j];
+      // 抓到的牌大于这一次比较的牌，放在这一次比较的牌的后面 即 j + 1;
+      if (tempA > tempB) {
+        // 放在当前牌后面，j+1, 删除0个，插入手里的牌tempA
+        handle.splice(j + 1, 0, tempA);
+        break;
+      }
+      if (j === 0) {
+        handle.unshift(tempA);
+      }
     }
-}
-//插入排序
-Array.prototype.insertionSort = function() {
-    for (var i = 1; i < this.length; ++i) {
-        var j = i, value = this[i];
-        while (j > 0 && this[j - 1] > value) {
-            this[j] = this[j - 1];
-            --j;
-        }
-        this[j] = value;
-    }
-}
-//希尔排序(>>位运算)
-Array.prototype.shellSort = function() {
-    for (var step = this.length >> 1; step > 0; step >>= 1) {
-        //alert(step >>= 1);
-        for (var i = 0; i < step; ++i) {
-            for (var j = i + step; j < this.length; j += step) {
-                var k = j, value = this[j];
-                while (k >= step && this[k - step] > value) {
-                    this[k] = this[k - step];
-                    k -= step;
-                }
-                this[k] = value;
-            }
-        }
-    }
-}
-//递归快速排序
-Array.prototype.quickSort = function(s, e) {
-    if (s == null)
-        s = 0;
-    if (e == null)
-        e = this.length - 1;
-    if (s >= e)
-        return;
-    this.swap((s + e) >> 1, e);
-    var index = s - 1;
-    for (var i = s; i <= e; ++i)
-        if (this[i] <= this[e]) this.swap(i, ++index);
-    this.quickSort(s, index - 1);
-    this.quickSort(index + 1, e);
-}
-//堆栈快速排序
-Array.prototype.stackQuickSort = function() {
-    var stack = [0, this.length - 1];
-    while (stack.length > 0) {
-        var e = stack.pop(), s = stack.pop();
-        if (s >= e)
-            continue;
-        this.swap((s + e) >> 1, e);
-        var index = s - 1;
-        for (var i = s; i <= e; ++i) {
-            if (this[i] <= this[e])
-                this.swap(i, ++index);
-        }
-        stack.push(s, index - 1, index + 1, e);
-    }
-}
-//归并排序
-Array.prototype.mergeSort = function(s, e, b) {
-    if (s == null)
-        s = 0;
-    if (e == null)
-        e = this.length - 1;
-    if (b == null)
-        b = new Array(this.length);
-    if (s >= e)
-        return;
-    var m = (s + e) >> 1;
-    this.mergeSort(s, m, b);
-    this.mergeSort(m + 1, e, b);
-    for (var i = s, j = s, k = m + 1; i <= e; ++i)
-        b[i] = this[(k > e || j <= m && this[j] < this[k]) ? j++ : k++];
-    for (var i = s; i <= e; ++i)
-        this[i] = b[i];
-}
-//堆排序
-Array.prototype.heapSort = function() {
-    for (var i = 1; i < this.length; ++i) {
-        for (var j = i, k = (j - 1) >> 1; k >= 0; j = k, k = (k - 1) >> 1) {
-            if (this[k] >= this[j])
-                break;
-            this.swap(j, k);
-        }
-    }
-    for (var i = this.length - 1; i > 0; --i) {
-        this.swap(0, i);
-        for (var j = 0, k = (j + 1) << 1; k <= i; j = k, k = (k + 1) << 1) {
-            if (k == i || this[k] < this[k - 1])
-                --k;
-            if (this[k] <= this[j])
-                break;
-            this.swap(j, k);
-        }
-    }
+  }
+  return handle;
 }
 
-//生成随机数
-function generate() {
-    var max = parseInt(txtMax.value),
-            count = parseInt(txtCount.value);
-    if (isNaN(max) || isNaN(count)) {
-        alert("随机数个数和最大值必须是整数");
-        return;
+// let ary = [12, 8, 24, 16, 1];
+// console.log(insert(ary));
+
+/**
+ * 快速排序--用到了递归思想，和分治思想
+ *
+ * 第一步，找出数组的中间项目middleValue，向下取整和向上取整都可以，
+ * 第二步，从原数组中把这一项移除
+ * 第三步，创建两个新数组，左数组和又数组，备用
+ * 第四步，遍历剩下的数组的值，比中间项小的放在左数组，比中间项大的放在又数组
+ * 第五步，合并，小数组 + 中间项 + 大数组
+ * 第六步，递归，继续拆分小数组和大数组，重复第一步到第五步
+ * 第七步，判断生成的左数组和右数组小于等于1项时，结束递归，返回数组
+ *
+ * [12,8,15,16,1,24]
+ * 找中间15，生产新数组 [12,8,16,1,24]，创建两个新数组
+ * 遍历新数组，比15大的放右边，比15小的放左边
+ * [12,8,1] [16,24] 15 => [[12,8,1], 15, [16,24]]
+ * 递归处理[12,8,1]
+ * 8 [12, 1] => [1] 8 [12] => [[1], 8, [12]]
+ * 递归处理[16,24]
+ * 16 [24] => [] 16 [24] => [[], 16, [24]]
+ * 最后concat， concat的值必然是数组内只有一项的值，或者是空数组0项
+ */
+function quick(ary) {
+  // 结束递归的条件，数组只有1项，或者数组是0项
+  if (ary.length <= 1) {
+    return  ary;
+  }
+  // 找到中间项的下标
+  const middleIndex = Math.floor(ary.length / 2);
+  // 从原数组中删除中间项，并且获取中间项的值
+  const middleValue = ary.splice(middleIndex, 1)[0];
+
+  const aryLeft = [];
+  const aryRight = [];
+  for (let i = 0; i < ary.length; i++) {
+    let item = ary[i];
+    // 大的放右边数组，小的放左边数组
+    item > middleValue ? aryRight.push(item) : aryLeft.push(item);
+  }
+  // 左边+中间+右边。
+  // 返回 值类型ary时 结束递归，出栈拼接。
+  // 返回 函数类型执行体时，继续执行递归调用，暂存拼接逻辑
+  return quick(aryLeft).concat(middleValue, quick(aryRight))
+}
+// let ary = [12,8,15,16,1,24];
+// console.log(quick(ary));
+
+/**
+ * 选择排序
+ * n个选出最小，放在第一位，第一位挪到原来最小的那个位置
+ * n-1个选最小，放在第二位，第二位挪到原来最小的那个位置
+ * 依次类推
+ *
+ * 原理：从数组中找到最小的，放在数组的起始位置，再找出第二小的放在第二个位置
+ * 起始也是每次找出最小的放前面，和冒泡排序结果类似，冒泡是每次找到最大的放后面。
+ * 过程不一样，
+ * 冒泡排序是相邻的两两对比，然后依次交换位置，直到最大的排最后
+ * 选择排序是从所有的找最小的，直接放在第一个位置，只有找够一轮才交换
+ *
+ * 先把第0项默认为最小值，和后面的所有项对比
+ * 第一次从length -1找到最小的，和第0项交换，此时第0项最小
+ * 第二次找到剩下length -1 - 1找到最小的，和第1项交换，此时第0，1项最小
+ * 第3次找到剩下length -1 - 1 - 1找到最小的，和第2项交换，此时第0，1， 2项最小
+ * 中间的某一次交换，肯定会把最大的交换到最后一个位置，因此只需length -1 次外层循环
+ *
+ * 内层循环排好序的不需再对比，因此是从第 i+1项开始对比
+ */
+function select(ary) {
+  let minIndex;
+  let temp;
+  // 中间会有一次自动把最大值换到最后一个位置的过程，所以是length - 1 次。
+  for(let i = 0; i < ary.length - 1; i++) {
+    // 初始化假定i=0为最小值
+    minIndex = i;
+
+    // 遍历i后面的所有项，因为i不用和自身比
+    for (let j = i+ 1; j < ary.length; j++) {
+
+      // 获取上一次比较的最小值minValue
+      const minValue = ary[minIndex];
+      // 获取当前项的值
+      const currentValue = ary[j];
+
+      // 上一次的minValue和这一次的所有项比较，找出最小值
+      if (currentValue < minValue) {
+        minIndex = j;
+        // 因为是找所有项的最小，不是找第1次出现的最小项
+        // 所以此处不能break,只能每次都是从头找到尾
+      }
     }
-    var array = [];
-    for (var i = 0; i < count; ++i)
-        array.push(Math.round(Math.random() * max));
-    txtInput.value = array.join(",");
-    txtOutput.value = "";
+    // minIndex  换到 i位置去;
+    // 把最小值存到temp
+    temp = ary[minIndex];
+    // 把当前i的大值赋给最小值的位置
+    ary[minIndex] = ary[i];
+    // 再把最小值放到当前i的位置
+    ary[i] = temp;
+
+  }
+  return ary;
 }
 
-//返回排序时间
-function sortAlgorithm(type) {
-    var timer=0;
-    var array = txtInput.value == "" ? [] : txtInput.value.replace().split(",");
-    for (var i = 0; i < array.length; ++i)
-        array[i] = parseInt(array[i]);
-    var t1 = new Date();
-    //eval() 函数可计算某个字符串，并执行其中的的JavaScript代码
-    eval("array." + type + "Sort()");
-    var t2 = new Date();
-    timer= t2.valueOf() - t1.valueOf();
-    txtOutput.value = array.join(",");
-    return timer;
-}
+let ary = [12,8,15,16,1,24];
+console.log(select(ary));
+
