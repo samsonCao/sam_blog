@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+  const initData = [
+    {
+      id: 0,
+      parentId: null,
+      name: "1"
+    },
+    {
+      id: 1,
+      parentId: 0,
+      name: "3"
+    },
+    // {
+    //   id: 9,
+    //   parentId: 0,
+    //   name: "9"
+    // },
+    {
+      id: 2,
+      parentId: 1,
+      name: "4"
+    },
+    {
+      id: 3,
+      parentId: 2,
+      name: "5"
+    },
+    {
+      id: 4,
+      parentId: 3,
+      name: "6"
+    },
+    {
+      id: 5,
+      parentId: 4,
+      name: "7"
+    }
+  ]
+
+  // const setFlatToTree = (list, parentId) => {
+  //   const treeList = [];
+  //   list.forEach((item, index) => {
+  //     if (item.id === parentId) {
+  //       treeList.push(item);
+  //     }
+  //     item.children = [];
+  //
+  //     // // list.splice(index, 1);
+  //     list.forEach((item2, index2) => {
+  //       if (item2.parentId === item.id) {
+  //         item.children.push(item2);
+  //       }
+  //     })
+  //   })
+  //   return treeList;
+  // }
+  // console.log(setFlatToTree(initData, 0))
+
+    // 数组扁平化
+  //   const ary = [[1,2,3], [[4]], [[[5],6], 7]]
+  //   const flatAry = (list) => {
+  //       let res = [];
+  //       for(let i = 0; i < list.length; i++) {
+  //         if (Array.isArray(list[i])) {
+  //           res = res.concat(flatAry(list[i]))
+  //         } else {
+  //           res.push(list[i])
+  //         }
+  //       }
+  //       return res;
+  //    }
+  // const flatReduce = (list) => {
+  //   return list.reduce((prev, item) => {
+  //     return prev.concat(Array.isArray(item) ? flatReduce(item) : item);
+  //   }, [])
+  // }
+  // // console.log(flatAry(ary))
+  // console.log(flatReduce(ary))
+
+  // f1(f2(f3(a))) => compose(f1, f2, f3)(a);
+  function compose(...funcs) {
+    if (funcs.length === 0) {
+      return arg => arg
+    }
+
+    if (funcs.length === 1) {
+      return funcs[0]
+    }
+    // 第一次 f1(f2)
+    // 第二次，f1(f2)里面再嵌套b即f3() => f1(f2(f3(a)))
+    return funcs.reduce((a, b) => {
+      // 上一次的a(b(...args))值会作为下一次的args值传进去叠加
+      return (...args) => {
+        return a(b(...args))
+      }
+    })
+  }
+  // compose(f1, f2, f3)(1)
+  console.log(compose(f1, f2, f3)(1));
+</script>
+</body>
+</html>

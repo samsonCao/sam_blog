@@ -9,21 +9,22 @@
 可以理解是每次执行栈执行的代码就是一个宏任务（包括每次从事件队列中获取一个事件回调并放到执行栈中执行）
 每一个task会从头到尾将这个任务执行完毕，不会执行其它
 浏览器为了能够使得JS内部task与DOM任务能够有序的执行，会在一个task执行结束后，在下一个 task 执行开始前，对页面进行重新渲
-    ```
-     大致看起来是这个样子的
-    （`task->渲染->task->渲染...`）
-    ```
+```
+  大致看起来是这个样子的
+（`task->渲染->task->渲染...`）
+```
 
 - microtask（又称为微任务）
 可以理解是在当前 task 执行结束后立即执行的任务
 也就是说，在当前task任务后，下一个task之前，在渲染之前
 所以它的响应速度相比setTimeout（setTimeout是task）会更快，因为无需等渲染
-也就是说，在某一个macrotask执行完后，就会将在它执行期间产生的所有microtask都执行完毕（在渲
+也就是说，在某一个macrotask执行完后，就会将在它执行期间产生的所有microtask都执行完毕
 
 - 宏任务和微任务场景区分
-    - macrotask宏任务：script主代码块，setTimeout，setInterval等（可以看到，事件队列中的每一个事件都是一个macrotask）
-    - microtask微任务：Promise，准确的说是Promise.resolve().then()产生了微任务。process.nextTick等
-    - 在node环境下，process.nextTick的优先级高于Promise__，也就是可以简单理解为：在宏任务结束后会先执行微任务队列中的nextTickQueue部分，然后才会执行微任务中的Promise部分
+  - macrotask宏任务：script主代码块，setTimeout，setInterval等（可以看到，事件队列中的每一个事件都是一个macrotask）
+  - microtask微任务：Promise，准确的说是Promise.resolve().then()产生了微任务。process.nextTick等
+  - 在node环境下，process.nextTick的优先级高于Promise__，也就是可以简单理解为：
+  在宏任务结束后会先执行微任务队列中的nextTickQueue部分，然后才会执行微任务中的Promise部分
 
 --------
 ### 重点解释Promise和setTimeout产生宏任务和微任务的原因
@@ -42,8 +43,8 @@
 当前宏任务执行完毕，开始检查渲染，然后GUI线程接管渲染
 渲染完毕后，JS线程继续接管，开始下一个宏任务（从事件队列中获取）
  ```javascript
-     大致看起来是这个样子的
-    （`整体代码script->微任务如Promises(如果有)-->渲染UI---->宏任务如setTimeout>微任务如Promises(如果有)->渲染UI...`）
+大致看起来是这个样子的
+（`整体代码script--->微任务如Promises(如果有)---渲染UI--->宏任务如setTimeout--->微任务如Promises(如果有)--->渲染UI...`）
  ```
 
  学完上面的知识，来做一个简单的练习题吧

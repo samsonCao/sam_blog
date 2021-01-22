@@ -64,9 +64,6 @@ var o = new Object(null);
 下面例子将一个空的Object对象存到o中
 ```javascript
 var o1 = new Object();
-at Function.create (<anonymous>)
-at <anonymous>:1:16
-
 var o = Object.create(undefined);
 var o1 = new Object(null);
 ```

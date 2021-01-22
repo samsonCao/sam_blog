@@ -25,7 +25,7 @@ Object.prototype.toString.call([]).slice(8, -1) // 'Array'
 ```
 
 ```javascript
-[object HTMLCollection]'html节点类型 此处是判断对象是不是dom
+[object HTMLCollection]'html节点类型 此处是判断对象是不是dom'
 
 ```
 
@@ -76,7 +76,7 @@ typeof undefined === 'undefined';
 typeof true === 'bollean'
 typeof 123 === 'number'
 typeof '121' === 'string'
-typeof  Symbol("foo") === 'Symbol'
+typeof Symbol("foo") === 'Symbol'
 
 // 判断null 居然是object
 typeof null === 'object'; // 怪胎
