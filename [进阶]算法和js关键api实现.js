@@ -594,12 +594,44 @@ myPromise.prototype.then = function(onFulfilled, onRejected) {
   let promise2 = null;
   console.log(self, 's2');
 
+  // 如果then方法链式调用，非函数的，构造函数把上一个value往下传
+  onFulfilled = typeof onFulfilled === 'function' ? onFulfilled : value => value;
+  onRejected = typeof onRejected === 'function' ? onRejected : error => { throw error };
+
   promise2 = new myPromise((resolve, reject) => {
     // 注册过程 prise是微任务，所以 push进去的函数可以被setTimeout包裹，模拟微任务
     if (self.state === PENDING) {
       self.onFulFilledCallbacks.push(() => {
+        queueMicrotask(() => {
+          try {
+            // 注册 then方法的第一个参数，入参是value,返回x。返回的值最终会被resolve出去
+            const x = onFulfilled(self.value);
+            // 此处是为了注册一个resolve或者resolve函数
+            self.resolvePromise(promise2, x, resolve, reject)
+          } catch (e) {
+            reject(e)
+          }
+        })
+      })
+      self.onRejectedCallbacks.push(() => {
+        queueMicrotask(() => {
+          try {
+            // 注册 then方法的第二个参数，入参是 reason,返回x
+            const x = onRejected(self.reason);
+            // 此处是为了注册一个resolve或者resolve函数
+            self.resolvePromise(promise2, x, resolve, reject)
+          } catch (e) {
+            reject(e)
+          }
+        })
+      })
+    }
+
+    // 执行x
+    if (self.state === FULFILLED) {
+      queueMicrotask(() => {
         try {
-          // 注册 then方法的第一个参数，入参是value,返回x。返回的值最终会被resolve出去
+          // 执行 then方法的第1个参数，入参是value,返回x
           const x = onFulfilled(self.value);
           // 此处是为了注册一个resolve或者resolve函数
           self.resolvePromise(promise2, x, resolve, reject)
@@ -607,9 +639,11 @@ myPromise.prototype.then = function(onFulfilled, onRejected) {
           reject(e)
         }
       })
-      self.onRejectedCallbacks.push(() => {
+    }
+    if (self.state === REJECTED) {
+      queueMicrotask(() => {
         try {
-          // 注册 then方法的第二个参数，入参是 reason,返回x
+          // 执行 then方法的第二个参数，入参是 reason,返回x
           const x = onRejected(self.reason);
           // 此处是为了注册一个resolve或者resolve函数
           self.resolvePromise(promise2, x, resolve, reject)
@@ -617,28 +651,6 @@ myPromise.prototype.then = function(onFulfilled, onRejected) {
           reject(e)
         }
       })
-    }
-
-    // 执行x
-    if (self.state === FULFILLED) {
-      try {
-        // 执行 then方法的第1个参数，入参是value,返回x
-        const x = onFulfilled(self.value);
-        // 此处是为了注册一个resolve或者resolve函数
-        self.resolvePromise(promise2, x, resolve, reject)
-      } catch (e) {
-        reject(e)
-      }
-    }
-    if (self.state === REJECTED) {
-      try {
-        // 执行 then方法的第二个参数，入参是 reason,返回x
-        const x = onRejected(self.reason);
-        // 此处是为了注册一个resolve或者resolve函数
-        self.resolvePromise(promise2, x, resolve, reject)
-      } catch (e) {
-        reject(e)
-      }
     }
   });
   return promise2;
