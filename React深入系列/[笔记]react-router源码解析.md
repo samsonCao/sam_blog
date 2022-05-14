@@ -58,7 +58,7 @@
 
 #### 我们拿一个createBrowserHistory的源码来做分析
 > 代码从第268行一直到510行，将近250行，摘录重要的说明
-```
+```javascript
 function createBrowserHistory(props) {
   if (props === void 0) {
     props = {};
@@ -307,7 +307,7 @@ function createBrowserHistory(props) {
 从源码可以看出，核心是返回的history对象，其中的很多方法都是调用浏览器history对象底层的api
 
 看到这里其实已经看到底了
-```
+```javascript
 var history = {
     length: globalHistory.length,
     action: 'POP',
@@ -331,7 +331,7 @@ var history = {
 
 看一下react-router的index.js文件都抛出了哪些方法，删除了其中的import的代码，保留export
 > 包含了10个方法
-```
+```javascript
 export { _MemoryRouter as MemoryRouter };
 export { _Prompt as Prompt };
 export { _Redirect as Redirect };
@@ -345,7 +345,7 @@ export { _withRouter as withRouter };
 ```
 
 ### 从一个switch组件说起
-```
+```javascript
  <Switch>
         <Route path='/merchant' exact render={() =>
             <Redirect to='/xxx/home' />
@@ -355,7 +355,7 @@ export { _withRouter as withRouter };
 ```
 
 switch的核心代码如下
-```
+```javascript
 Switch.prototype.render = function render() {
     var route = this.context.router.route;
     var children = this.props.children;
