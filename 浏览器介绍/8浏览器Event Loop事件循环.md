@@ -1,3 +1,12 @@
+### 浏览器 Event Loop大致流程
+
+##### 代码执行顺序
+
+1. JavaScript属于宏任务（主线程），自上往下执行，直到执行完。
+2. 执行微任务，中途遇到微任务放入队列尾部，继续执行，直至清空。
+3. 执行宏任务，中途遇到宏任务放入队列尾部，继续执行，直到清空。
+4. 宏任务执行过程中遇到微任务，会执行微任务
+
 ### 宏任务和微任务区别和由来
 
 - 采纳 JSC 引擎的术语，我们把宿主(我们开发者)发起的任务称为宏观任务，把 JavaScript 引擎发起的任务称为微观任务。
@@ -21,7 +30,7 @@
 也就是说，在某一个macrotask执行完后，就会将在它执行期间产生的所有microtask都执行完毕
 
 - 宏任务和微任务场景区分
-  - macrotask宏任务：script主代码块，setTimeout，setInterval等（可以看到，事件队列中的每一个事件都是一个macrotask）
+  - macrotask宏任务：script主代码块，setTimeout，setInterval等（事件队列中的每一个事件都是一个宏任务）
   - microtask微任务：Promise，准确的说是Promise.resolve().then()产生了微任务。process.nextTick等
   - 在node环境下，process.nextTick的优先级高于Promise__，也就是可以简单理解为：
   在宏任务结束后会先执行微任务队列中的nextTickQueue部分，然后才会执行微任务中的Promise部分
@@ -50,7 +59,7 @@
  学完上面的知识，来做一个简单的练习题吧
 
  ```javascript
- 尝试说出下面的输出顺序
+//  尝试说出下面的输出顺序
  setTimeout(function(){
      console.log('1')
  });
