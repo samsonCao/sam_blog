@@ -2,7 +2,7 @@
 
 ant-design 的 create 源码如下
 
-```
+```javascript
 static create = function<TOwnProps extends FormComponentProps>(
     options: FormCreateOption<TOwnProps> = {},
   ): FormWrappedProps<TOwnProps> {
