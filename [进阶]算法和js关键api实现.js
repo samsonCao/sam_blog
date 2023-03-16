@@ -1,7 +1,7 @@
 /**
  * 冒泡排序
  * 原理：每循环一次，都会找出最大的放在最后一位
- * 第一次循环，找出最大的一的，放在最后一位
+ * 第一次循环，找出最大的，放在最后一位
  * 第二次循环，找出剩下的最大的，放在倒数第二位
  * 第三次循环，找出剩下的最大的，放在倒数第三位
  * 直到最后一个最大的值在第一位
@@ -16,11 +16,11 @@ function bubble(ary) {
   for (let i = 0; i < ary.length - 1; i++) {
     // 内层循环控制每一轮比较的次数。
     // 每一轮比较后，最后一个一定是最大，因此比较  ary.length - 1 - i
-    for(let j = 0; j < ary.length - 1 - i; j++) {
+    for (let j = 0; j < ary.length - 1 - i; j++) {
       // 如果前一项比后一项大，前一项和后一项交换位置
-      if (ary[j] > ary[j+1]) {
+      if (ary[j] > ary[j + 1]) {
         // 交换位置
-        [ary[j+1], ary[j]] = [ary[j], ary[j+1]]
+        [ary[j + 1], ary[j]] = [ary[j], ary[j + 1]];
       }
     }
   }
@@ -28,7 +28,6 @@ function bubble(ary) {
 }
 // let ary = [12, 8, 24, 16, 1];
 // console.log(bubble(ary));
-
 
 /**
  * 插入排序
@@ -40,7 +39,7 @@ function bubble(ary) {
  * 第4次抓拍，从前往后 16 和 [8，12，24] 比较 [8，12，16，24] 比3次，比到到的break
  * 第5次抓拍，从前往后 1 和 [8，12，16，24] 比较 [1，8，12，16，24] 比4次，比到到的break
  */
-function insert (ary) {
+function insert(ary) {
   // 准备一个新数组，放抓到的牌，先放一张牌进去
   const handle = [];
   handle.push(ary[0]);
@@ -112,7 +111,7 @@ function quick(ary) {
   // 左边+中间+右边。
   // 返回 值类型ary时 结束递归，出栈拼接。
   // 返回 函数类型执行体时，继续执行递归调用，暂存拼接逻辑
-  return quick(aryLeft).concat(middleValue, quick(aryRight))
+  return quick(aryLeft).concat(middleValue, quick(aryRight));
 }
 // let ary = [12,8,15,16,1,24];
 // console.log(quick(ary));
@@ -141,13 +140,12 @@ function select(ary) {
   let minIndex;
   let temp;
   // 中间会有一次自动把最大值换到最后一个位置的过程，所以是length - 1 次。
-  for(let i = 0; i < ary.length - 1; i++) {
+  for (let i = 0; i < ary.length - 1; i++) {
     // 初始化假定i=0为最小值
     minIndex = i;
 
     // 遍历i后面的所有项，因为i不用和自身比
-    for (let j = i+ 1; j < ary.length; j++) {
-
+    for (let j = i + 1; j < ary.length; j++) {
       // 获取上一次比较的最小值minValue
       const minValue = ary[minIndex];
       // 获取当前项的值
@@ -171,7 +169,7 @@ function select(ary) {
   return ary;
 }
 
-let ary = [12,8,15,16,1,24];
+let ary = [12, 8, 15, 16, 1, 24];
 console.log(select(ary));
 
 // 递归求和,递归有两种return，一种返回值，一种返回表达式。
@@ -181,7 +179,7 @@ function sumAll(n) {
   if (n <= 1) {
     return 1;
   }
-  return n + sumAll(n - 1)
+  return n + sumAll(n - 1);
 }
 // console.log(sumAll(10))
 
@@ -224,8 +222,8 @@ Function.prototype.myBind = function (context) {
   return function Fn() {
     // 函数func具体执行时的参数 arguments
     const funcArgs = args.concat(...arguments);
-    return fn.apply(context, funcArgs)
-  }
+    return fn.apply(context, funcArgs);
+  };
 };
 
 // 实现一个new => var person = myNew(Person,'xiaoming',18)
@@ -246,7 +244,7 @@ function myNew() {
 // 实现一个create函数，是一个干净的对象，没有prototype toString等方法
 // Object.create(proto，[propertiesObject])
 function create(obj, propertiesObject) {
-  function F() {};
+  function F() {}
   F.prototype = obj;
   // new完之后返回对象字面量{},
   // objF.__proto__ = F.prototype = obj
@@ -257,15 +255,19 @@ function create(obj, propertiesObject) {
 
 // 实现一个instance_of => 实例的__proto__ 可以指向 构造函数的prototype
 function instance_of(left, right) {
-  left = Object.getPrototypeOf(left);
-  while(true) {
-    if (left == null) {
+  if (typeof left !== "object" || left === null) {
+    return false;
+  };
+
+  let proto = Object.getPrototypeOf(left);
+  while (true) {
+    if (proto == null) {
       return false;
-    } else if (left === right.prototype) {
-      return true
+    } else if (proto === right.prototype) {
+      return true;
     } else {
       // 即left.__proto__.__proto__.__proto__...
-      left = Object.getPrototypeOf(left);
+      proto = Object.getPrototypeOf(proto);
     }
   }
 }
@@ -273,8 +275,8 @@ function instance_of(left, right) {
 // 实现JSON.stringify 忽略 实现定时器忽略
 
 // 实现数组的 reduce 方法 => reduce(func(prev, item, index, ary), initValue);
-Array.prototype.myReduce = function(callback) {
-  console.log(this, 'this是要被处理的数组');
+Array.prototype.myReduce = function (callback) {
+  console.log(this, "this是要被处理的数组");
   // 格式化传入的值，null, undefined时返回空对象
   const formatObj = Object(this);
   // 非数字转为0，如 undefined ||null 'string' >>> 0 => 0
@@ -296,21 +298,22 @@ Array.prototype.myReduce = function(callback) {
     if (index in formatObj) {
       // 用while 重复调用callback执行callback,
       // 每次callback返回的value其实即为上一次的和prev
-      value = callback(value, formatObj[index], index, formatObj)
+      value = callback(value, formatObj[index], index, formatObj);
     }
     index++;
   }
   return value;
-}
+};
 
 // 手动实现数组map方法 a = [].map((item, index, arr) => {
 //  return xxx
+// 此处的this指代数组本身
 // })
 function myMap(callback) {
   const newArr = [];
   const that = this;
-  for(let i = 0; i < that.length; i++) {
-    newArr.push(callback(that[i], i, that))
+  for (let i = 0; i < that.length; i++) {
+    newArr.push(callback(that[i], i, that));
   }
   return newArr;
 }
@@ -318,45 +321,42 @@ function myMap(callback) {
 // 数组扁平化
 const flatten = (list) => {
   return list.reduce((prevAry, item) => {
-    return prevAry.concat(
-      Array.isArray(item) ?
-        flatten(item) : item
-    );
-  }, [])
+    return prevAry.concat(Array.isArray(item) ? flatten(item) : item);
+  }, []);
 };
 // 数组扁平化2
 const flatAry = (list) => {
   let res = [];
-  for(let i = 0; i < list.length; i++) {
+  for (let i = 0; i < list.length; i++) {
     if (Array.isArray(list[i])) {
-      res = res.concat(flatAry(list[i]))
+      res = res.concat(flatAry(list[i]));
     } else {
-      res.push(list[i])
+      res.push(list[i]);
     }
   }
   return res;
-}
+};
 
 // 对象扁平化 { a.b.c = 1, m.n = 2 }
 const objectFlat = (obj = {}) => {
   const res = {};
-  function flat(item, preKey = '') {
+  function flat(item, preKey = "") {
     Object.entries(item).forEach(([key, value]) => {
       const newKey = preKey ? `${preKey}.${key}` : key;
-      if (value && typeof value === 'object') {
-        flat(value, newKey)
+      if (value && typeof value === "object") {
+        flat(value, newKey);
       } else {
         res[newKey] = value;
       }
-    })
+    });
   }
   return res;
-}
+};
 
 // 数组去重1 无法去重空对象{}
 const unique1 = (list) => {
   return Array.from(new Set(list));
-}
+};
 // 数组去重2 filter方法
 const unique2 = (list) => {
   return list.filter((item, index, arr) => {
@@ -365,11 +365,11 @@ const unique2 = (list) => {
     // 如果不一致，说明当前item不是第一次出现，需要被删掉，返回false
     return arr.indexOf(item) === index;
   });
-}
+};
 // 数组去重3 reduce方法
 const unique3 = (list) => {
   return list.reduce((prev, cur) => {
-    return prev.includes(cur) ? prev : prev.concat(cur)
+    return prev.includes(cur) ? prev : prev.concat(cur);
   }, []);
 };
 
@@ -377,11 +377,11 @@ const unique3 = (list) => {
 // compose 返回的是函数表达式   // return (...args) => f1(f2(f3(...args)))
 function compose(...funcs) {
   if (funcs.length === 0) {
-    return arg => arg
+    return (arg) => arg;
   }
 
   if (funcs.length === 1) {
-    return funcs[0]
+    return funcs[0];
   }
   // 第一次 f1(f2)
   // 第二次，f1(f2)里面再嵌套b即f3() => f1(f2(f3(a)))
@@ -391,15 +391,15 @@ function compose(...funcs) {
       // 1, 4 输出两次。
       // 因为return函数时，只存值执行过程
       // return 值时才作为参数传递，
-      console.log(args)
-      return a(b(...args))
-    }
-  })
+      console.log(args);
+      return a(b(...args));
+    };
+  });
 }
 const f1 = (a) => a + 1;
 const f2 = (a) => a + 2;
 const f3 = (a) => a + 3;
-compose(f1, f2, f3)(1);  // => f1(f2(f3(1)))
+compose(f1, f2, f3)(1); // => f1(f2(f3(1)))
 
 // 函数柯里化 curry(sum)(1,2)(3,4)(5)
 // 柯里化只是收集参数，收集的参数等于传入的fn的参数时就执行fn并返回执行的值
@@ -413,43 +413,104 @@ const curry = (fn, arr = []) => {
     const concatValue = [...arr, ...args];
     if (concatValue.length < len) {
       // fn没变，一直都是sum，递归变的是参数，是个参数收集的过程
-      return curry(fn, concatValue)
+      return curry(fn, concatValue);
     } else {
       // 收集的参数个数等于fn的参数个数，执行fn,传参为收集的参数
       // 收集的参数concatValue最终为 1,2,3,4,5
       return fn(...concatValue);
     }
-  }
+  };
+};
+
+function curry(func) {
+  return function curried(...args) {
+    if (args.length >= func.length) {
+      return func.apply(this, args);
+    } else {
+      return function (...args2) {
+        return curried.apply(this, args.concat(args2));
+      };
+    }
+  };
 }
-const sum = (a,b,c,d,e) => a+b+c+d+e;
-let r = curry(sum)(1,2)(3,4)(5);
+
+const sum = (a, b, c, d, e) => a + b + c + d + e;
+let r = curry(sum)(1, 2)(3, 4)(5);
 console.log(r);
 
 // 深拷贝
-function deepClone(obj) {
-  // 边界处理 regexp date
-  if (obj instanceof RegExp) return new RegExp(obj);
-  if (obj instanceof Date) return new Date(obj);
-  // 结束的判断  null 非object 返回自身，如string number bool undefined
-  if (obj == null || typeof obj !== 'object') return obj;
-
-  // 处理对象 数组或者object, new 构造函数生产新数组或者对象
-  const newObj = new obj.constructor();
-  for(let key in obj) {
-    if (obj.hasOwnProperty(key)) {
-      newObj[key] = deepClone(obj[key])
-    }
+function deepClone(target) {
+  const map = new WeakMap()
+  
+  function isObject(target) {
+      return (typeof target === 'object' && target ) || typeof target === 'function'
   }
-  return newObj;
+
+  function clone(data) {
+      if (!isObject(data)) {
+          return data
+      }
+      if ([Date, RegExp].includes(data.constructor)) {
+          return new data.constructor(data)
+      }
+      if (typeof data === 'function') {
+          return new Function('return ' + data.toString())()
+      }
+      const exist = map.get(data)
+      if (exist) {
+          return exist
+      }
+      if (data instanceof Map) {
+          const result = new Map()
+          map.set(data, result)
+          data.forEach((val, key) => {
+              if (isObject(val)) {
+                  result.set(key, clone(val))
+              } else {
+                  result.set(key, val)
+              }
+          })
+          return result
+      }
+      if (data instanceof Set) {
+          const result = new Set()
+          map.set(data, result)
+          data.forEach(val => {
+              if (isObject(val)) {
+                  result.add(clone(val))
+              } else {
+                  result.add(val)
+              }
+          })
+          return result
+      }
+      const keys = Reflect.ownKeys(data)
+      const allDesc = Object.getOwnPropertyDescriptors(data)
+      const result = Object.create(Object.getPrototypeOf(data), allDesc)
+      map.set(data, result)
+      keys.forEach(key => {
+          const val = data[key]
+          if (isObject(val)) {
+              result[key] = clone(val)
+          } else {
+              result[key] = val
+          }
+      })
+      return result
+  }
+
+  return clone(target)
 }
+
+
 
 // 写一个延时执行的睡眠函数
 const sleep = (n) => {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve();
-    }, n)
-  })
+    }, n);
+  });
 };
 
 // 防抖-- 事件触发n秒后再执行函数，n秒内再触发重新计算。
@@ -469,9 +530,9 @@ function debounce(func, wait) {
     timer = setTimeout(() => {
       // 把 onmousemove 的 this 指向func,
       // 把 onmousemove 的 arguments 给func
-      func.apply(context, args)
+      func.apply(context, args);
     }, wait);
-  }
+  };
 }
 // 节流--每次隔n秒执行一次，稀释执行的频率
 // dom.onmousemove = debounce(count, 1000)
@@ -485,7 +546,7 @@ function throttle(func, wait) {
       func.apply(context, args);
       oldTime = now;
     }
-  }
+  };
 }
 function throttle2(func, wait) {
   let timer;
@@ -499,10 +560,25 @@ function throttle2(func, wait) {
       timer = setTimeout(() => {
         func.apply(context, args);
         timer = null;
-      }, wait)
+      }, wait);
     }
-  }
+  };
 }
+
+// 获取url的参数
+const parserURL = (url) => {
+  url = url || window.location.href;
+  const [_, params] = url.split("?");
+  const result = {};
+  if (params) {
+    const _params = params.split("&");
+    _params.forEach((item) => {
+      const [key, value] = item.split("=");
+      result[key] = decodeURIComponent(value);
+    });
+  }
+  return result;
+};
 
 // 发布订阅模式 一对多。一个调度中心多个事件订阅或发布
 class EventEmitter {
@@ -511,24 +587,23 @@ class EventEmitter {
   }
   // 实现订阅
   on(type, callBack) {
-   if (!this.events[type]) {
-     this.events[type] = [];
-   }
-   this.events[type].push(callBack)
+    if (!this.events[type]) {
+      this.events[type] = [];
+    }
+    this.events[type].push(callBack);
   }
   // 实现触发
   emit(type, args) {
     if (this.events.type) {
-      this.events[type].forEach(callBack => {
+      this.events[type].forEach((callBack) => {
         callBack(args);
-      })
+      });
     }
   }
   // 清除订阅的事件
   remove(type, callback) {
     if (!this.events.type) return;
-    this.events[type] = this.events[type].filter(
-      (item) => item !== callback)
+    this.events[type] = this.events[type].filter((item) => item !== callback);
   }
   removeAll(type) {
     if (this.events[type]) {
@@ -538,7 +613,7 @@ class EventEmitter {
 }
 
 // 手写ajax 可演化为promise形式的ajax
-function ajax({method, url, data}) {
+function ajax({ method, url, data }) {
   let xhr = new XMLHttpRequest();
   xhr.open(method, url);
   xhr.send(data);
@@ -546,13 +621,13 @@ function ajax({method, url, data}) {
     if (xhr.readyState === 4 && xhr.status === 200) {
       console.log(xhr.responseText);
     }
-  }
+  };
 }
 
 // 手写promise
-const PENDING = 'pending';
-const FULFILLED = 'fulfilled';
-const REJECTED = 'rejected';
+const PENDING = "pending";
+const FULFILLED = "fulfilled";
+const REJECTED = "rejected";
 function myPromise(fn) {
   const self = this;
   self.state = PENDING;
@@ -568,35 +643,43 @@ function myPromise(fn) {
       // 具体执行的是 then中注册的resolve方法
       // const x = onFulfilled(self.value); => then方法的第一个函数
       // self.resolvePromise(promise2, x, resolve, reject) => 把x reject 出来
-      self.onFulFilledCallbacks.forEach(fulfilledCallback => fulfilledCallback())
+      self.onFulFilledCallbacks.forEach((fulfilledCallback) =>
+        fulfilledCallback()
+      );
     }
-  };
+  }
 
-  function reject (reason) {
+  function reject(reason) {
     if (self.state === PENDING) {
       self.state = REJECTED;
       self.reason = reason;
     }
     // 具体执行的是 then中注册的reject方法
-    self.onRejectedCallbacks.forEach(rejectedCallback => rejectedCallback())
-  };
+    self.onRejectedCallbacks.forEach((rejectedCallback) => rejectedCallback());
+  }
 
   try {
     fn(resolve, reject);
-    console.log(self,'s-promise')
+    console.log(self, "s-promise");
   } catch (e) {
-    reject(e)
+    reject(e);
   }
 }
 
-myPromise.prototype.then = function(onFulfilled, onRejected) {
+myPromise.prototype.then = function (onFulfilled, onRejected) {
   let self = this;
   let promise2 = null;
-  console.log(self, 's2');
+  console.log(self, "s2");
 
   // 如果then方法链式调用，非函数的，构造函数把上一个value往下传
-  onFulfilled = typeof onFulfilled === 'function' ? onFulfilled : value => value;
-  onRejected = typeof onRejected === 'function' ? onRejected : error => { throw error };
+  onFulfilled =
+    typeof onFulfilled === "function" ? onFulfilled : (value) => value;
+  onRejected =
+    typeof onRejected === "function"
+      ? onRejected
+      : (error) => {
+          throw error;
+        };
 
   promise2 = new myPromise((resolve, reject) => {
     // 注册过程 prise是微任务，所以 push进去的函数可以被setTimeout包裹，模拟微任务
@@ -607,24 +690,24 @@ myPromise.prototype.then = function(onFulfilled, onRejected) {
             // 注册 then方法的第一个参数，入参是value,返回x。返回的值最终会被resolve出去
             const x = onFulfilled(self.value);
             // 此处是为了注册一个resolve或者resolve函数
-            self.resolvePromise(promise2, x, resolve, reject)
+            self.resolvePromise(promise2, x, resolve, reject);
           } catch (e) {
-            reject(e)
+            reject(e);
           }
-        })
-      })
+        });
+      });
       self.onRejectedCallbacks.push(() => {
         queueMicrotask(() => {
           try {
             // 注册 then方法的第二个参数，入参是 reason,返回x
             const x = onRejected(self.reason);
             // 此处是为了注册一个resolve或者resolve函数
-            self.resolvePromise(promise2, x, resolve, reject)
+            self.resolvePromise(promise2, x, resolve, reject);
           } catch (e) {
-            reject(e)
+            reject(e);
           }
-        })
-      })
+        });
+      });
     }
 
     // 执行x
@@ -634,11 +717,11 @@ myPromise.prototype.then = function(onFulfilled, onRejected) {
           // 执行 then方法的第1个参数，入参是value,返回x
           const x = onFulfilled(self.value);
           // 此处是为了注册一个resolve或者resolve函数
-          self.resolvePromise(promise2, x, resolve, reject)
+          self.resolvePromise(promise2, x, resolve, reject);
         } catch (e) {
-          reject(e)
+          reject(e);
         }
-      })
+      });
     }
     if (self.state === REJECTED) {
       queueMicrotask(() => {
@@ -646,11 +729,11 @@ myPromise.prototype.then = function(onFulfilled, onRejected) {
           // 执行 then方法的第二个参数，入参是 reason,返回x
           const x = onRejected(self.reason);
           // 此处是为了注册一个resolve或者resolve函数
-          self.resolvePromise(promise2, x, resolve, reject)
+          self.resolvePromise(promise2, x, resolve, reject);
         } catch (e) {
-          reject(e)
+          reject(e);
         }
-      })
+      });
     }
   });
   return promise2;
@@ -660,63 +743,67 @@ myPromise.prototype.resolvePromise = function (promise2, x, resolve, reject) {
   let self = this;
   let called = false; // 防止多次调用
 
-  if (promise2 === x ) {
-    return reject(new TypeError('循环引用'))
+  if (promise2 === x) {
+    return reject(new TypeError("循环引用"));
   }
 
   const xType = Object.prototype.toString.call(x);
 
-  if (x !== null && (xType === '[object Object]' || xType === '[object Function]')) {
+  if (
+    x !== null &&
+    (xType === "[object Object]" || xType === "[object Function]")
+  ) {
     try {
       let then = x.then;
       // then是函数类型 循环调用then
-      if (typeof then === 'function') {
+      if (typeof then === "function") {
         const res = (y) => {
           if (called) {
             return;
           }
           called = true;
-          self.resolvePromise(promise2, y, resolve, reject)
+          self.resolvePromise(promise2, y, resolve, reject);
         };
         const rej = (reason) => {
           if (called) {
             return;
           }
           called = true;
-          reject(reason)
+          reject(reason);
         };
         // 循环执行then方法传 。此处有循环调用，直到成功的类型为基本类型，然后resolve出去。
-        then.call(x, res, rej)
+        then.call(x, res, rej);
       } else {
         if (called) {
           return;
         }
         called = true;
         // 非函数类型，说明结束了，直接resolve
-        resolve(x)
+        resolve(x);
       }
     } catch (e) {
-      reject(e)
+      reject(e);
     }
   } else {
     // 普通值，直接抛出去
-    resolve(x)
+    resolve(x);
   }
-}
+};
 
 // 寄生组合式继承
 function Parent(name) {
   this.name = name;
 }
-function Child (name, age) {
+function Child(name, age) {
   // 借用父类的构造函数继承父类属性
   Parent.call(this, name);
   this.age = age;
 }
+
 // 原型链继承来继承方法
 function InheritProperty(child, parent) {
   const middleType = Object.create(parent.prototype); //创建对象
-  middleType.constructor = child;  //增强对象
+  middleType.constructor = child; //增强对象
   child.prototype = middleType; //指定对象
 }
 InheritProperty(Child, Parent);
@@ -724,35 +811,35 @@ InheritProperty(Child, Parent);
 // 模拟实现es6的 extend
 function myExtend(child, parent) {
   child.prototype = Object.create(parent.prototype, {
-    constructor:  {
+    constructor: {
       value: child,
       enumerable: false,
       writable: true,
       configurable: true,
-    }
-  })
+    },
+  });
   child.__proto__ = parent;
 }
 
 // 为数字添加分号
 function formatMoney(num) {
-  const numList = String(num).split('.');
-  const listFirst = numList[0].split('').reverse();
+  const numList = String(num).split(".");
+  const listFirst = numList[0].split("").reverse();
   const tempFirst = [];
   if (listFirst) {
     // 12345 => [5,4,3,2,1]
     listFirst.forEach((item, index) => {
       if (index % 3 === 0 && index !== 0) {
-        tempFirst.push(',')
+        tempFirst.push(",");
       }
-      tempFirst.push(item)
-    })
+      tempFirst.push(item);
+    });
     tempFirst.reverse();
   }
   if (numList[1].length) {
-    return tempFirst.join('').concat('.', numList[1])
+    return tempFirst.join("").concat(".", numList[1]);
   } else {
-    return tempFirst.join('')
+    return tempFirst.join("");
   }
 }
 
@@ -761,22 +848,22 @@ function format2(num) {
   // 第一个replace获取.之前的数字，第二个replace后向断言会回溯，从后向前数3个加,
   return num.toString().replace(/\d/, function (res1) {
     return res1.replace(/(?=(\d{3})+$)/g, function ($1) {
-      return $1 + ','
-    })
-  })
+      return $1 + ",";
+    });
+  });
 }
 
 // 判断一个字符串出现的最多次数
 function getMaxCountString(str) {
-  const list = str.split('');
+  const list = str.split("");
   const tempObject = {};
-  list.map(item => {
+  list.map((item) => {
     if (!tempObject[item]) {
       tempObject[item] = 1;
     } else {
       tempObject[item] = tempObject[item] + 1;
     }
-  })
+  });
   let num = 0;
   let resKey = null;
   for (let key in tempObject) {
@@ -785,15 +872,15 @@ function getMaxCountString(str) {
       resKey = key;
     }
   }
-  return resKey + '出现了:' +num + '次';
+  return resKey + "出现了:" + num + "次";
 }
 
 // 统计出现次数最多的数组里面的数字
 function getMaxCountFormArray(list) {
   const temp = {};
   let numMax = 1;
-  let itemMax = '';
-  for(let i = 0; i < list.length; i++) {
+  let itemMax = "";
+  for (let i = 0; i < list.length; i++) {
     const value = list[i];
     if (!temp[value]) {
       temp[value] = 1;
@@ -806,9 +893,9 @@ function getMaxCountFormArray(list) {
     }
   }
   if (!itemMax) {
-    return  '没有最多出现次数的值'
+    return "没有最多出现次数的值";
   }
-  return itemMax + '出现了:' +numMax + '次';
+  return itemMax + "出现了:" + numMax + "次";
 }
 
 // 手写一个js的数据结构Map
@@ -822,7 +909,7 @@ class MyMap {
     this.size = this.size + 1;
   }
   get(key) {
-    return this.data[key]
+    return this.data[key];
   }
   size() {
     return this.size;
@@ -863,29 +950,29 @@ const node = {
       children: [
         {
           key: 3,
-          children: []
+          children: [],
         },
         {
           key: 4,
-          children: []
-        }
-      ]
+          children: [],
+        },
+      ],
     },
     {
       key: 5,
       children: [
         {
           key: 6,
-          children: []
+          children: [],
         },
         {
           key: 7,
-          children: []
-        }
-      ]
-    }
-  ]
-}
+          children: [],
+        },
+      ],
+    },
+  ],
+};
 
 // 广度优先
 function BFS(node) {
@@ -901,7 +988,7 @@ function BFS(node) {
     // [7] => 出7
     const currentNode = list.shift();
     if (currentNode.children) {
-      for(let i = 0; i < currentNode.children.length; i++) {
+      for (let i = 0; i < currentNode.children.length; i++) {
         // 正向压栈
         list.push(currentNode.children[i]);
       }
@@ -909,7 +996,7 @@ function BFS(node) {
   }
 }
 
-// 深度优先
+// 深度优先-循环法
 function DFS(node) {
   const list = [node];
   while (list.length > 0) {
@@ -923,26 +1010,30 @@ function DFS(node) {
     // [7] => 出7
     const currentNode = list.pop();
     if (currentNode.children) {
-      for(let i = currentNode.children.length - 1; i >= 0; i--) {
+      for (let i = currentNode.children.length - 1; i >= 0; i--) {
         // 反向压栈
-        list.push(currentNode.children[i])
+        list.push(currentNode.children[i]);
       }
     }
   }
 }
 
-function DFSLoop(node) {
-  const list = [];
-  if (!node.children) {
+// 深度优先-递归法
+function DFSLoop(node, list = []) {
+  console.log(node, "回的过程before");
+  if (node) {
     list.push(node.key);
+    if (node.children) {
+      node.children.forEach((child) => {
+        DFSLoop(child, list);
+      });
+    }
   }
-  if (node.children) {
-    DFSLoop(node.children);
-  }
+  console.log(node, "溯的过程 after");
+  return list;
 }
 
-console.log(DFSLoop, 'DFSLoop')
-
+console.log(DFSLoop(node), "DFSLoop");
 
 // 监听指定元素是否在视口区
 const elementIsVisibleInViewport = (el, partiallyVisible = false) => {
@@ -950,31 +1041,31 @@ const elementIsVisibleInViewport = (el, partiallyVisible = false) => {
   const { innerHeight, innerWidth } = window;
   if (partiallyVisible) {
     return (
-      (top > 0 && top < innerHeight) ||
-      (bottom > 0 && bottom < innerHeight)
-    ) && (
-      (left > 0 && left < innerWidth)
-      || (right > 0 && right < innerWidth))
+      ((top > 0 && top < innerHeight) ||
+        (bottom > 0 && bottom < innerHeight)) &&
+      ((left > 0 && left < innerWidth) || (right > 0 && right < innerWidth))
+    );
   } else {
-    return top >= 0 && left >= 0 && bottom <= innerHeight && right <= innerWidth
+    return (
+      top >= 0 && left >= 0 && bottom <= innerHeight && right <= innerWidth
+    );
   }
 };
 
 // 封装滚动到页面顶部
 const scrollToTop = () => {
-  const top = document.documentElement.scrollTop ||
-    document.body.scrollTop;
+  const top = document.documentElement.scrollTop || document.body.scrollTop;
   if (top > 0) {
     // 不可见的元素不会发生重绘和回流，每一帧集中操作dom，性能比较好
     window.requestAnimationFrame(scrollToTop);
     // 每次让top减少 1/8,
-    window.scrollTo(0, top - top/8)
+    window.scrollTo(0, top - top / 8);
   }
 };
 
 // 确认父元素包含子元素
 const elementContains = (parent, child) => {
-  return parent !== child && parent.contains(child)
+  return parent !== child && parent.contains(child);
 };
 
 // 获取当前页面（或者元素）的滚动位置
@@ -985,28 +1076,28 @@ const getScrollPosition = (el = window) => {
     // IE9 及更早版本 scrollLeft  scrollTop
     x: hasPageOffset ? el.pageXOffset : el.scrollLeft,
     y: hasPageOffset ? el.pageYOffset : el.scrollTop,
-  }
+  };
 };
 
 // 长列表渲染防止爱卡顿用的时间切片方案
 // requestAnimationFrame + DocumentFragment
 function renderList() {
-  const ul = document.getElementById('ul')
+  const ul = document.getElementById("ul");
   const total = 1000;
   const pageSize = 20;
   function loop(curTotal, curIndex) {
     if (curTotal <= 0) return;
-    const pageCount = Math.min(curTotal,  pageSize);
+    const pageCount = Math.min(curTotal, pageSize);
     window.requestAnimationFrame(function () {
       let fragment = document.createDocumentFragment();
-      for(let i = 0; i < pageCount; i++) {
-        const li = document.createElement('li');
-        li.innerText = 'li';
-        fragment.appendChild(li)
+      for (let i = 0; i < pageCount; i++) {
+        const li = document.createElement("li");
+        li.innerText = "li";
+        fragment.appendChild(li);
       }
-      ul.appendChild(fragment)
-      loop(curTotal - pageCount, curIndex + pageCount)
-    })
+      ul.appendChild(fragment);
+      loop(curTotal - pageCount, curIndex + pageCount);
+    });
   }
   loop(total, 0);
 }
@@ -1016,30 +1107,136 @@ function setRem() {
   let doc = document.documentElement;
   let width = doc.getBoundingClientRect().width;
   let rem = width / 75;
-  doc.style.fontSize = rem +'px';
+  doc.style.fontSize = rem + "px";
+}
+
+// 实现render函数 虚拟dom转真实dom
+
+
+// 第一题
+// 实现query函数，后续可进行where、orderBy、gorupBy、execute操作，根据自己理解书写即可
+const data = [
+  { name: 'fos', age: 16, city: 'shanghai' },
+  { name: 'bar', age: 24, city: 'hangzhou ' },
+  { name: 'fiz', age: 22, city: 'shanghai' },
+  { name: 'baz', age: 19, city: 'shanghai' }
+]
+query(data).where(item => item.age > 18).orderBy('age').gorupBy('city').execute();
+// 返回结果 
+[
+  [
+    { name: 'baz', age: 19, city: 'shanghai' },
+    { name: 'fiz', age: 22, city: 'shanghai' },
+  ],
+  [
+    { name: 'bar', age: 24, city: 'hangzhou ' },
+  ]
+]
+
+function query(data) {
+  class Query {
+    constructor(value) {
+      this.value = value;
+    }
+
+    where(func) {
+      this.value = this.value.filter(func);
+      return this;
+    }
+
+    orderBy(key) {
+      this.value = this.value.sort((a, b) => a[key] - b[key])
+      return this;
+    }
+
+    gorupBy(key) {
+      const resList = [];
+      const cache = new Map();
+      let currentIndex = 1;
+      this.value.forEach(item => {
+        if (!resList.length) {
+          resList.push([item])
+        } else {
+          const { cacheKey, cacheIndex } = cache.get(key) || {};
+          if (!cacheKey) {
+            cache.set(key, {cacheKey: key, cacheIndex: currentIndex})
+            resList.push([item]);
+            currentIndex += 1;
+          }
+          if (cacheKey) {
+            resList[cacheIndex].push(item)
+          }
+        }
+      })
+      this.value = resList
+      return this;
+    }
+    execute() {
+      return this.value;
+    }
+  }
+  const queryFunc = new Query(data);
+  return queryFunc;
+}
+
+// 第二题/
+//  基于fetch实现一个手动发送请求的hooks -> useManualFetch
+//  如： const [data, loading, error, send] = useManualFetch({api: 'yyy', data: any, ...});
+//  默认请求不发送，在符合条件时，调用 send 手动触发请求
+
+const useManualFetch = (req) => {
+  const { api, ...rest } = req;
+  let data;
+  let error;
+  let loading = false;
+
+  const send = async () => {
+    loading = true;
+    try {
+      await fetch(api, rest).then(res => {
+        data = res;
+        loading = false;
+      }, error => {
+        error = error;
+        loading = false;
+      }).catch(err => {
+        error = err;
+      })
+    } catch (e) {
+      error = e;
+      loading = false;
+    }
+  };
+
+  return [
+    data,
+    loading,
+    error,
+    send,
+  ]
 }
 
 
+// 第三题
+// 实现简单的发布订阅模式，通过 addListener、dispatch订阅和发布，按照自己理解书写即可
+class EventEmitter {
+  constructor() {
+    this.events = {}
+  }
+  addListener(type, fn) {
+    if (!this.events[type]) {
+      this.events[type] = [fn]
+    } else {
+      this.events[type].push(fn)
+    }
+  }
+  dispatch(type, ...rest) {
+    if (this.events[type]) {
+      this.events[type].forEach(fn => fn.apply(this, rest))
+    }
+  }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// 实现一个 bind 函数
+// 手写代码，实现继承的方式，尽可能多写
 

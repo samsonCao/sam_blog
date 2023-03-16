@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+  const nodes = {
+    tag: "DIV",
+    attrs: {
+      id: "app",
+    },
+    children: [
+      {
+        tag: "SPAN",
+        children: [
+          {
+            tag: "A",
+            children: [],
+          },
+        ],
+      },
+      {
+        tag: "SPAN",
+        children: [
+          {
+            tag: "A",
+            children: [],
+          },
+          {
+            tag: "A",
+            children: [],
+          },
+        ],
+      },
+    ],
+  };
+  function render(vnode) {
+    const dom = document.createElement(vnode.tag);
+    if (vnode.attrs) {
+      Object.keys(vnode.attrs).forEach(key => {
+        const value = vnode.attrs[key];
+        dom.setAttribute(key, value)
+      })
+    }
+    if (vnode.children) {
+      vnode.children.forEach(child => {
+        dom.appendChild(render(child))
+      })
+    }
+    return dom;
+  }
+
+  // console.log(render(nodes))
+
+  const promiseList = [
+    new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(3)
+      }, 3000);
+    }),
+    new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(2)
+      }, 2000);
+    }),
+    new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(1)
+      }, 1000);
+    }),
+  ];
+
+  const promiseAll = (list) => {
+    return new Promise((resolve) => {
+      let result = [];
+      let num = 0;
+      list.forEach((item, index) => {
+        if (typeof item.then === 'function') {
+          item.then(res => {
+            result[index] = res;
+            num++;
+            if (num === list.length) {
+              resolve(result)
+            }
+          })
+        }
+
+      })
+    })
+  }
+
+  // promiseAll(promiseList).then(res => {
+  //   console.log(res, 'rrrrr')
+  // });
+
+  const upperStr = (str) => {
+    if (!str || typeof str !== 'string') return;
+    const arr = str.split('-');
+    if (arr[0] === '') {
+      arr.shift(1);
+    }
+    for (let i = 1; i < arr.length; i++) {
+      const item = arr[i];
+      arr[i] = item.charAt(0).toUpperCase() + item.slice(1)
+    }
+    return arr.join('');
+  }
+
+  // console.log(upperStr('-get-element-by-id'))
+
+
+  //   例1：dssfsfsf–>true
+  // 例2：21333ghksd–>false
+  const sameStr = (str) => {
+    if (!str || typeof str !== 'string') {
+      return false
+    };
+    const obj = {};
+    for (let item of str) {
+      if (!obj[item]) {
+        obj[item] = item;
+      } else {
+        return false;
+      }
+    }
+    return true;
+  }
+  // console.log(sameStr('123asdal'))
+
+  // const arrList = [
+  //   ['home','user', 'react'],
+  //   ['home','user', 'vue'],
+  //   ['home','user', 'angular'],
+  // ]
+
+  // for (let i = 0; i < arrList.length; i++) {
+  //   const list = arrList[i];
+
+  //   for (let j = 0; j < list.length; j++) {
+  //     const item = list[j];
+
+  //   }
+
+  // }
+
+  // 实现一个深度优先
+  const node = {
+    key: 1,
+    children: [
+      {
+        key: 2,
+        children: [
+          {
+            key: 3,
+            children: []
+          },
+          {
+            key: 4,
+            children: []
+          }
+        ]
+      },
+      {
+        key: 5,
+        children: [
+          {
+            key: 6,
+            children: []
+          },
+          {
+            key: 7,
+            children: []
+          }
+        ]
+      }
+    ]
+  }
+
+  function DFSLoop(node, list = []) {
+    console.log(node, '回的过程before')
+    if (node) {
+      list.push(node.key)
+      if (node.children) {
+        node.children.forEach(child => {
+          DFSLoop(child, list)
+        })
+      }
+    }
+    console.log(node, '溯的过程 after')
+    return list;
+  }
+
+  console.log(DFSLoop(node), 'DFSLoop')
+
+
+</script>
+
+</html>

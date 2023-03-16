@@ -1,153 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-     <meta charset="UTF-8">
-     <title>Title</title>
-     <style>
-          div,p {
-               width: 100px;
-               height:100px;
-               border: 1px solid #000;
-               cursor: pointer;
-          }
-     </style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div,
+        p {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+            cursor: pointer;
+        }
+    </style>
 </head>
+
 <body>
-<div>函数防抖测试debounce</div>
-<p>函数节流测试throttle</p>
-<script>
-// 节流--一定时间内js方法只跑一次。比如人的眨眼睛，就是一定时间内眨一次。这是函数节流最形象的解释。类似setInterval
+    <div>函数防抖测试debounce</div>
+    <p>函数节流测试throttle</p>
+    <script>
+        // 节流--一定时间内js方法只跑一次。比如人的眨眼睛，就是一定时间内眨一次。这是函数节流最形象的解释。类似setInterval
 
-// 节流--throttle-第一次执行完之后间隔一定时间再执行，防止input输入框每次输入都会发送请求给服务端
+        // 节流--throttle-第一次执行完之后间隔一定时间再执行，防止input输入框每次输入都会发送请求给服务端
 
-// 防抖--debounce-当调用动作n毫秒后，才会执行该动作，若在这n毫秒内又调用此动作则将重新计算执行时间。
+        // 防抖--debounce-当调用动作n毫秒后，才会执行该动作，若在这n毫秒内又调用此动作则将重新计算执行时间。
 
 
-    let divDom = document.getElementsByTagName('div')[0];
-    let pDom = document.getElementsByTagName('p')[0];
+        let divDom = document.getElementsByTagName('div')[0];
+        let pDom = document.getElementsByTagName('p')[0];
 
-    //所有的点击停止后，间隔一定毫秒数才执行
-    divDom.addEventListener('click', debounce(function () {
-        console.log(121212)
-    }, 1000), false)
+        //所有的点击停止后，间隔一定毫秒数才执行
+        divDom.addEventListener('click', debounce(function () {
+            console.log(121212)
+        }, 1000), false)
 
-    function debounce(func, wait, immediate) {
-        let timer, args, that, timestamp, result;
+        function debounce(func, wait, immediate) {
+            let timer, args, that, timestamp, result;
 
-        let later = function () {
-            let now = new Date().getTime();
-            let last = now - timestamp;
+            let later = function () {
+                let now = new Date().getTime();
+                let last = now - timestamp;
 
-            if (last < wait && last >= 0) {
-                timer = setTimeout(later, wait - last);
-            } else {
-                timer = null;
-                if (!immediate) {
+                if (last < wait && last >= 0) {
+                    timer = setTimeout(later, wait - last);
+                } else {
+                    timer = null;
+                    if (!immediate) {
+                        result = func.apply(that, args);
+                        if (!timer) that = args = null;
+                    }
+                }
+            };
+
+            return function () {
+                that = this;
+                args = arguments;
+                timestamp = new Date().getTime();
+                let callNow = immediate && !timer;
+                if (!timer) timer = setTimeout(later, wait);
+                if (callNow) {
                     result = func.apply(that, args);
-                    if (!timer) that = args = null;
+                    that = args = null;
                 }
-            }
+
+                return result;
+            };
         };
 
-        return function () {
-            that = this;
-            args = arguments;
-            timestamp = new Date().getTime();
-            let callNow = immediate && !timer;
-            if (!timer) timer = setTimeout(later, wait);
-            if (callNow) {
-                result = func.apply(that, args);
-                that = args = null;
-            }
-
-            return result;
-        };
-    };
-
-    /**
-     * 函数防抖第二种写法
-     * @param fn {Function}   实际要执行的函数
-     * @param delay {Number}  延迟时间，也就是阈值，单位是毫秒（ms）
-     *
-     * @return {Function}     返回一个“去弹跳”了的函数
-     */
-   function debounce(fn, delay) {
-
-       // 定时器，用来 setTimeout
-       var timer
-
-       // 返回一个函数，这个函数会在一个时间区间结束后的 delay 毫秒时执行 fn 函数
-       return function () {
-
-           // 保存函数调用时的上下文和参数，传递给 fn
-           var context = this
-           var args = arguments
-
-           // 每次这个返回的函数被调用，就清除定时器，以保证不执行 fn
-           clearTimeout(timer)
-
-           // 当返回的函数被最后一次调用后（也就是用户停止了某个连续的操作），
-           // 再过 delay 毫秒就执行 fn
-           timer = setTimeout(function () {
-               fn.apply(context, args)
-           }, delay)
-       }
-   }
-
-
-   // 函数节流测试
-    //第一次执行后间隔一定毫秒再执行第二次
-    pDom.addEventListener('click',throttle(function () {
-        console.log(10012)
-    },1000, true), false)
-
-
-    //第一次执行之后 间隔一定毫秒再执行第二次 如果在间隔时间内有点击 则重新开始计时
-    function throttle (func, wait, options) {
-        /* options的默认值
-         *  表示首次调用返回值方法时，会马上调用func；否则仅会记录当前时刻，当第二次调用的时间间隔超过wait时，才调用func。
-         *  options.leading = true;
-         * 表示当调用方法时，未到达wait指定的时间间隔，则启动计时器延迟调用func函数，若后续在既未达到wait指定的时间间隔和func函数又未被调用的情况下调用返回值方法，则被调用请求将被丢弃。
-         *  options.trailing = true;
-         * 注意：当options.trailing = false时，效果与上面的简单实现效果相同
+        /**
+         * 函数防抖第二种写法
+         * @param fn {Function}   实际要执行的函数
+         * @param wait {Number}  延迟时间，也就是阈值，单位是毫秒（ms）
+         *
+         * @return {Function}     返回一个“去弹跳”了的函数
          */
-        var context, args, result;
-        var timeout = null;
-        var previous = 0;
-        if (!options) options = {};
-        var later = function() {
-            previous = options.leading === false ? 0 : new Date().getTime();
-            timeout = null;
-            result = func.apply(context, args);
-            if (!timeout) context = args = null;
-        };
-        return function() {
-            var now = new Date().getTime();
-            if (!previous && options.leading === false) previous = now;
-            // 计算剩余时间
-            var remaining = wait - (now - previous);
-            context = this;
-            args = arguments;
-            // 当到达wait指定的时间间隔，则调用func函数
-            // 精彩之处：按理来说remaining <= 0已经足够证明已经到达wait的时间间隔，但这里还考虑到假如客户端修改了系统时间则马上执行func函数。
-            if (remaining <= 0 || remaining > wait) {
-                // 由于setTimeout存在最小时间精度问题，因此会存在到达wait的时间间隔，但之前设置的setTimeout操作还没被执行，因此为保险起见，这里先清理setTimeout操作
-                if (timeout) {
-                    clearTimeout(timeout);
-                    timeout = null;
-                }
-                previous = now;
+        function debounce(fn, wait) {
+
+            // 定时器，用来 setTimeout
+            var timer
+
+            // 返回一个函数，这个函数会在一个时间区间结束后的 wait 毫秒时执行 fn 函数
+            return function () {
+
+                // 保存函数调用时的上下文和参数，传递给 fn
+                var context = this
+                var args = arguments
+
+                // 每次这个返回的函数被调用，就清除定时器，以保证不执行 fn
+                clearTimeout(timer)
+
+                // 当返回的函数被最后一次调用后（也就是用户停止了某个连续的操作），
+                // 再过 wait 毫秒就执行 fn
+                timer = setTimeout(function () {
+                    fn.apply(context, args)
+                }, wait)
+            }
+        }
+
+
+        // 函数节流测试
+        //第一次执行后间隔一定毫秒再执行第二次
+        pDom.addEventListener('click', throttle(function () {
+            console.log(10012)
+        }, 1000, true), false)
+
+
+        //第一次执行之后 间隔一定毫秒再执行第二次 如果在间隔时间内有点击 则重新开始计时
+        function throttle(func, wait, options) {
+            /* options的默认值
+             *  表示首次调用返回值方法时，会马上调用func；否则仅会记录当前时刻，当第二次调用的时间间隔超过wait时，才调用func。
+             *  options.leading = true;
+             * 表示当调用方法时，未到达wait指定的时间间隔，则启动计时器延迟调用func函数，若后续在既未达到wait指定的时间间隔和func函数又未被调用的情况下调用返回值方法，则被调用请求将被丢弃。
+             *  options.trailing = true;
+             * 注意：当options.trailing = false时，效果与上面的简单实现效果相同
+             */
+            var context, args, result;
+            var timeout = null;
+            var previous = 0;
+            if (!options) options = {};
+            var later = function () {
+                previous = options.leading === false ? 0 : new Date().getTime();
+                timeout = null;
                 result = func.apply(context, args);
                 if (!timeout) context = args = null;
-            } else if (!timeout && options.trailing !== false) {
-                // options.trailing=true时，延时执行func函数
-                timeout = setTimeout(later, remaining);
-            }
-            return result;
+            };
+            return function () {
+                var now = new Date().getTime();
+                if (!previous && options.leading === false) previous = now;
+                // 计算剩余时间
+                var remaining = wait - (now - previous);
+                context = this;
+                args = arguments;
+                // 当到达wait指定的时间间隔，则调用func函数
+                // 精彩之处：按理来说remaining <= 0已经足够证明已经到达wait的时间间隔，但这里还考虑到假如客户端修改了系统时间则马上执行func函数。
+                if (remaining <= 0 || remaining > wait) {
+                    // 由于setTimeout存在最小时间精度问题，因此会存在到达wait的时间间隔，但之前设置的setTimeout操作还没被执行，因此为保险起见，这里先清理setTimeout操作
+                    if (timeout) {
+                        clearTimeout(timeout);
+                        timeout = null;
+                    }
+                    previous = now;
+                    result = func.apply(context, args);
+                    if (!timeout) context = args = null;
+                } else if (!timeout && options.trailing !== false) {
+                    // options.trailing=true时，延时执行func函数
+                    timeout = setTimeout(later, remaining);
+                }
+                return result;
+            };
         };
-    };
 
 
-</script>
+    </script>
 </body>
+
 </html>

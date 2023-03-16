@@ -62,7 +62,7 @@ class Promise {
       if (this.status === PENDING) {
         this.status = RESOLVED;
         this.value = value;
-        this.onfulfilledCallbacks.forEach((fn) => fu());
+        this.onfulfilledCallbacks.forEach((fn) => fn());
       }
     };
 
@@ -70,7 +70,7 @@ class Promise {
       if (this.status === PENDING) {
         this.status = REJECTED;
         this.reason = reason;
-        this.onrejectedCallbacks.forEach((fn) => fu());
+        this.onrejectedCallbacks.forEach((fn) => fn());
       }
     };
 
@@ -100,7 +100,7 @@ class Promise {
 
     // 为什么要try catch 为什么要setTimeout?
 
-    // then链式调用，因此需要返回promise实例 // executor会立即执行，因此包裹后内部的方法也会立即执行
+    // then链式调用，因此需要返回 promise 实例 // executor会立即执行，因此包裹后内部的方法也会立即执行
     let promise2 = new Promise((resolve, rejected) => {
       //  promise内部的executor方法是同步 直接执行
       if (this.status === RESOLVED) {
@@ -173,11 +173,16 @@ class Promise {
   // 如果返回一个 promise 会等待这个 promise 也执行完毕。如果返回的是成功的 promise，
   // 会采用上一次的结果；如果返回的是失败的 promise，会用这个失败的结果，传到 catch 中。
   finally(callback) {
-    return this.then((value)=>{
-      return Promise.resolve(callback()).then(()=>value)
-    },(reason)=>{
-      return Promise.resolve(callback()).then(()=>{throw reason})
-    })  
+    return this.then(
+      (value) => {
+        return Promise.resolve(callback()).then(() => value);
+      },
+      (reason) => {
+        return Promise.resolve(callback()).then(() => {
+          throw reason;
+        });
+      }
+    );
   }
 
   // 加static只能在Promise类上调用，不能在实例上调用。比如 const p = new Promise(() => {})
@@ -207,7 +212,8 @@ class Promise {
       let orderIndex = 0;
       const processResultByKey = (res, i) => {
         resultArr[i] = res;
-        if (orderIndex.length === resultArr.length) {
+        orderIndex += 1;
+        if (orderIndex === resultArr.length) {
           resolve(resultArr);
         }
       };
